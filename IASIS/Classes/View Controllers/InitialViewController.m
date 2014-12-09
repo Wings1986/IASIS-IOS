@@ -9,9 +9,22 @@
 #import "InitialViewController.h"
 #import "JSSlidingViewController.h"
 #import "MenuViewController.h"
-#import "PersonalViewController.h"
+#import "MenuViewControllerDelegate.h"
 
-@interface InitialViewController ()
+#import "PersonalViewController.h"
+#import "HospitalsViewController.h"
+#import "ProvidersViewController.h"
+#import "PortalViewController.h"
+#import "SettingsViewController.h"
+
+@interface InitialViewController () <MenuViewControllerDelegate>
+
+@property (nonatomic, strong) JSSlidingViewController *vcSliding;
+@property (nonatomic, strong) PersonalViewController *vcPersonal;
+@property (nonatomic, strong) HospitalsViewController *vcHospitals;
+@property (nonatomic, strong) ProvidersViewController *vcProviders;
+@property (nonatomic, strong) PortalViewController *vcPortal;
+@property (nonatomic, strong) SettingsViewController *vcSettings;
 
 @end
 
@@ -25,10 +38,51 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     MenuViewController *menuVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([MenuViewController class])];
+    menuVC.delegate = self;
     PersonalViewController *personalVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([PersonalViewController class])];
     
-    JSSlidingViewController *vc = [[JSSlidingViewController alloc] initWithFrontViewController:personalVC backViewController:menuVC];
-    [self presentViewController:vc animated:NO completion:nil];
+    self.vcSliding = [[JSSlidingViewController alloc] initWithFrontViewController:personalVC backViewController:menuVC];
+    [self presentViewController:self.vcSliding animated:NO completion:nil];
+}
+
+- (void)menuSelectedItem:(NSUInteger)index
+{
+    if(index == 0) {
+        if(!self.vcPersonal) {
+            self.vcPersonal = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([PersonalViewController class])];
+        }
+        [self.vcSliding setFrontViewController:self.vcPersonal animated:YES completion:nil];
+    }
+
+    if(index == 1) {
+        if(!self.vcHospitals) {
+            self.vcHospitals = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([HospitalsViewController class])];
+        }
+        [self.vcSliding setFrontViewController:self.vcHospitals animated:YES completion:nil];
+    }
+
+    if(index == 2) {
+        if(!self.vcProviders) {
+            self.vcProviders = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ProvidersViewController class])];
+        }
+        [self.vcSliding setFrontViewController:self.vcProviders animated:YES completion:nil];
+    }
+
+    if(index == 3) {
+        if(!self.vcPortal) {
+            self.vcPortal = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([PortalViewController class])];
+        }
+        [self.vcSliding setFrontViewController:self.vcPortal animated:YES completion:nil];
+    }
+
+    if(index == 4) {
+        if(!self.vcSettings) {
+            self.vcSettings = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([SettingsViewController class])];
+        }
+        [self.vcSliding setFrontViewController:self.vcSettings animated:YES completion:nil];
+    }
+    
+    [self.vcSliding closeSlider:YES completion:nil];
 }
 
 @end

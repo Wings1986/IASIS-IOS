@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		63247F462DC109081C4FF889 /* libPods-IASIS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B386E523C8EB5942917140BF /* libPods-IASIS.a */; };
+		653F94601A37B42A0045739C /* HospitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F945F1A37B42A0045739C /* HospitalsViewController.m */; };
+		653F94631A37B4340045739C /* ProvidersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94621A37B4340045739C /* ProvidersViewController.m */; };
+		653F94661A37B43C0045739C /* PortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94651A37B43C0045739C /* PortalViewController.m */; };
+		653F94691A37B44C0045739C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94681A37B44C0045739C /* SettingsViewController.m */; };
 		65A1DBDE1A17FF2100EF78FA /* IASISTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBDD1A17FF2100EF78FA /* IASISTests.m */; };
 		65A1DBFA1A17FF6200EF78FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBEA1A17FF6200EF78FA /* AppDelegate.m */; };
 		65A1DBFB1A17FF6200EF78FA /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBEE1A17FF6200EF78FA /* InitialViewController.m */; };
@@ -33,6 +37,15 @@
 
 /* Begin PBXFileReference section */
 		323DEAA7EDC2366AAC9C3C75 /* Pods-IASIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IASIS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IASIS/Pods-IASIS.debug.xcconfig"; sourceTree = "<group>"; };
+		653F945E1A37B42A0045739C /* HospitalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalsViewController.h; sourceTree = "<group>"; };
+		653F945F1A37B42A0045739C /* HospitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalsViewController.m; sourceTree = "<group>"; };
+		653F94611A37B4340045739C /* ProvidersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvidersViewController.h; sourceTree = "<group>"; };
+		653F94621A37B4340045739C /* ProvidersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvidersViewController.m; sourceTree = "<group>"; };
+		653F94641A37B43C0045739C /* PortalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortalViewController.h; sourceTree = "<group>"; };
+		653F94651A37B43C0045739C /* PortalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortalViewController.m; sourceTree = "<group>"; };
+		653F94671A37B44C0045739C /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		653F94681A37B44C0045739C /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		653F946A1A37B5290045739C /* MenuViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewControllerDelegate.h; sourceTree = "<group>"; };
 		65A1DBBE1A17FF2100EF78FA /* IASIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IASIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A1DBD71A17FF2100EF78FA /* IASISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IASISTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A1DBDC1A17FF2100EF78FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +105,42 @@
 				A596595F72C3F41E858537BD /* Pods-IASIS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		653F945A1A37B3DA0045739C /* Hospitals */ = {
+			isa = PBXGroup;
+			children = (
+				653F945E1A37B42A0045739C /* HospitalsViewController.h */,
+				653F945F1A37B42A0045739C /* HospitalsViewController.m */,
+			);
+			name = Hospitals;
+			sourceTree = "<group>";
+		};
+		653F945B1A37B3E70045739C /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				653F94611A37B4340045739C /* ProvidersViewController.h */,
+				653F94621A37B4340045739C /* ProvidersViewController.m */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		653F945C1A37B3F40045739C /* Patient Portal */ = {
+			isa = PBXGroup;
+			children = (
+				653F94641A37B43C0045739C /* PortalViewController.h */,
+				653F94651A37B43C0045739C /* PortalViewController.m */,
+			);
+			name = "Patient Portal";
+			sourceTree = "<group>";
+		};
+		653F945D1A37B4040045739C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				653F94671A37B44C0045739C /* SettingsViewController.h */,
+				653F94681A37B44C0045739C /* SettingsViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		65A1DBB51A17FF2100EF78FA = {
@@ -177,8 +226,12 @@
 			children = (
 				65A1DBED1A17FF6200EF78FA /* InitialViewController.h */,
 				65A1DBEE1A17FF6200EF78FA /* InitialViewController.m */,
-				65B13E0C1A2D622600A5E4D3 /* PersonalViewController */,
 				65B13E081A2D61DF00A5E4D3 /* MenuViewController */,
+				65B13E0C1A2D622600A5E4D3 /* PersonalViewController */,
+				653F945A1A37B3DA0045739C /* Hospitals */,
+				653F945B1A37B3E70045739C /* Providers */,
+				653F945C1A37B3F40045739C /* Patient Portal */,
+				653F945D1A37B4040045739C /* Settings */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -238,6 +291,7 @@
 			children = (
 				65B13E091A2D61FE00A5E4D3 /* MenuViewController.h */,
 				65B13E0A1A2D61FE00A5E4D3 /* MenuViewController.m */,
+				653F946A1A37B5290045739C /* MenuViewControllerDelegate.h */,
 			);
 			name = MenuViewController;
 			sourceTree = "<group>";
@@ -397,9 +451,13 @@
 			files = (
 				65B13E0F1A2D623500A5E4D3 /* PersonalViewController.m in Sources */,
 				65A1DBFB1A17FF6200EF78FA /* InitialViewController.m in Sources */,
+				653F94601A37B42A0045739C /* HospitalsViewController.m in Sources */,
 				65A1DBFD1A17FF6200EF78FA /* main.m in Sources */,
+				653F94661A37B43C0045739C /* PortalViewController.m in Sources */,
+				653F94631A37B4340045739C /* ProvidersViewController.m in Sources */,
 				65B13E131A2D655400A5E4D3 /* MenuTableViewCell.m in Sources */,
 				65B13E071A2D617D00A5E4D3 /* JSSlidingViewController.m in Sources */,
+				653F94691A37B44C0045739C /* SettingsViewController.m in Sources */,
 				65A1DBFA1A17FF6200EF78FA /* AppDelegate.m in Sources */,
 				65B13E0B1A2D61FE00A5E4D3 /* MenuViewController.m in Sources */,
 			);

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuViewControllerDelegate.h"
 
 @interface MenuViewController : UIViewController
+
+@property (nonatomic, weak) id <MenuViewControllerDelegate> delegate;
 
 @end
