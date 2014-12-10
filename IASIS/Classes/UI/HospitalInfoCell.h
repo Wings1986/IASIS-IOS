@@ -12,5 +12,7 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *lblTitle;
 @property (nonatomic, weak) IBOutlet UILabel *lblLocation;
+@property (nonatomic, weak) IBOutlet UIButton *btnInfo;
+@property (nonatomic, weak) IBOutlet UIButton *btnCheckIn;
 
 @end

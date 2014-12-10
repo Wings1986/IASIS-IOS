@@ -359,6 +359,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnCheckIn" destination="DhV-7a-Lt0" id="zfj-zK-tpI"/>
+                                            <outlet property="btnInfo" destination="Yq9-sX-OP3" id="PLR-mQ-x0W"/>
                                             <outlet property="lblLocation" destination="6JZ-Wx-W0Z" id="Tt3-r4-gfX"/>
                                             <outlet property="lblTitle" destination="jgq-jv-mXo" id="etP-Cv-0sX"/>
                                         </connections>
@@ -482,6 +484,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnCheckIn" destination="JY4-6t-qEY" id="uFy-Vc-deo"/>
+                                            <outlet property="btnInfo" destination="PSm-y7-LeR" id="CXB-8o-Kb9"/>
                                             <outlet property="lblLocation" destination="obM-ps-k1v" id="7Xx-YN-6NM"/>
                                             <outlet property="lblTitle" destination="dU6-me-xhy" id="qIo-kn-Mmp"/>
                                             <outlet property="lblWait" destination="qXg-kZ-U3a" id="5WM-8H-8Si"/>
