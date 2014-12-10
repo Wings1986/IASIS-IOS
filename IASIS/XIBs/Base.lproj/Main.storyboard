@@ -120,20 +120,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhL-81-nTp">
-                                <rect key="frame" x="270" y="285" width="60" height="30"/>
-                                <state key="normal" title="Personal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fD4-v5-yTL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="u28-JT-Nhz">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CEI-Lv-vD8" id="KgR-wz-fyJ"/>
+                                    <outlet property="delegate" destination="CEI-Lv-vD8" id="caV-kK-6Qo"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="NhL-81-nTp" secondAttribute="centerX" id="hFM-HG-2nz"/>
-                            <constraint firstAttribute="centerY" secondItem="NhL-81-nTp" secondAttribute="centerY" id="wfp-q7-ozM"/>
+                            <constraint firstItem="2Hi-0D-YVc" firstAttribute="top" secondItem="fD4-v5-yTL" secondAttribute="bottom" id="DWR-N0-D55"/>
+                            <constraint firstItem="fD4-v5-yTL" firstAttribute="leading" secondItem="tMl-OC-xKu" secondAttribute="leading" id="N9O-3A-EuI"/>
+                            <constraint firstItem="fD4-v5-yTL" firstAttribute="top" secondItem="tMl-OC-xKu" secondAttribute="top" id="RiE-ub-hzb"/>
+                            <constraint firstAttribute="trailing" secondItem="fD4-v5-yTL" secondAttribute="trailing" id="hgC-uC-yfb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pea-xd-VVX"/>
+                    <connections>
+                        <outlet property="collectionView" destination="fD4-v5-yTL" id="CMT-Il-Bba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcw-YQ-sjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,6 +353,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MenuStar" width="26" height="24"/>
+        <image name="MenuStar" width="27" height="27"/>
     </resources>
 </document>
