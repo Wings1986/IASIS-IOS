@@ -1,5 +1,5 @@
 //
-//  HospitalsViewController.h
+//  FindHospitalCell.h
 //  IASIS
 //
 //  Created by Tyler Hall on 12/10/14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HospitalsViewController : UIViewController
+@interface StateNameCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UILabel *lblSubtitle;
+@property (nonatomic, weak) IBOutlet UILabel *lblTitle;
 
 @end

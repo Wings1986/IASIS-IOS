@@ -1,5 +1,5 @@
 //
-//  HospitalsViewController.h
+//  HospitalInfoCellER.h
 //  IASIS
 //
 //  Created by Tyler Hall on 12/10/14.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HospitalInfoCell.h"
 
-@interface HospitalsViewController : UIViewController
+@interface HospitalInfoCellER : HospitalInfoCell
 
-@property (nonatomic, weak) IBOutlet UILabel *lblSubtitle;
+@property (nonatomic, weak) IBOutlet UILabel *lblWait;
 
 @end

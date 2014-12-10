@@ -2,36 +2,60 @@
 //  HospitalsViewController.m
 //  IASIS
 //
-//  Created by Tyler Hall on 12/9/14.
+//  Created by Tyler Hall on 12/10/14.
 //  Copyright (c) 2014 IASIS Healthcare Corporation. All rights reserved.
 //
 
 #import "HospitalsViewController.h"
+#import "HospitalInfoCell.h"
+#import "HospitalInfoCellER.h"
 
-@interface HospitalsViewController ()
+@interface HospitalsViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *hospitals;
 
 @end
 
 @implementation HospitalsViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.navigationItem.title = @"Find a Hospital";
+    
+    self.hospitals = @[ @"Some Hospital", @"Some Hospital", @"Some Hospital", @"Some Hospital", @"Some Hospital", @"Some Hospital", ];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.hospitals.count;
 }
 
-/*
-#pragma mark - Navigation
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row % 2 == 0) {
+        HospitalInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HospitalInfoCell class]) forIndexPath:indexPath];
+        cell.lblTitle.text = @"Mountain Vista Medical Center";
+        cell.lblLocation.text = @"Mesa, AZ";
+        NSLog(@"%@", cell);
+        return cell;
+    } else {
+        HospitalInfoCellER *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HospitalInfoCellER class]) forIndexPath:indexPath];
+        cell.lblTitle.text = @"St. Luke's Behavioral Health Center";
+        cell.lblLocation.text = @"Phoenix, AZ";
+        cell.lblWait.text = @"Current ER Wait Time: 20 minutes";
+        NSLog(@"%@", cell);
+        return cell;
+    }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return nil;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end

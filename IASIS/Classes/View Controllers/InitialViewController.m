@@ -12,7 +12,7 @@
 #import "MenuViewControllerDelegate.h"
 
 #import "PersonalViewController.h"
-#import "HospitalsViewController.h"
+#import "StatesViewController.h"
 #import "ProvidersViewController.h"
 #import "PortalViewController.h"
 #import "SettingsViewController.h"
@@ -21,7 +21,7 @@
 
 @property (nonatomic, strong) JSSlidingViewController *vcSliding;
 @property (nonatomic, strong) PersonalViewController *vcPersonal;
-@property (nonatomic, strong) HospitalsViewController *vcHospitals;
+@property (nonatomic, strong) StatesViewController *vcStates;
 @property (nonatomic, strong) ProvidersViewController *vcProviders;
 @property (nonatomic, strong) PortalViewController *vcPortal;
 @property (nonatomic, strong) SettingsViewController *vcSettings;
@@ -59,10 +59,10 @@
     }
 
     if(index == 1) {
-        if(!self.vcHospitals) {
-            self.vcHospitals = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([HospitalsViewController class])];
+        if(!self.vcStates) {
+            self.vcStates = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([StatesViewController class])];
         }
-        [self.vcSliding setFrontViewController:self.vcHospitals animated:YES completion:nil];
+        [self.vcSliding setFrontViewController:self.vcStates animated:YES completion:nil];
     }
 
     if(index == 2) {

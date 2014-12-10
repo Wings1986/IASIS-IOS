@@ -17,12 +17,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIBarButtonItem *hamburger = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"hamburger"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                                                  style:UIBarButtonItemStylePlain
-                                                                 target:self
-                                                                 action:@selector(hamburger:)];
-    self.navigationItem.leftBarButtonItem = hamburger;
+
+    if(!self.showDefaultLeftBarButton) {
+        UIBarButtonItem *hamburger = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"hamburger"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                                      style:UIBarButtonItemStylePlain
+                                                                     target:self
+                                                                     action:@selector(hamburger:)];
+        self.navigationItem.leftBarButtonItem = hamburger;
+    }
 
     UIBarButtonItem *settings = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"SettingsButton"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                                                   style:UIBarButtonItemStylePlain

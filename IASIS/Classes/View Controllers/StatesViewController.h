@@ -1,5 +1,5 @@
 //
-//  IASISViewController.h
+//  HospitalsViewController.h
 //  IASIS
 //
 //  Created by Tyler Hall on 12/9/14.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IASISViewController.h"
 
-@interface IASISViewController : UIViewController
-
-@property (nonatomic, assign) BOOL showDefaultLeftBarButton;
+@interface StatesViewController : IASISViewController
 
 @end
