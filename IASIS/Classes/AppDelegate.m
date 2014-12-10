@@ -23,8 +23,9 @@
 
 - (void)styleApp
 {
-    [[UINavigationBar appearance] setBarTintColor:[UIColor IASISBlue]];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavigationBarBG"] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 
 @end
