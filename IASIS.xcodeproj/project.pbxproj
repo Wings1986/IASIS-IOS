@@ -12,6 +12,8 @@
 		653F94631A37B4340045739C /* ProvidersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94621A37B4340045739C /* ProvidersViewController.m */; };
 		653F94661A37B43C0045739C /* PortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94651A37B43C0045739C /* PortalViewController.m */; };
 		653F94691A37B44C0045739C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94681A37B44C0045739C /* SettingsViewController.m */; };
+		653F946D1A37BA2F0045739C /* IASISViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F946C1A37BA2F0045739C /* IASISViewController.m */; };
+		653F94701A37BA760045739C /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F946F1A37BA760045739C /* UIColor+Colors.m */; };
 		65A1DBDE1A17FF2100EF78FA /* IASISTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBDD1A17FF2100EF78FA /* IASISTests.m */; };
 		65A1DBFA1A17FF6200EF78FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBEA1A17FF6200EF78FA /* AppDelegate.m */; };
 		65A1DBFB1A17FF6200EF78FA /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBEE1A17FF6200EF78FA /* InitialViewController.m */; };
@@ -46,6 +48,10 @@
 		653F94671A37B44C0045739C /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		653F94681A37B44C0045739C /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		653F946A1A37B5290045739C /* MenuViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewControllerDelegate.h; sourceTree = "<group>"; };
+		653F946B1A37BA2F0045739C /* IASISViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASISViewController.h; sourceTree = "<group>"; };
+		653F946C1A37BA2F0045739C /* IASISViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASISViewController.m; sourceTree = "<group>"; };
+		653F946E1A37BA760045739C /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colors.h"; sourceTree = "<group>"; };
+		653F946F1A37BA760045739C /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colors.m"; sourceTree = "<group>"; };
 		65A1DBBE1A17FF2100EF78FA /* IASIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IASIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A1DBD71A17FF2100EF78FA /* IASISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IASISTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A1DBDC1A17FF2100EF78FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -198,6 +204,8 @@
 		65A1DBE71A17FF6200EF78FA /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				653F946E1A37BA760045739C /* UIColor+Colors.h */,
+				653F946F1A37BA760045739C /* UIColor+Colors.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -226,6 +234,8 @@
 			children = (
 				65A1DBED1A17FF6200EF78FA /* InitialViewController.h */,
 				65A1DBEE1A17FF6200EF78FA /* InitialViewController.m */,
+				653F946B1A37BA2F0045739C /* IASISViewController.h */,
+				653F946C1A37BA2F0045739C /* IASISViewController.m */,
 				65B13E081A2D61DF00A5E4D3 /* MenuViewController */,
 				65B13E0C1A2D622600A5E4D3 /* PersonalViewController */,
 				653F945A1A37B3DA0045739C /* Hospitals */,
@@ -451,8 +461,10 @@
 			files = (
 				65B13E0F1A2D623500A5E4D3 /* PersonalViewController.m in Sources */,
 				65A1DBFB1A17FF6200EF78FA /* InitialViewController.m in Sources */,
+				653F94701A37BA760045739C /* UIColor+Colors.m in Sources */,
 				653F94601A37B42A0045739C /* HospitalsViewController.m in Sources */,
 				65A1DBFD1A17FF6200EF78FA /* main.m in Sources */,
+				653F946D1A37BA2F0045739C /* IASISViewController.m in Sources */,
 				653F94661A37B43C0045739C /* PortalViewController.m in Sources */,
 				653F94631A37B4340045739C /* ProvidersViewController.m in Sources */,
 				65B13E131A2D655400A5E4D3 /* MenuTableViewCell.m in Sources */,

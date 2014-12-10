@@ -39,9 +39,10 @@
 {
     MenuViewController *menuVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([MenuViewController class])];
     menuVC.delegate = self;
-    PersonalViewController *personalVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([PersonalViewController class])];
+
+    self.vcPersonal = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([PersonalViewController class])];
     
-    self.vcSliding = [[JSSlidingViewController alloc] initWithFrontViewController:personalVC backViewController:menuVC];
+    self.vcSliding = [[JSSlidingViewController alloc] initWithFrontViewController:self.vcPersonal backViewController:menuVC];
     [self presentViewController:self.vcSliding animated:NO completion:nil];
 }
 

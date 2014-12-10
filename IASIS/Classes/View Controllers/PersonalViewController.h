@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IASISViewController.h"
 
-@interface PersonalViewController : UIViewController
+@interface PersonalViewController : IASISViewController
 
 @end
