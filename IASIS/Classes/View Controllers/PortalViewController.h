@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IASISViewController.h"
 
-@interface PortalViewController : UIViewController
+@interface PortalViewController : IASISViewController
 
 @end

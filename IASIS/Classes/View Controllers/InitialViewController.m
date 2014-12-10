@@ -37,12 +37,15 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hamburger:) name:@"HAMBURGER" object:nil];
+    
     MenuViewController *menuVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([MenuViewController class])];
     menuVC.delegate = self;
 
     self.vcPersonal = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([PersonalViewController class])];
     
     self.vcSliding = [[JSSlidingViewController alloc] initWithFrontViewController:self.vcPersonal backViewController:menuVC];
+    self.vcSliding.useBouncyAnimations = NO;
     [self presentViewController:self.vcSliding animated:NO completion:nil];
 }
 
@@ -84,6 +87,11 @@
     }
     
     [self.vcSliding closeSlider:YES completion:nil];
+}
+
+- (void)hamburger:(NSNotification *)notification
+{
+    [self.vcSliding openSlider:YES completion:nil];
 }
 
 @end

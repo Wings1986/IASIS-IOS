@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IASISViewController.h"
 
-@interface HospitalsViewController : UIViewController
+@interface HospitalsViewController : IASISViewController
 
 @end

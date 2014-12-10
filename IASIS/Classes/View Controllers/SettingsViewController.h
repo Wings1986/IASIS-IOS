@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IASISViewController.h"
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : IASISViewController
 
 @end
