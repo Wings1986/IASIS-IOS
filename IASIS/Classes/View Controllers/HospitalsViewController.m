@@ -9,6 +9,7 @@
 #import "HospitalsViewController.h"
 #import "HospitalInfoCell.h"
 #import "HospitalInfoCellER.h"
+#import "HospitalInfoViewController.h"
 
 @interface HospitalsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -39,12 +40,14 @@
         HospitalInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HospitalInfoCell class]) forIndexPath:indexPath];
         cell.lblTitle.text = @"Mountain Vista Medical Center";
         cell.lblLocation.text = @"Mesa, AZ";
+        [cell.btnInfo addTarget:self action:@selector(info:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     } else {
         HospitalInfoCellER *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HospitalInfoCellER class]) forIndexPath:indexPath];
         cell.lblTitle.text = @"St. Luke's Behavioral Health Center";
         cell.lblLocation.text = @"Phoenix, AZ";
         cell.lblWait.text = @"Current ER Wait Time: 20 minutes";
+        [cell.btnInfo addTarget:self action:@selector(info:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
 
@@ -56,9 +59,10 @@
     return NO;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (IBAction)info:(id)sender
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HospitalInfoViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([HospitalInfoViewController class])];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

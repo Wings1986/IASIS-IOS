@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FindHospitalInfoCell" id="wn8-dl-bS1" customClass="FindHospitalInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="459" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="459" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyHospitalHeaderBG" translatesAutoresizingMaskIntoConstraints="NO" id="qG4-ug-X9y">
+                        <rect key="frame" x="0.0" y="0.0" width="459" height="127"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7g2-3l-W3S">
+                        <rect key="frame" x="0.0" y="0.0" width="459" height="127"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mountain Vista Medical Center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQ0-Ga-sUP">
+                                <rect key="frame" x="108" y="14" width="242" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dqv-Ri-tab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mesa, AZ 8209" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leq-F3-wLp">
+                                <rect key="frame" x="171" y="64" width="116" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4h4-db-PSZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(480) 358-6100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDc-bY-Lxh">
+                                <rect key="frame" x="171" y="90" width="116" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CkC-Dq-aBj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1301 S. Crimson Road" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjq-WM-Nhn">
+                                <rect key="frame" x="142" y="41" width="174" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cpv-HR-rlH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="EQ0-Ga-sUP" secondAttribute="centerY" constant="39.5" id="6Sh-Vz-XNU"/>
+                            <constraint firstAttribute="centerX" secondItem="EQ0-Ga-sUP" secondAttribute="centerX" constant="0.5" id="DRG-zG-aLP"/>
+                            <constraint firstAttribute="centerY" secondItem="sDc-bY-Lxh" secondAttribute="centerY" constant="-36.5" id="DWT-Xj-nqr"/>
+                            <constraint firstAttribute="centerX" secondItem="leq-F3-wLp" secondAttribute="centerX" constant="0.5" id="OBh-LZ-7JF"/>
+                            <constraint firstAttribute="centerX" secondItem="hjq-WM-Nhn" secondAttribute="centerX" constant="0.5" id="Plt-51-Zrg"/>
+                            <constraint firstAttribute="centerX" secondItem="sDc-bY-Lxh" secondAttribute="centerX" constant="0.5" id="Rkc-zT-qpo"/>
+                            <constraint firstAttribute="centerY" secondItem="leq-F3-wLp" secondAttribute="centerY" constant="-10.5" id="bQr-gz-MAT"/>
+                            <constraint firstAttribute="centerY" secondItem="hjq-WM-Nhn" secondAttribute="centerY" constant="12.5" id="f2A-uF-hFO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="0.1361473799" green="0.340436399" blue="0.47059553859999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="7g2-3l-W3S" firstAttribute="leading" secondItem="wn8-dl-bS1" secondAttribute="leading" id="0ra-86-TgB"/>
+                <constraint firstAttribute="bottom" secondItem="qG4-ug-X9y" secondAttribute="bottom" id="BD2-RN-qRI"/>
+                <constraint firstItem="qG4-ug-X9y" firstAttribute="leading" secondItem="wn8-dl-bS1" secondAttribute="leading" id="GyI-pD-vHA"/>
+                <constraint firstItem="7g2-3l-W3S" firstAttribute="top" secondItem="wn8-dl-bS1" secondAttribute="top" id="ONz-Af-0Wg"/>
+                <constraint firstItem="qG4-ug-X9y" firstAttribute="top" secondItem="wn8-dl-bS1" secondAttribute="top" id="ZhM-BQ-qCs"/>
+                <constraint firstAttribute="trailing" secondItem="7g2-3l-W3S" secondAttribute="trailing" id="Zpg-jo-qll"/>
+                <constraint firstAttribute="bottom" secondItem="7g2-3l-W3S" secondAttribute="bottom" id="ong-IU-XkB"/>
+                <constraint firstAttribute="trailing" secondItem="qG4-ug-X9y" secondAttribute="trailing" id="qrh-eC-twJ"/>
+            </constraints>
+            <size key="customSize" width="459" height="127"/>
+            <point key="canvasLocation" x="437.5" y="350.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="MyHospitalHeaderBG" width="320" height="106"/>
+    </resources>
+</document>
