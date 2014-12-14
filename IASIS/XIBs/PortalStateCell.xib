@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PortalStateCell" id="k5F-Wv-YsB" customClass="PortalStateCell">
+            <rect key="frame" x="0.0" y="0.0" width="595" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="595" height="51"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5N-Fd-E1P">
+                        <rect key="frame" x="13" y="15" width="547" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="sh0-ro-Znz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.14132328329999999" green="0.36368897560000002" blue="0.54210656879999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChevronBlue" translatesAutoresizingMaskIntoConstraints="NO" id="1MR-tf-cW7">
+                        <rect key="frame" x="568" y="17" width="11" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="11" id="Sp2-yX-5xM"/>
+                            <constraint firstAttribute="height" constant="17" id="mvl-gX-DOK"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vra-5B-3f4">
+                        <rect key="frame" x="0.0" y="50" width="595" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.25" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="vva-Ax-T58"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vra-5B-3f4" secondAttribute="trailing" id="061-Rx-aK8"/>
+                <constraint firstItem="J5N-Fd-E1P" firstAttribute="leading" secondItem="k5F-Wv-YsB" secondAttribute="leading" constant="13" id="0o8-WD-aOG"/>
+                <constraint firstItem="1MR-tf-cW7" firstAttribute="leading" secondItem="J5N-Fd-E1P" secondAttribute="trailing" constant="8" id="ONs-hI-GOq"/>
+                <constraint firstAttribute="centerY" secondItem="1MR-tf-cW7" secondAttribute="centerY" id="Qnd-f6-wEQ"/>
+                <constraint firstItem="vra-5B-3f4" firstAttribute="leading" secondItem="k5F-Wv-YsB" secondAttribute="leading" id="Vgb-Hl-MTl"/>
+                <constraint firstAttribute="centerY" secondItem="J5N-Fd-E1P" secondAttribute="centerY" id="de8-0U-jbb"/>
+                <constraint firstAttribute="trailing" secondItem="1MR-tf-cW7" secondAttribute="trailing" constant="16" id="rva-iq-j6j"/>
+                <constraint firstAttribute="bottom" secondItem="vra-5B-3f4" secondAttribute="bottom" id="sOr-Yz-N6y"/>
+            </constraints>
+            <size key="customSize" width="595" height="51"/>
+            <connections>
+                <outlet property="lblTitle" destination="J5N-Fd-E1P" id="Vwj-LQ-FFC"/>
+            </connections>
+            <point key="canvasLocation" x="525.5" y="372.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ChevronBlue" width="11" height="17"/>
+    </resources>
+</document>

@@ -36,6 +36,10 @@
 		C61ED4241A380B150034717B /* OutlinedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C61ED4231A380B150034717B /* OutlinedButton.m */; };
 		C66517D31A3D53CD0087BCA8 /* ProviderResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66517D21A3D53CD0087BCA8 /* ProviderResultsViewController.m */; };
 		C66517D61A3D55750087BCA8 /* ProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66517D51A3D55750087BCA8 /* ProviderViewController.m */; };
+		C66517DA1A3D5B650087BCA8 /* PortalHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66517D91A3D5B650087BCA8 /* PortalHeaderCell.xib */; };
+		C66517DD1A3D5BA20087BCA8 /* PortalHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C66517DC1A3D5BA20087BCA8 /* PortalHeaderCell.m */; };
+		C66517DF1A3D5CDD0087BCA8 /* PortalStateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66517DE1A3D5CDD0087BCA8 /* PortalStateCell.xib */; };
+		C66517E21A3D5D5A0087BCA8 /* PortalStateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C66517E11A3D5D5A0087BCA8 /* PortalStateCell.m */; };
 		C6EEB2361A38F62600C59CB2 /* HospitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EEB2351A38F62600C59CB2 /* HospitalsViewController.m */; };
 		C6EEB2391A38F6EC00C59CB2 /* HospitalInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EEB2381A38F6EC00C59CB2 /* HospitalInfoCell.m */; };
 		C6EEB23C1A38F74200C59CB2 /* HospitalInfoCellER.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EEB23B1A38F74200C59CB2 /* HospitalInfoCellER.m */; };
@@ -112,6 +116,12 @@
 		C66517D21A3D53CD0087BCA8 /* ProviderResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProviderResultsViewController.m; sourceTree = "<group>"; };
 		C66517D41A3D55750087BCA8 /* ProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProviderViewController.h; sourceTree = "<group>"; };
 		C66517D51A3D55750087BCA8 /* ProviderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProviderViewController.m; sourceTree = "<group>"; };
+		C66517D91A3D5B650087BCA8 /* PortalHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortalHeaderCell.xib; sourceTree = "<group>"; };
+		C66517DB1A3D5BA20087BCA8 /* PortalHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortalHeaderCell.h; sourceTree = "<group>"; };
+		C66517DC1A3D5BA20087BCA8 /* PortalHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortalHeaderCell.m; sourceTree = "<group>"; };
+		C66517DE1A3D5CDD0087BCA8 /* PortalStateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortalStateCell.xib; sourceTree = "<group>"; };
+		C66517E01A3D5D5A0087BCA8 /* PortalStateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortalStateCell.h; sourceTree = "<group>"; };
+		C66517E11A3D5D5A0087BCA8 /* PortalStateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortalStateCell.m; sourceTree = "<group>"; };
 		C6EEB2341A38F62600C59CB2 /* HospitalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalsViewController.h; sourceTree = "<group>"; };
 		C6EEB2351A38F62600C59CB2 /* HospitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalsViewController.m; sourceTree = "<group>"; };
 		C6EEB2371A38F6EC00C59CB2 /* HospitalInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalInfoCell.h; sourceTree = "<group>"; };
@@ -397,6 +407,10 @@
 				C6EEB23E1A393AA200C59CB2 /* FindHospitalInfoCell.m */,
 				C6EEB2471A393D3B00C59CB2 /* WebCell.h */,
 				C6EEB2481A393D3B00C59CB2 /* WebCell.m */,
+				C66517DB1A3D5BA20087BCA8 /* PortalHeaderCell.h */,
+				C66517DC1A3D5BA20087BCA8 /* PortalHeaderCell.m */,
+				C66517E01A3D5D5A0087BCA8 /* PortalStateCell.h */,
+				C66517E11A3D5D5A0087BCA8 /* PortalStateCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -410,6 +424,8 @@
 				C618922D1A38118700A0CD08 /* MyProviderCell.xib */,
 				C6EEB2401A393B1300C59CB2 /* FindHospitalInfoCell.xib */,
 				C6EEB2451A393D0700C59CB2 /* WebCell.xib */,
+				C66517D91A3D5B650087BCA8 /* PortalHeaderCell.xib */,
+				C66517DE1A3D5CDD0087BCA8 /* PortalStateCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -507,6 +523,7 @@
 			files = (
 				65A1DBFF1A17FF6200EF78FA /* LaunchScreen.xib in Resources */,
 				C6EEB2461A393D0700C59CB2 /* WebCell.xib in Resources */,
+				C66517DA1A3D5B650087BCA8 /* PortalHeaderCell.xib in Resources */,
 				C61892291A38108B00A0CD08 /* MyMyProvidersHeader.xib in Resources */,
 				C6EEB2411A393B1300C59CB2 /* FindHospitalInfoCell.xib in Resources */,
 				C61ED4191A3807920034717B /* MyMyHospitalCell.xib in Resources */,
@@ -514,6 +531,7 @@
 				65A1DBFC1A17FF6200EF78FA /* Images.xcassets in Resources */,
 				65A1DC001A17FF6200EF78FA /* Main.storyboard in Resources */,
 				C61ED4211A380AA40034717B /* MyERWaitCell.xib in Resources */,
+				C66517DF1A3D5CDD0087BCA8 /* PortalStateCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +585,7 @@
 				65B13E0F1A2D623500A5E4D3 /* PersonalViewController.m in Sources */,
 				65A1DBFB1A17FF6200EF78FA /* InitialViewController.m in Sources */,
 				653F94701A37BA760045739C /* UIColor+Colors.m in Sources */,
+				C66517E21A3D5D5A0087BCA8 /* PortalStateCell.m in Sources */,
 				653F94601A37B42A0045739C /* StatesViewController.m in Sources */,
 				65A1DBFD1A17FF6200EF78FA /* main.m in Sources */,
 				C6EEB2441A393C2400C59CB2 /* HospitalInfoViewController.m in Sources */,
@@ -581,6 +600,7 @@
 				653F94631A37B4340045739C /* ProvidersViewController.m in Sources */,
 				65B13E131A2D655400A5E4D3 /* MenuTableViewCell.m in Sources */,
 				C61ED4241A380B150034717B /* OutlinedButton.m in Sources */,
+				C66517DD1A3D5BA20087BCA8 /* PortalHeaderCell.m in Sources */,
 				C618922C1A38117B00A0CD08 /* MyProviderCell.m in Sources */,
 				C66517D31A3D53CD0087BCA8 /* ProviderResultsViewController.m in Sources */,
 				C6EEB2491A393D3B00C59CB2 /* WebCell.m in Sources */,

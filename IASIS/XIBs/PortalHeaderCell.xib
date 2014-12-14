@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PortalHeaderCell" id="XWv-Fg-fHW" customClass="PortalHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="447" height="121"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyHospitalHeaderBG" translatesAutoresizingMaskIntoConstraints="NO" id="knN-e1-CI2">
+                        <rect key="frame" x="0.0" y="0.0" width="447" height="121"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vag-Za-7mn">
+                        <rect key="frame" x="0.0" y="0.0" width="447" height="121"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Staying Healthy is Now Easer Than Ever" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16V-ND-Tm2">
+                        <rect key="frame" x="70" y="73" width="308" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUc-KI-DbJ">
+                        <rect key="frame" x="145" y="47" width="156" height="27"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patient Portal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxl-As-RNi">
+                                <rect key="frame" x="20" y="1" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="156" id="YnJ-Mi-Hzq"/>
+                            <constraint firstAttribute="height" constant="27" id="jgq-ww-6tk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="0.1361473799" green="0.340436399" blue="0.47059553859999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="16V-ND-Tm2" firstAttribute="top" secondItem="TUc-KI-DbJ" secondAttribute="bottom" constant="-1" id="0kK-yz-bwt"/>
+                <constraint firstItem="vag-Za-7mn" firstAttribute="top" secondItem="XWv-Fg-fHW" secondAttribute="top" id="6jp-E5-C4v"/>
+                <constraint firstAttribute="trailing" secondItem="vag-Za-7mn" secondAttribute="trailing" id="9u8-Ob-m2i"/>
+                <constraint firstAttribute="centerX" secondItem="TUc-KI-DbJ" secondAttribute="centerX" constant="0.5" id="EKO-Mj-UY8"/>
+                <constraint firstAttribute="centerX" secondItem="16V-ND-Tm2" secondAttribute="centerX" id="K1S-Un-sT6"/>
+                <constraint firstItem="knN-e1-CI2" firstAttribute="top" secondItem="XWv-Fg-fHW" secondAttribute="top" id="Xjt-6O-MYx"/>
+                <constraint firstAttribute="centerY" secondItem="TUc-KI-DbJ" secondAttribute="centerY" constant="0.5" id="Zi3-4w-yJA"/>
+                <constraint firstAttribute="bottom" secondItem="knN-e1-CI2" secondAttribute="bottom" id="a22-vj-EPd"/>
+                <constraint firstItem="knN-e1-CI2" firstAttribute="leading" secondItem="XWv-Fg-fHW" secondAttribute="leading" id="cN3-EK-AVA"/>
+                <constraint firstAttribute="trailing" secondItem="knN-e1-CI2" secondAttribute="trailing" id="h48-nM-WWy"/>
+                <constraint firstItem="vag-Za-7mn" firstAttribute="leading" secondItem="XWv-Fg-fHW" secondAttribute="leading" id="l4g-xc-ogP"/>
+                <constraint firstAttribute="bottom" secondItem="vag-Za-7mn" secondAttribute="bottom" id="sY6-L8-Xgx"/>
+            </constraints>
+            <size key="customSize" width="447" height="121"/>
+            <point key="canvasLocation" x="431.5" y="347.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="MyHospitalHeaderBG" width="320" height="106"/>
+    </resources>
+</document>
