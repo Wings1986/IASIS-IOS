@@ -513,7 +513,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwk-uR-Zc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="1908"/>
+            <point key="canvasLocation" x="2001" y="1877"/>
+        </scene>
+        <!--Provider Results View Controller-->
+        <scene sceneID="yxR-si-CqC">
+            <objects>
+                <viewController storyboardIdentifier="ProviderResultsViewController" id="Ac0-ud-2HN" customClass="ProviderResultsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hPD-Ze-3sE"/>
+                        <viewControllerLayoutGuide type="bottom" id="DhH-v7-zqK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lzb-lh-ASa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8pl-cA-cjz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="cSd-Ih-Ljr">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ac0-ud-2HN" id="Jgg-Xi-aSC"/>
+                                    <outlet property="delegate" destination="Ac0-ud-2HN" id="wef-wq-fuT"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8pl-cA-cjz" firstAttribute="top" secondItem="Lzb-lh-ASa" secondAttribute="top" id="KUs-1j-ChM"/>
+                            <constraint firstItem="8pl-cA-cjz" firstAttribute="leading" secondItem="Lzb-lh-ASa" secondAttribute="leading" id="PmY-hV-KGJ"/>
+                            <constraint firstAttribute="trailing" secondItem="8pl-cA-cjz" secondAttribute="trailing" id="dMV-gB-Yyx"/>
+                            <constraint firstItem="DhH-v7-zqK" firstAttribute="top" secondItem="8pl-cA-cjz" secondAttribute="bottom" id="eCr-su-Hvo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="8pl-cA-cjz" id="fmH-Md-63k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XfV-1a-OYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2001" y="2549"/>
+        </scene>
+        <!--Provider View Controller-->
+        <scene sceneID="D1b-IR-ISd">
+            <objects>
+                <viewController storyboardIdentifier="ProviderViewController" id="6bW-SC-ozf" customClass="ProviderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JyO-4w-OVC"/>
+                        <viewControllerLayoutGuide type="bottom" id="94W-Kh-10A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sx4-Qm-yBO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ugK-ct-aHA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZED-vb-WvQ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6bW-SC-ozf" id="Ase-Wt-SH7"/>
+                                    <outlet property="delegate" destination="6bW-SC-ozf" id="dQQ-bq-cpj"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="94W-Kh-10A" firstAttribute="top" secondItem="ugK-ct-aHA" secondAttribute="bottom" id="Q2C-9p-t3v"/>
+                            <constraint firstAttribute="trailing" secondItem="ugK-ct-aHA" secondAttribute="trailing" id="grZ-zI-Vsv"/>
+                            <constraint firstItem="ugK-ct-aHA" firstAttribute="top" secondItem="Sx4-Qm-yBO" secondAttribute="top" id="hBx-ig-drK"/>
+                            <constraint firstItem="ugK-ct-aHA" firstAttribute="leading" secondItem="Sx4-Qm-yBO" secondAttribute="leading" id="i1A-eW-v79"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ugK-ct-aHA" id="qN4-ys-5wg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxf-iT-xJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634" y="2549"/>
         </scene>
         <!--Hospital Info View Controller-->
         <scene sceneID="EfL-Gb-SPW">
@@ -557,7 +645,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELd-bN-4xR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2634" y="1908"/>
+            <point key="canvasLocation" x="2634" y="1877"/>
         </scene>
         <!--Providers View Controller-->
         <scene sceneID="I2P-Fn-RVu">
@@ -577,10 +665,147 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use the filters below to find a provider." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDX-B2-ZoZ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="56"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.56078431370000004" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="O1g-9I-LHc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQk-A0-nhl" customClass="OutlinedButton">
+                                <rect key="frame" x="16" y="135" width="568" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="JlC-Vp-m0h"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="KIb-up-ZoD"/>
+                                    <constraint firstAttribute="width" constant="106" id="ZlF-7N-sB2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="   State">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.20784313730000001" green="0.56078431370000004" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KIb-up-ZoD"/>
+                                        <exclude reference="ZlF-7N-sB2"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywa-al-9Ib" customClass="OutlinedButton">
+                                <rect key="frame" x="16" y="185" width="568" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="INZ-il-Og1"/>
+                                    <constraint firstAttribute="height" constant="33" id="SaV-oj-wLb"/>
+                                    <constraint firstAttribute="width" constant="106" id="qYQ-CQ-pX4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="   City">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.20784313730000001" green="0.56078431370000004" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="INZ-il-Og1"/>
+                                        <exclude reference="qYQ-CQ-pX4"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jq-pH-rvX" customClass="OutlinedButton">
+                                <rect key="frame" x="16" y="237" width="568" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="5Ul-zp-WrF"/>
+                                    <constraint firstAttribute="width" constant="106" id="J5H-xx-1Cw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="RbC-sQ-40E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="   Specialty">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.20784313730000001" green="0.56078431370000004" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="J5H-xx-1Cw"/>
+                                        <exclude reference="RbC-sQ-40E"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="   Provider's Last Name..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUz-ek-WJi">
+                                <rect key="frame" x="16" y="285" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FxK-II-3P3"/>
+                                </constraints>
+                                <color key="textColor" red="0.20784313730000001" green="0.56078431370000004" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88o-6m-QXf" customClass="OutlinedButton">
+                                <rect key="frame" x="16" y="330" width="568" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="2bK-6u-v1s"/>
+                                    <constraint firstAttribute="width" constant="106" id="8Nm-Sc-aLr"/>
+                                    <constraint firstAttribute="height" constant="43" id="u65-rJ-AT0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Search" backgroundImage="NavigationBarBG">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2bK-6u-v1s"/>
+                                        <exclude reference="8Nm-Sc-aLr"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="search:" destination="VnH-zy-jJY" eventType="touchUpInside" id="IsX-Mo-pTc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oUz-ek-WJi" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="0YB-Bd-CtW"/>
+                            <constraint firstItem="ywa-al-9Ib" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="0sd-Z9-RzX"/>
+                            <constraint firstAttribute="trailing" secondItem="MDX-B2-ZoZ" secondAttribute="trailing" id="2OB-c2-CBD"/>
+                            <constraint firstItem="MDX-B2-ZoZ" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leading" id="3cY-bU-GMj"/>
+                            <constraint firstItem="9Jq-pH-rvX" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="5yB-8p-IqZ"/>
+                            <constraint firstItem="ywa-al-9Ib" firstAttribute="top" secondItem="uQk-A0-nhl" secondAttribute="bottom" constant="17" id="9Fv-Zc-gsk"/>
+                            <constraint firstItem="9Jq-pH-rvX" firstAttribute="top" secondItem="ywa-al-9Ib" secondAttribute="bottom" constant="19" id="CY5-HN-JsC"/>
+                            <constraint firstItem="uQk-A0-nhl" firstAttribute="top" secondItem="MDX-B2-ZoZ" secondAttribute="bottom" constant="15" id="F0p-c0-pL4"/>
+                            <constraint firstItem="88o-6m-QXf" firstAttribute="top" secondItem="oUz-ek-WJi" secondAttribute="bottom" constant="15" id="Y2B-5Q-OaW"/>
+                            <constraint firstItem="uQk-A0-nhl" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="Y7Y-k8-osg"/>
+                            <constraint firstItem="uQk-A0-nhl" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="daC-GY-A2q"/>
+                            <constraint firstItem="oUz-ek-WJi" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="iAG-Pt-Ogg"/>
+                            <constraint firstItem="88o-6m-QXf" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="j1I-Gf-00p"/>
+                            <constraint firstItem="MDX-B2-ZoZ" firstAttribute="top" secondItem="Fdh-26-aIV" secondAttribute="bottom" id="nmu-Le-8DT"/>
+                            <constraint firstItem="88o-6m-QXf" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="qU8-Fp-F70"/>
+                            <constraint firstItem="ywa-al-9Ib" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="sBC-6a-mpE"/>
+                            <constraint firstItem="oUz-ek-WJi" firstAttribute="top" secondItem="9Jq-pH-rvX" secondAttribute="bottom" constant="15" id="sWT-T1-foN"/>
+                            <constraint firstItem="9Jq-pH-rvX" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="x5Y-88-2P7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KmP-tT-M5e"/>
+                    <connections>
+                        <outlet property="txtLastName" destination="oUz-ek-WJi" id="IGR-6d-LGm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGV-4u-Hbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -734,5 +959,6 @@
     <resources>
         <image name="ChevronBlue" width="11" height="17"/>
         <image name="MenuStar" width="27" height="27"/>
+        <image name="NavigationBarBG" width="29" height="26"/>
     </resources>
 </document>

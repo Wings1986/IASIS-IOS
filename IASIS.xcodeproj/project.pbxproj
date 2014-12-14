@@ -34,6 +34,8 @@
 		C61ED41F1A380A8C0034717B /* MyERWaitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C61ED41E1A380A8C0034717B /* MyERWaitCell.m */; };
 		C61ED4211A380AA40034717B /* MyERWaitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C61ED4201A380AA40034717B /* MyERWaitCell.xib */; };
 		C61ED4241A380B150034717B /* OutlinedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C61ED4231A380B150034717B /* OutlinedButton.m */; };
+		C66517D31A3D53CD0087BCA8 /* ProviderResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66517D21A3D53CD0087BCA8 /* ProviderResultsViewController.m */; };
+		C66517D61A3D55750087BCA8 /* ProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66517D51A3D55750087BCA8 /* ProviderViewController.m */; };
 		C6EEB2361A38F62600C59CB2 /* HospitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EEB2351A38F62600C59CB2 /* HospitalsViewController.m */; };
 		C6EEB2391A38F6EC00C59CB2 /* HospitalInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EEB2381A38F6EC00C59CB2 /* HospitalInfoCell.m */; };
 		C6EEB23C1A38F74200C59CB2 /* HospitalInfoCellER.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EEB23B1A38F74200C59CB2 /* HospitalInfoCellER.m */; };
@@ -106,6 +108,10 @@
 		C61ED4201A380AA40034717B /* MyERWaitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyERWaitCell.xib; sourceTree = "<group>"; };
 		C61ED4221A380B150034717B /* OutlinedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlinedButton.h; sourceTree = "<group>"; };
 		C61ED4231A380B150034717B /* OutlinedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlinedButton.m; sourceTree = "<group>"; };
+		C66517D11A3D53CD0087BCA8 /* ProviderResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProviderResultsViewController.h; sourceTree = "<group>"; };
+		C66517D21A3D53CD0087BCA8 /* ProviderResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProviderResultsViewController.m; sourceTree = "<group>"; };
+		C66517D41A3D55750087BCA8 /* ProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProviderViewController.h; sourceTree = "<group>"; };
+		C66517D51A3D55750087BCA8 /* ProviderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProviderViewController.m; sourceTree = "<group>"; };
 		C6EEB2341A38F62600C59CB2 /* HospitalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalsViewController.h; sourceTree = "<group>"; };
 		C6EEB2351A38F62600C59CB2 /* HospitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalsViewController.m; sourceTree = "<group>"; };
 		C6EEB2371A38F6EC00C59CB2 /* HospitalInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalInfoCell.h; sourceTree = "<group>"; };
@@ -176,6 +182,10 @@
 			children = (
 				653F94611A37B4340045739C /* ProvidersViewController.h */,
 				653F94621A37B4340045739C /* ProvidersViewController.m */,
+				C66517D11A3D53CD0087BCA8 /* ProviderResultsViewController.h */,
+				C66517D21A3D53CD0087BCA8 /* ProviderResultsViewController.m */,
+				C66517D41A3D55750087BCA8 /* ProviderViewController.h */,
+				C66517D51A3D55750087BCA8 /* ProviderViewController.m */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -572,12 +582,14 @@
 				65B13E131A2D655400A5E4D3 /* MenuTableViewCell.m in Sources */,
 				C61ED4241A380B150034717B /* OutlinedButton.m in Sources */,
 				C618922C1A38117B00A0CD08 /* MyProviderCell.m in Sources */,
+				C66517D31A3D53CD0087BCA8 /* ProviderResultsViewController.m in Sources */,
 				C6EEB2491A393D3B00C59CB2 /* WebCell.m in Sources */,
 				65B13E071A2D617D00A5E4D3 /* JSSlidingViewController.m in Sources */,
 				653F94691A37B44C0045739C /* SettingsViewController.m in Sources */,
 				C6EEB23C1A38F74200C59CB2 /* HospitalInfoCellER.m in Sources */,
 				65A1DBFA1A17FF6200EF78FA /* AppDelegate.m in Sources */,
 				65B13E0B1A2D61FE00A5E4D3 /* MenuViewController.m in Sources */,
+				C66517D61A3D55750087BCA8 /* ProviderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
