@@ -11,5 +11,6 @@
 @interface UIColor (Colors)
 
 + (UIColor *)IASISBlue;
++ (UIColor *)textFieldColor;
 
 @end
