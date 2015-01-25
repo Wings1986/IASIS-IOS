@@ -676,9 +676,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQk-A0-nhl" customClass="OutlinedButton">
-                                <rect key="frame" x="16" y="135" width="568" height="33"/>
+                                <rect key="frame" x="16" y="135" width="568" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="JlC-Vp-m0h"/>
+                                    <constraint firstAttribute="height" constant="40" id="JlC-Vp-m0h"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="KIb-up-ZoD"/>
                                     <constraint firstAttribute="width" constant="106" id="ZlF-7N-sB2"/>
                                 </constraints>
@@ -699,10 +699,10 @@
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywa-al-9Ib" customClass="OutlinedButton">
-                                <rect key="frame" x="16" y="185" width="568" height="33"/>
+                                <rect key="frame" x="16" y="192" width="568" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="INZ-il-Og1"/>
-                                    <constraint firstAttribute="height" constant="33" id="SaV-oj-wLb"/>
+                                    <constraint firstAttribute="height" constant="40" id="SaV-oj-wLb"/>
                                     <constraint firstAttribute="width" constant="106" id="qYQ-CQ-pX4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -722,9 +722,9 @@
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jq-pH-rvX" customClass="OutlinedButton">
-                                <rect key="frame" x="16" y="237" width="568" height="33"/>
+                                <rect key="frame" x="16" y="251" width="568" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="5Ul-zp-WrF"/>
+                                    <constraint firstAttribute="height" constant="40" id="5Ul-zp-WrF"/>
                                     <constraint firstAttribute="width" constant="106" id="J5H-xx-1Cw"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="RbC-sQ-40E"/>
                                 </constraints>
@@ -744,21 +744,28 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Provider's Last Name..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUz-ek-WJi">
-                                <rect key="frame" x="16" y="285" width="568" height="33"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="EJf-lz-A15">
+                                <rect key="frame" x="566" y="268" width="9" height="6"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="FxK-II-3P3"/>
+                                    <constraint firstAttribute="width" constant="9" id="7Ma-5C-9if"/>
+                                    <constraint firstAttribute="height" constant="6" id="QuC-Lt-n9l"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Provider's Last Name..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUz-ek-WJi">
+                                <rect key="frame" x="16" y="306" width="568" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FxK-II-3P3"/>
                                 </constraints>
                                 <color key="textColor" red="0.20784313730000001" green="0.56078431370000004" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88o-6m-QXf" customClass="OutlinedButton">
-                                <rect key="frame" x="16" y="333" width="568" height="43"/>
+                                <rect key="frame" x="16" y="361" width="568" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="2bK-6u-v1s"/>
                                     <constraint firstAttribute="width" constant="106" id="8Nm-Sc-aLr"/>
-                                    <constraint firstAttribute="height" constant="43" id="u65-rJ-AT0"/>
+                                    <constraint firstAttribute="height" constant="44" id="u65-rJ-AT0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Search" backgroundImage="NavigationBarBG">
@@ -779,9 +786,24 @@
                                     <action selector="search:" destination="VnH-zy-jJY" eventType="touchUpInside" id="IsX-Mo-pTc"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="35V-MY-kVx">
+                                <rect key="frame" x="566" y="152" width="9" height="6"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="J7S-jM-XdO"/>
+                                    <constraint firstAttribute="width" constant="9" id="c1g-Hq-lcf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="It5-LS-5Vs">
+                                <rect key="frame" x="566" y="209" width="9" height="6"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="9" id="mJM-Mj-GrB"/>
+                                    <constraint firstAttribute="height" constant="6" id="ut7-q3-EYa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="35V-MY-kVx" firstAttribute="leading" secondItem="uQk-A0-nhl" secondAttribute="trailing" constant="-18" id="095-EO-avd"/>
                             <constraint firstItem="oUz-ek-WJi" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="0YB-Bd-CtW"/>
                             <constraint firstItem="ywa-al-9Ib" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="0sd-Z9-RzX"/>
                             <constraint firstAttribute="trailing" secondItem="MDX-B2-ZoZ" secondAttribute="trailing" id="2OB-c2-CBD"/>
@@ -790,9 +812,14 @@
                             <constraint firstItem="ywa-al-9Ib" firstAttribute="top" secondItem="uQk-A0-nhl" secondAttribute="bottom" constant="17" id="9Fv-Zc-gsk"/>
                             <constraint firstItem="9Jq-pH-rvX" firstAttribute="top" secondItem="ywa-al-9Ib" secondAttribute="bottom" constant="19" id="CY5-HN-JsC"/>
                             <constraint firstItem="uQk-A0-nhl" firstAttribute="top" secondItem="MDX-B2-ZoZ" secondAttribute="bottom" constant="15" id="F0p-c0-pL4"/>
+                            <constraint firstItem="EJf-lz-A15" firstAttribute="leading" secondItem="9Jq-pH-rvX" secondAttribute="trailing" constant="-18" id="Gt1-g8-ALj"/>
+                            <constraint firstItem="It5-LS-5Vs" firstAttribute="leading" secondItem="ywa-al-9Ib" secondAttribute="trailing" constant="-18" id="IXs-s3-NBh"/>
+                            <constraint firstItem="It5-LS-5Vs" firstAttribute="centerY" secondItem="ywa-al-9Ib" secondAttribute="centerY" id="Suk-Jt-ZSY"/>
+                            <constraint firstItem="uQk-A0-nhl" firstAttribute="centerY" secondItem="35V-MY-kVx" secondAttribute="centerY" id="TzG-2Z-8eF"/>
                             <constraint firstItem="88o-6m-QXf" firstAttribute="top" secondItem="oUz-ek-WJi" secondAttribute="bottom" constant="15" id="Y2B-5Q-OaW"/>
                             <constraint firstItem="uQk-A0-nhl" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="Y7Y-k8-osg"/>
                             <constraint firstItem="uQk-A0-nhl" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="daC-GY-A2q"/>
+                            <constraint firstItem="EJf-lz-A15" firstAttribute="centerY" secondItem="9Jq-pH-rvX" secondAttribute="centerY" id="gkI-67-yU5"/>
                             <constraint firstItem="oUz-ek-WJi" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="iAG-Pt-Ogg"/>
                             <constraint firstItem="88o-6m-QXf" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="j1I-Gf-00p"/>
                             <constraint firstItem="MDX-B2-ZoZ" firstAttribute="top" secondItem="Fdh-26-aIV" secondAttribute="bottom" id="nmu-Le-8DT"/>
@@ -976,6 +1003,7 @@
     </scenes>
     <resources>
         <image name="ChevronBlue" width="11" height="17"/>
+        <image name="DropDownArrow" width="9" height="6"/>
         <image name="MenuStar" width="27" height="27"/>
         <image name="NavigationBarBG" width="29" height="26"/>
     </resources>
