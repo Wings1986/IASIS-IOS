@@ -20,4 +20,9 @@
     return [UIColor colorWithRed:53.0 / 255.0 green:143.0 / 255.0 blue:199.0 / 255.0 alpha:1.0];
 }
 
++ (UIColor *)menuBackgroundColor
+{
+    return [UIColor colorWithRed:47.0 / 255.0 green:47.0 / 255.0 blue:47.0 / 255.0 alpha:1.0];
+}
+
 @end

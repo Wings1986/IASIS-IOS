@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "MenuTableViewCell.h"
+#import "UIColor+Colors.h"
 
 typedef NS_ENUM(NSUInteger, MenuItem) {
     MenuItemMyIASIS,
@@ -73,6 +74,18 @@ typedef NS_ENUM(NSUInteger, MenuItem) {
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 55.0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 18.0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 18)];
+    headerView.backgroundColor = [UIColor menuBackgroundColor];
+    return headerView;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

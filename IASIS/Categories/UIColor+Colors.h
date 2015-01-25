@@ -12,5 +12,6 @@
 
 + (UIColor *)IASISBlue;
 + (UIColor *)textFieldColor;
++ (UIColor *)menuBackgroundColor;
 
 @end
