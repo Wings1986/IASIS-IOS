@@ -10,12 +10,12 @@
 
 @implementation MyProviderCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.viewForShadow.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    self.viewForShadow.layer.shadowOffset = CGSizeMake(0, 3);
+    self.viewForShadow.layer.shadowOpacity = 1.0;
 }
-*/
 
 @end

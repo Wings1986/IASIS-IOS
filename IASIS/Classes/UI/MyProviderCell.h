@@ -10,4 +10,6 @@
 
 @interface MyProviderCell : UICollectionViewCell
 
+@property (nonatomic, weak) IBOutlet UIView *viewForShadow;
+
 @end

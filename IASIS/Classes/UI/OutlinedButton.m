@@ -15,6 +15,7 @@
     _color = color;
     self.layer.borderColor = self.color.CGColor;
     self.layer.borderWidth = 1.0;
+    self.layer.cornerRadius = 4.0;
     [self setTitleColor:self.color forState:UIControlStateNormal];
 }
 

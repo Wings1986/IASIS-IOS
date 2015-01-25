@@ -190,7 +190,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="gd2-rk-Yb2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.20784313730000001" green="0.56078431370000004" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.14117647058823529" green="0.36470588235294116" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChevronBlue" translatesAutoresizingMaskIntoConstraints="NO" id="8AB-YY-spR">

@@ -75,10 +75,10 @@
     return CGSizeMake(collectionView.bounds.size.width, 120.0);
 }
 
-- (CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     if(section == 2) {
-        return CGSizeMake(60.0f, 40.0f);
+        return CGSizeMake(60.0f, 50.0f);
     }
     
     return CGSizeZero;
