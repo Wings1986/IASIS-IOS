@@ -363,6 +363,7 @@
                                             <outlet property="btnInfo" destination="Yq9-sX-OP3" id="PLR-mQ-x0W"/>
                                             <outlet property="lblLocation" destination="6JZ-Wx-W0Z" id="Tt3-r4-gfX"/>
                                             <outlet property="lblTitle" destination="jgq-jv-mXo" id="etP-Cv-0sX"/>
+                                            <outlet property="viewForShadow" destination="3iU-X7-ZOe" id="BlR-9p-1kj"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HospitalInfoCellER" rowHeight="203" id="R5N-QO-u69" customClass="HospitalInfoCellER">
@@ -489,6 +490,7 @@
                                             <outlet property="lblLocation" destination="obM-ps-k1v" id="7Xx-YN-6NM"/>
                                             <outlet property="lblTitle" destination="dU6-me-xhy" id="qIo-kn-Mmp"/>
                                             <outlet property="lblWait" destination="qXg-kZ-U3a" id="5WM-8H-8Si"/>
+                                            <outlet property="viewForShadow" destination="FMB-1h-tCo" id="mtm-TK-9zB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

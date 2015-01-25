@@ -10,6 +10,7 @@
 
 @interface HospitalInfoCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UIView *viewForShadow;
 @property (nonatomic, weak) IBOutlet UILabel *lblTitle;
 @property (nonatomic, weak) IBOutlet UILabel *lblLocation;
 @property (nonatomic, weak) IBOutlet UIButton *btnInfo;
