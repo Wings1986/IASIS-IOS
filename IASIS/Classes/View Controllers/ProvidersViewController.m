@@ -8,6 +8,7 @@
 
 #import "ProvidersViewController.h"
 #import "ProviderResultsViewController.h"
+#import "UIColor+Colors.h"
 
 @interface ProvidersViewController () <UITextFieldDelegate>
 
@@ -22,8 +23,16 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Find a Provider";
-    
+
     self.txtLastName.delegate = self;
+    self.txtLastName.layer.borderColor = [UIColor textFieldColor].CGColor;
+    self.txtLastName.layer.borderWidth = 1.0;
+    NSAttributedString *str = [[NSAttributedString alloc] initWithString:@"Provider's Last name..." attributes:@{ NSForegroundColorAttributeName : [UIColor textFieldColor] }];
+    self.txtLastName.attributedPlaceholder = str;
+
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, 20)];
+    self.txtLastName.leftView = paddingView;
+    self.txtLastName.leftViewMode = UITextFieldViewModeAlways;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
