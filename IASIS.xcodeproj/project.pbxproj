@@ -34,6 +34,7 @@
 		C61ED41F1A380A8C0034717B /* MyERWaitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C61ED41E1A380A8C0034717B /* MyERWaitCell.m */; };
 		C61ED4211A380AA40034717B /* MyERWaitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C61ED4201A380AA40034717B /* MyERWaitCell.xib */; };
 		C61ED4241A380B150034717B /* OutlinedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C61ED4231A380B150034717B /* OutlinedButton.m */; };
+		C632877F1A75693F00C90D76 /* EmptyBackButtonTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C632877E1A75693F00C90D76 /* EmptyBackButtonTitleViewController.m */; };
 		C66517D31A3D53CD0087BCA8 /* ProviderResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66517D21A3D53CD0087BCA8 /* ProviderResultsViewController.m */; };
 		C66517D61A3D55750087BCA8 /* ProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66517D51A3D55750087BCA8 /* ProviderViewController.m */; };
 		C66517DA1A3D5B650087BCA8 /* PortalHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66517D91A3D5B650087BCA8 /* PortalHeaderCell.xib */; };
@@ -112,6 +113,8 @@
 		C61ED4201A380AA40034717B /* MyERWaitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyERWaitCell.xib; sourceTree = "<group>"; };
 		C61ED4221A380B150034717B /* OutlinedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlinedButton.h; sourceTree = "<group>"; };
 		C61ED4231A380B150034717B /* OutlinedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlinedButton.m; sourceTree = "<group>"; };
+		C632877D1A75693F00C90D76 /* EmptyBackButtonTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyBackButtonTitleViewController.h; sourceTree = "<group>"; };
+		C632877E1A75693F00C90D76 /* EmptyBackButtonTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyBackButtonTitleViewController.m; sourceTree = "<group>"; };
 		C66517D11A3D53CD0087BCA8 /* ProviderResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProviderResultsViewController.h; sourceTree = "<group>"; };
 		C66517D21A3D53CD0087BCA8 /* ProviderResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProviderResultsViewController.m; sourceTree = "<group>"; };
 		C66517D41A3D55750087BCA8 /* ProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProviderViewController.h; sourceTree = "<group>"; };
@@ -284,6 +287,7 @@
 			children = (
 				65A1DBE91A17FF6200EF78FA /* AppDelegate.h */,
 				65A1DBEA1A17FF6200EF78FA /* AppDelegate.m */,
+				C632877C1A75692100C90D76 /* Subclasses */,
 				65A1DBEB1A17FF6200EF78FA /* UI */,
 				65A1DBEC1A17FF6200EF78FA /* View Controllers */,
 			);
@@ -439,6 +443,15 @@
 			name = Buttons;
 			sourceTree = "<group>";
 		};
+		C632877C1A75692100C90D76 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				C632877D1A75693F00C90D76 /* EmptyBackButtonTitleViewController.h */,
+				C632877E1A75693F00C90D76 /* EmptyBackButtonTitleViewController.m */,
+			);
+			path = Subclasses;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -584,6 +597,7 @@
 			files = (
 				65B13E0F1A2D623500A5E4D3 /* PersonalViewController.m in Sources */,
 				65A1DBFB1A17FF6200EF78FA /* InitialViewController.m in Sources */,
+				C632877F1A75693F00C90D76 /* EmptyBackButtonTitleViewController.m in Sources */,
 				653F94701A37BA760045739C /* UIColor+Colors.m in Sources */,
 				C66517E21A3D5D5A0087BCA8 /* PortalStateCell.m in Sources */,
 				653F94601A37B42A0045739C /* StatesViewController.m in Sources */,

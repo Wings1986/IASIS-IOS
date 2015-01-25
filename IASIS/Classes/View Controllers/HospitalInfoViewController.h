@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EmptyBackButtonTitleViewController.h"
 
-@interface HospitalInfoViewController : UIViewController
+@interface HospitalInfoViewController : EmptyBackButtonTitleViewController
 
 @end

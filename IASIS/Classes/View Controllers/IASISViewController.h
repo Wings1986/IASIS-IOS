@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EmptyBackButtonTitleViewController.h"
 
-@interface IASISViewController : UIViewController
+@interface IASISViewController : EmptyBackButtonTitleViewController
 
 @property (nonatomic, assign) BOOL showDefaultLeftBarButton;
 

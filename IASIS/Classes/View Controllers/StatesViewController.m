@@ -25,6 +25,7 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Find a Hospital";
+    
 
     self.states = @[ @"Arizona", @"Arkansas", @"Colorado", @"Louisiana", @"Nevada", @"Texas", @"Utah" ];
 }

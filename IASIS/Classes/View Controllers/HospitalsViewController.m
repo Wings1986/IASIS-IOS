@@ -25,7 +25,7 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"Find a Hospital";
-    
+
     self.hospitals = @[ @"Some Hospital", @"Some Hospital", @"Some Hospital", @"Some Hospital", @"Some Hospital", @"Some Hospital", ];
 }
 
