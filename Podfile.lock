@@ -1,4 +1,7 @@
 PODS:
+  - AFNetworkActivityLogger (2.0.4):
+    - AFNetworking/NSURLConnection (~> 2.0)
+    - AFNetworking/NSURLSession (~> 2.0)
   - AFNetworking (2.4.1):
     - AFNetworking/NSURLConnection (= 2.4.1)
     - AFNetworking/NSURLSession (= 2.4.1)
@@ -28,6 +31,7 @@ PODS:
   - TPKeyboardAvoiding-Goonbee (1.2.4.1)
 
 DEPENDENCIES:
+  - AFNetworkActivityLogger (~> 2.0)
   - AFNetworking
   - MBProgressHUD
   - NSString-UrlEncode
@@ -35,6 +39,7 @@ DEPENDENCIES:
   - TPKeyboardAvoiding-Goonbee (~> 1.2)
 
 SPEC CHECKSUMS:
+  AFNetworkActivityLogger: cdaa92ea0d544835babe0ba097e7806182d8f837
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   NSString-UrlEncode: 9b49b5499996dad0439373683820420978731628

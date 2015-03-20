@@ -11,5 +11,8 @@
 @interface MyProviderCell : UICollectionViewCell
 
 @property (nonatomic, weak) IBOutlet UIView *viewForShadow;
+@property (nonatomic, weak) IBOutlet UILabel *lblName;
+@property (nonatomic, weak) IBOutlet UILabel *lblSpecialty;
+@property (nonatomic, weak) IBOutlet UIImageView *photo;
 
 @end

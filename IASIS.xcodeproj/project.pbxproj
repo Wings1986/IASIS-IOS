@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		63247F462DC109081C4FF889 /* libPods-IASIS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B386E523C8EB5942917140BF /* libPods-IASIS.a */; };
+		652D22631ABCA10000FA9D9D /* ERWaitTimes.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22621ABCA10000FA9D9D /* ERWaitTimes.m */; };
+		652D22661ABCA5CA00FA9D9D /* ProviderSearchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22651ABCA5CA00FA9D9D /* ProviderSearchClient.m */; };
+		652D22691ABCA6B600FA9D9D /* WaitSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22681ABCA6B600FA9D9D /* WaitSpinner.m */; };
+		652D226C1ABCAB4D00FA9D9D /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D226B1ABCAB4D00FA9D9D /* UIViewController+Alerts.m */; };
 		653F94601A37B42A0045739C /* StatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F945F1A37B42A0045739C /* StatesViewController.m */; };
 		653F94631A37B4340045739C /* ProvidersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94621A37B4340045739C /* ProvidersViewController.m */; };
 		653F94661A37B43C0045739C /* PortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94651A37B43C0045739C /* PortalViewController.m */; };
@@ -63,6 +67,14 @@
 
 /* Begin PBXFileReference section */
 		323DEAA7EDC2366AAC9C3C75 /* Pods-IASIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IASIS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IASIS/Pods-IASIS.debug.xcconfig"; sourceTree = "<group>"; };
+		652D22611ABCA10000FA9D9D /* ERWaitTimes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERWaitTimes.h; sourceTree = "<group>"; };
+		652D22621ABCA10000FA9D9D /* ERWaitTimes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERWaitTimes.m; sourceTree = "<group>"; };
+		652D22641ABCA5CA00FA9D9D /* ProviderSearchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProviderSearchClient.h; sourceTree = "<group>"; };
+		652D22651ABCA5CA00FA9D9D /* ProviderSearchClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProviderSearchClient.m; sourceTree = "<group>"; };
+		652D22671ABCA6B600FA9D9D /* WaitSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitSpinner.h; sourceTree = "<group>"; };
+		652D22681ABCA6B600FA9D9D /* WaitSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitSpinner.m; sourceTree = "<group>"; };
+		652D226A1ABCAB4D00FA9D9D /* UIViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
+		652D226B1ABCAB4D00FA9D9D /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
 		653F945E1A37B42A0045739C /* StatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesViewController.h; sourceTree = "<group>"; };
 		653F945F1A37B42A0045739C /* StatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesViewController.m; sourceTree = "<group>"; };
 		653F94611A37B4340045739C /* ProvidersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvidersViewController.h; sourceTree = "<group>"; };
@@ -276,6 +288,8 @@
 		65A1DBE71A17FF6200EF78FA /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				652D226A1ABCAB4D00FA9D9D /* UIViewController+Alerts.h */,
+				652D226B1ABCAB4D00FA9D9D /* UIViewController+Alerts.m */,
 				653F946E1A37BA760045739C /* UIColor+Colors.h */,
 				653F946F1A37BA760045739C /* UIColor+Colors.m */,
 			);
@@ -290,6 +304,12 @@
 				C632877C1A75692100C90D76 /* Subclasses */,
 				65A1DBEB1A17FF6200EF78FA /* UI */,
 				65A1DBEC1A17FF6200EF78FA /* View Controllers */,
+				652D22611ABCA10000FA9D9D /* ERWaitTimes.h */,
+				652D22621ABCA10000FA9D9D /* ERWaitTimes.m */,
+				652D22641ABCA5CA00FA9D9D /* ProviderSearchClient.h */,
+				652D22651ABCA5CA00FA9D9D /* ProviderSearchClient.m */,
+				652D22671ABCA6B600FA9D9D /* WaitSpinner.h */,
+				652D22681ABCA6B600FA9D9D /* WaitSpinner.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -503,6 +523,7 @@
 				TargetAttributes = {
 					65A1DBBD1A17FF2100EF78FA = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = R542H35MSK;
 					};
 					65A1DBD61A17FF2100EF78FA = {
 						CreatedOnToolsVersion = 6.1;
@@ -595,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652D22661ABCA5CA00FA9D9D /* ProviderSearchClient.m in Sources */,
 				65B13E0F1A2D623500A5E4D3 /* PersonalViewController.m in Sources */,
 				65A1DBFB1A17FF6200EF78FA /* InitialViewController.m in Sources */,
 				C632877F1A75693F00C90D76 /* EmptyBackButtonTitleViewController.m in Sources */,
@@ -615,12 +637,15 @@
 				65B13E131A2D655400A5E4D3 /* MenuTableViewCell.m in Sources */,
 				C61ED4241A380B150034717B /* OutlinedButton.m in Sources */,
 				C66517DD1A3D5BA20087BCA8 /* PortalHeaderCell.m in Sources */,
+				652D226C1ABCAB4D00FA9D9D /* UIViewController+Alerts.m in Sources */,
 				C618922C1A38117B00A0CD08 /* MyProviderCell.m in Sources */,
 				C66517D31A3D53CD0087BCA8 /* ProviderResultsViewController.m in Sources */,
 				C6EEB2491A393D3B00C59CB2 /* WebCell.m in Sources */,
 				65B13E071A2D617D00A5E4D3 /* JSSlidingViewController.m in Sources */,
+				652D22631ABCA10000FA9D9D /* ERWaitTimes.m in Sources */,
 				653F94691A37B44C0045739C /* SettingsViewController.m in Sources */,
 				C6EEB23C1A38F74200C59CB2 /* HospitalInfoCellER.m in Sources */,
+				652D22691ABCA6B600FA9D9D /* WaitSpinner.m in Sources */,
 				65A1DBFA1A17FF6200EF78FA /* AppDelegate.m in Sources */,
 				65B13E0B1A2D61FE00A5E4D3 /* MenuViewController.m in Sources */,
 				C66517D61A3D55750087BCA8 /* ProviderViewController.m in Sources */,
@@ -748,11 +773,12 @@
 			baseConfigurationReference = 323DEAA7EDC2366AAC9C3C75 /* Pods-IASIS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Pfeiffer (SVRQGP8NR3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/IASIS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9d0ad2d9-59b5-4c16-b5ba-57eac18341ad";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -761,11 +787,12 @@
 			baseConfigurationReference = A596595F72C3F41E858537BD /* Pods-IASIS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Pfeiffer (SVRQGP8NR3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/IASIS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9d0ad2d9-59b5-4c16-b5ba-57eac18341ad";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

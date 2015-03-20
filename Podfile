@@ -10,4 +10,5 @@ target "IASIS" do
 	pod 'AFNetworking'
 	pod 'TPKeyboardAvoiding-Goonbee', '~> 1.2'
 	pod 'Realm'
+	pod 'AFNetworkActivityLogger', '~> 2.0'
 end

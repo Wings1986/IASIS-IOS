@@ -9,6 +9,7 @@
 #import "ProviderResultsViewController.h"
 #import "ProviderViewController.h"
 #import "MyProviderCell.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface ProviderResultsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -29,12 +30,20 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 100;
+    return self.providers.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *provider = self.providers[indexPath.row];
+    
+    NSString *photURLString = [NSString stringWithFormat:@"%@", provider[@"photo"]];
+    
     MyProviderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyProviderCell class]) forIndexPath:indexPath];
+    cell.lblName.text = [NSString stringWithFormat:@"%@ %@", provider[@"first_name"], provider[@"last_name"]];
+    cell.lblSpecialty.text = provider[@"specialty1"] ? provider[@"specialty1"] : @"";
+    [cell.photo setImageWithURL:[NSURL URLWithString:photURLString] placeholderImage:[UIImage imageNamed:@"doctor_placeholder"]];
+
     return cell;
 }
 

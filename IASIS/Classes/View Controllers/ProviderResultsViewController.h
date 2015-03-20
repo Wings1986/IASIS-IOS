@@ -10,4 +10,6 @@
 
 @interface ProviderResultsViewController : IASISViewController
 
+@property (nonatomic, strong) NSArray *providers;
+
 @end

@@ -99,6 +99,9 @@
             </constraints>
             <size key="customSize" width="503" height="117"/>
             <connections>
+                <outlet property="lblName" destination="F0O-L6-CCP" id="h2v-Gq-9i4"/>
+                <outlet property="lblSpecialty" destination="1yZ-8h-kJc" id="FZ8-8o-nXb"/>
+                <outlet property="photo" destination="ubK-0h-14r" id="7vg-jk-NTm"/>
                 <outlet property="viewForShadow" destination="lWT-f1-nPl" id="ffc-O4-slE"/>
             </connections>
             <point key="canvasLocation" x="408.5" y="436.5"/>

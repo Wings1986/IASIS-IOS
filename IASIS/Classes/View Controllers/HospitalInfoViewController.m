@@ -55,7 +55,7 @@
     
     if(indexPath.section == 2) {
         WebCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([WebCell class]) forIndexPath:indexPath];
-        cell.url = [NSURL URLWithString:@"http://www.yahoo.com"];
+        cell.url = [NSURL URLWithString:@"http://www.iasishealthcare.com/app/mvmc.html"];
         return cell;
     }
     
