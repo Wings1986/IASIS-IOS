@@ -78,7 +78,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     if(section == 2) {
-        return CGSizeMake(60.0f, 50.0f);
+        return CGSizeMake(60.0f, 35.0f);
     }
     
     return CGSizeZero;
