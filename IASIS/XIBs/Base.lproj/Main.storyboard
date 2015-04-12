@@ -734,6 +734,9 @@
                                         <exclude reference="Uw0-oQ-B35"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="state:" destination="VnH-zy-jJY" eventType="touchUpInside" id="8Fv-Ue-xGY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ux-dW-Z9O" customClass="OutlinedButton">
                                 <rect key="frame" x="16" y="199" width="568" height="40"/>
@@ -757,6 +760,9 @@
                                         <exclude reference="mBs-PB-RzF"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="city:" destination="VnH-zy-jJY" eventType="touchUpInside" id="MdT-tZ-4C0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkO-Zs-4a2" customClass="OutlinedButton">
                                 <rect key="frame" x="16" y="258" width="568" height="40"/>
@@ -780,6 +786,9 @@
                                         <exclude reference="ksM-Zu-Wj0"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="specialty:" destination="VnH-zy-jJY" eventType="touchUpInside" id="SQj-EV-gSu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -806,6 +815,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="KmP-tT-M5e"/>
                     <connections>
+                        <outlet property="btnCity" destination="5Ux-dW-Z9O" id="Zka-Rl-oqh"/>
+                        <outlet property="btnSpecialty" destination="WkO-Zs-4a2" id="t2I-9Y-5o7"/>
+                        <outlet property="btnState" destination="7Km-Kj-zlH" id="B7T-p3-jrg"/>
                         <outlet property="txtLastName" destination="oUz-ek-WJi" id="IGR-6d-LGm"/>
                     </connections>
                 </viewController>

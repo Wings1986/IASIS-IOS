@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63247F462DC109081C4FF889 /* libPods-IASIS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B386E523C8EB5942917140BF /* libPods-IASIS.a */; };
+		6513CF471ADAFF260089ED53 /* ProviderLocations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6513CF461ADAFF260089ED53 /* ProviderLocations.plist */; };
 		652D22631ABCA10000FA9D9D /* ERWaitTimes.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22621ABCA10000FA9D9D /* ERWaitTimes.m */; };
 		652D22661ABCA5CA00FA9D9D /* ProviderSearchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22651ABCA5CA00FA9D9D /* ProviderSearchClient.m */; };
 		652D22691ABCA6B600FA9D9D /* WaitSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22681ABCA6B600FA9D9D /* WaitSpinner.m */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		323DEAA7EDC2366AAC9C3C75 /* Pods-IASIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IASIS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IASIS/Pods-IASIS.debug.xcconfig"; sourceTree = "<group>"; };
+		6513CF461ADAFF260089ED53 /* ProviderLocations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProviderLocations.plist; sourceTree = "<group>"; };
 		652D22611ABCA10000FA9D9D /* ERWaitTimes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERWaitTimes.h; sourceTree = "<group>"; };
 		652D22621ABCA10000FA9D9D /* ERWaitTimes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERWaitTimes.m; sourceTree = "<group>"; };
 		652D22641ABCA5CA00FA9D9D /* ProviderSearchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProviderSearchClient.h; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				65A1DBF41A17FF6200EF78FA /* Info.plist */,
+				6513CF461ADAFF260089ED53 /* ProviderLocations.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				C61ED4191A3807920034717B /* MyMyHospitalCell.xib in Resources */,
 				C618922E1A38118700A0CD08 /* MyProviderCell.xib in Resources */,
 				65A1DBFC1A17FF6200EF78FA /* Images.xcassets in Resources */,
+				6513CF471ADAFF260089ED53 /* ProviderLocations.plist in Resources */,
 				65A1DC001A17FF6200EF78FA /* Main.storyboard in Resources */,
 				C61ED4211A380AA40034717B /* MyERWaitCell.xib in Resources */,
 				C66517DF1A3D5CDD0087BCA8 /* PortalStateCell.xib in Resources */,

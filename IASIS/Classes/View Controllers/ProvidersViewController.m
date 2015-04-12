@@ -13,12 +13,18 @@
 #import "WaitSpinner.h"
 #import "UIViewController+Alerts.h"
 
-@interface ProvidersViewController () <UITextFieldDelegate>
+@interface ProvidersViewController () <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (nonatomic, weak) IBOutlet UITextField *txtState;
-@property (nonatomic, weak) IBOutlet UITextField *txtCity;
-@property (nonatomic, weak) IBOutlet UITextField *txtSpecialty;
+@property (nonatomic, strong) IBOutlet UIPickerView *pickerView;
+@property (nonatomic, weak) IBOutlet UIButton *btnState;
+@property (nonatomic, weak) IBOutlet UIButton *btnCity;
+@property (nonatomic, weak) IBOutlet UIButton *btnSpecialty;
 @property (nonatomic, weak) IBOutlet UITextField *txtLastName;
+@property (nonatomic, strong) NSDictionary *providerLocations;
+@property (nonatomic, strong) UIView *shimView;
+@property (nonatomic, strong) UIButton *selectedButton;
+
+@property (nonatomic, strong) NSArray *pickerData;
 
 @end
 
@@ -30,10 +36,20 @@
     
     self.navigationItem.title = @"Find a Provider";
     
-    [self styleTextField:self.txtState withPlaceholder:@"Provider's State..."];
-    [self styleTextField:self.txtCity withPlaceholder:@"Provider's City..."];
-    [self styleTextField:self.txtSpecialty withPlaceholder:@"Provider's Specialty..."];
     [self styleTextField:self.txtLastName withPlaceholder:@"Provider's Last Name..."];
+
+    self.providerLocations = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ProviderLocations" ofType:@"plist"]];
+    
+    self.shimView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.shimView];
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hidePickerView)];
+    [self.shimView addGestureRecognizer:tgr];
+
+    self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 162.0)];
+    self.pickerView.hidden = YES;
+    self.pickerView.delegate = self;
+    self.pickerView.dataSource = self;
+    [self.view addSubview:self.pickerView];
 }
 
 - (void)styleTextField:(UITextField *)textField withPlaceholder:(NSString *)placeholder
@@ -55,11 +71,47 @@
     return YES;
 }
 
+- (IBAction)state:(id)sender
+{
+    self.selectedButton = sender;
+    self.pickerData = self.providerLocations.allKeys;
+    [self.pickerView reloadAllComponents];
+    [self showPickerView];
+}
+
+- (IBAction)city:(id)sender
+{
+    self.selectedButton = sender;
+    self.pickerData = @[];
+    if(self.providerLocations[[[self.btnState titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]]) {
+        NSString *selection = [[self.btnState titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        self.pickerData = self.providerLocations[selection];
+    }
+    [self.pickerView reloadAllComponents];
+    [self showPickerView];
+}
+
+- (IBAction)specialty:(id)sender
+{
+    self.selectedButton = sender;
+    self.pickerData = @[];
+    [self.pickerView reloadAllComponents];
+    [self showPickerView];
+}
+
 - (IBAction)search:(id)sender
 {
     [[WaitSpinner sharedObject] wait];
+    
+    NSString *state = [[self.btnState titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *city = [[self.btnCity titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *specialty = [[self.btnSpecialty titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if([specialty isEqualToString:@"Specialty"]) {
+        specialty = @"";
+    }
 
-    [[ProviderSearchClient sharedObject] searchWithState:self.txtState.text city:self.txtCity.text specialty:self.txtSpecialty.text lastName:self.txtLastName.text successBlock:^(id responseObject) {
+    [[ProviderSearchClient sharedObject] searchWithState:state city:city specialty:specialty lastName:self.txtLastName.text successBlock:^(id responseObject) {
         [[WaitSpinner sharedObject] unwait];
 
         ProviderResultsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ProviderResultsViewController class])];
@@ -75,6 +127,63 @@
         [[WaitSpinner sharedObject] unwait];
         [self TDM_presentOkAlertControllerWithTitle:@"Error" message:@"An error occurred while fetching your search results. Please try again." handler:nil];
     }];
+}
+
+- (void)showPickerView
+{
+    CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width, 162.0);
+    frame.origin.y = self.view.bounds.size.height;
+    
+    CGRect newFrame = frame;
+    newFrame.origin.y -= self.pickerView.frame.size.height;
+
+    self.pickerView.frame = frame;
+    self.pickerView.hidden = NO;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.pickerView.frame = newFrame;
+    } completion:^(BOOL finished) {
+        self.shimView.hidden = NO;
+    }];
+}
+
+- (void)hidePickerView
+{
+    CGRect newFrame = self.pickerView.frame;
+    newFrame.origin.y = self.view.bounds.size.height;
+
+    self.shimView.hidden = YES;
+    
+    if(self.pickerData.count > 0) {
+        NSString *selection = self.pickerData[[self.pickerView selectedRowInComponent:0]];
+        [self.selectedButton setTitle:[NSString stringWithFormat:@"   %@", selection] forState:UIControlStateNormal];
+    }
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.pickerView.frame = newFrame;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return self.pickerData.count;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return self.pickerData[row];
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
+{
+    return self.view.bounds.size.width;
 }
 
 @end

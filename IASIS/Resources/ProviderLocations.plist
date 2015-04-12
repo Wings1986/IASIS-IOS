@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Arizona</key>
+	<array>
+		<string>Mesa</string>
+		<string>Phoenix</string>
+		<string>Tempe</string>
+	</array>
+	<key>Arkansas</key>
+	<array>
+		<string>Hope</string>
+	</array>
+	<key>Colorado</key>
+	<array>
+		<string>Woodland Park</string>
+	</array>
+	<key>Louisiana</key>
+	<array>
+		<string>West Monroe</string>
+	</array>
+	<key>Texas</key>
+	<array>
+		<string>Odessa</string>
+		<string>San Antonio</string>
+		<string>Houston</string>
+		<string>Port Arthur</string>
+		<string>Texarkana</string>
+	</array>
+	<key>Utah</key>
+	<array>
+		<string>Layton</string>
+		<string>West Jordan</string>
+		<string>West Valley City</string>
+		<string>Salt Lake City</string>
+	</array>
+</dict>
+</plist>
