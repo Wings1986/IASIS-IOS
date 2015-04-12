@@ -43,6 +43,12 @@
     cell.lblName.text = [NSString stringWithFormat:@"%@ %@", provider[@"first_name"], provider[@"last_name"]];
     cell.lblSpecialty.text = provider[@"specialty1"] ? provider[@"specialty1"] : @"";
     [cell.photo setImageWithURL:[NSURL URLWithString:photURLString] placeholderImage:[UIImage imageNamed:@"doctor_placeholder"]];
+    
+    cell.btnDetails.tag = indexPath.row;
+    [cell.btnDetails addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.btnSchedule.tag = indexPath.row;
+    [cell.btnSchedule addTarget:self action:@selector(schedule:) forControlEvents:UIControlEventTouchUpInside];
 
     return cell;
 }
@@ -56,6 +62,20 @@
 {
     ProviderViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ProviderViewController class])];
     vc.showDefaultLeftBarButton = YES;
+    vc.providerDict = self.providers[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)schedule:(id)sender
+{
+    
+}
+
+- (IBAction)details:(UIButton *)sender
+{
+    ProviderViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ProviderViewController class])];
+    vc.showDefaultLeftBarButton = YES;
+    vc.providerDict = self.providers[sender.tag];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

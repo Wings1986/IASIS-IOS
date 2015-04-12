@@ -17,8 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
-    [[AFNetworkActivityLogger sharedLogger] startLogging];
+//    [[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
+//    [[AFNetworkActivityLogger sharedLogger] startLogging];
 
     [self styleApp];
 

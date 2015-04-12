@@ -106,7 +106,15 @@
     NSString *state = [[self.btnState titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *city = [[self.btnCity titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *specialty = [[self.btnSpecialty titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+    if([state isEqualToString:@"State"]) {
+        state = @"";
+    }
     
+    if([city isEqualToString:@"City"]) {
+        city = @"";
+    }
+
     if([specialty isEqualToString:@"Specialty"]) {
         specialty = @"";
     }

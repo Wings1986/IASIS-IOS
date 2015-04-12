@@ -14,5 +14,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *lblName;
 @property (nonatomic, weak) IBOutlet UILabel *lblSpecialty;
 @property (nonatomic, weak) IBOutlet UIImageView *photo;
+@property (nonatomic, weak) IBOutlet UIButton *btnSchedule;
+@property (nonatomic, weak) IBOutlet UIButton *btnDetails;
 
 @end

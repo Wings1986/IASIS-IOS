@@ -10,4 +10,6 @@
 
 @interface ProviderViewController : IASISViewController
 
+@property (nonatomic, strong) NSDictionary *providerDict;
+
 @end
