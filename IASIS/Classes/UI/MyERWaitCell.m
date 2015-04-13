@@ -25,8 +25,11 @@
     [super awakeFromNib];
     
     self.lblWaitTime.text = @"Fetching ER Wait Time...";
-    
-    [[ERWaitTimes sharedObject] fetchWaitTimeForHospital:@"foo" successBlock:^(NSXMLParser *parser) {
+}
+
+- (void)fetchER:(NSString *)erURL
+{
+    [[ERWaitTimes sharedObject] fetchWaitTimeForHospital:erURL successBlock:^(NSXMLParser *parser) {
         self.characters = @"";
         self.foundFirstTitle = NO;
         parser.delegate = self;

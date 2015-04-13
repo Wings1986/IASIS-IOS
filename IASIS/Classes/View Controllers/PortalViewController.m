@@ -72,7 +72,7 @@
     }
 
     if(indexPath.section == 1) {
-        return CGSizeMake(collectionView.bounds.size.width, 54.0);
+        return CGSizeMake(collectionView.bounds.size.width, 60.0);
     }
     
     return CGSizeZero;

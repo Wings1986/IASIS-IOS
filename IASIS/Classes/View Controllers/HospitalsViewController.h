@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "EmptyBackButtonTitleViewController.h"
 
 @interface HospitalsViewController : EmptyBackButtonTitleViewController
 
-@property (nonatomic, weak) IBOutlet UILabel *lblSubtitle;
+@property (nonatomic, strong) NSArray *hospitals;
+@property (nonatomic, strong) NSString *subtitle;
 
 @end

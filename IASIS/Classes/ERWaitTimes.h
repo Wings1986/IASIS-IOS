@@ -13,6 +13,6 @@
 
 + (instancetype)sharedObject;
 
-- (AFHTTPRequestOperation *)fetchWaitTimeForHospital:(NSString *)username successBlock:(void (^)(NSXMLParser *))successBlock failureBlock:(void (^)(NSError *error))failureBlock;
+- (AFHTTPRequestOperation *)fetchWaitTimeForHospital:(NSString *)username successBlock:(void (^)(NSXMLParser *parser))successBlock failureBlock:(void (^)(NSError *error))failureBlock;
 
 @end

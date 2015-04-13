@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		63247F462DC109081C4FF889 /* libPods-IASIS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B386E523C8EB5942917140BF /* libPods-IASIS.a */; };
 		6513CF471ADAFF260089ED53 /* ProviderLocations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6513CF461ADAFF260089ED53 /* ProviderLocations.plist */; };
+		6513CF491ADB5AFF0089ED53 /* Hospitals.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6513CF481ADB5AFF0089ED53 /* Hospitals.plist */; };
 		652D22631ABCA10000FA9D9D /* ERWaitTimes.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22621ABCA10000FA9D9D /* ERWaitTimes.m */; };
 		652D22661ABCA5CA00FA9D9D /* ProviderSearchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22651ABCA5CA00FA9D9D /* ProviderSearchClient.m */; };
 		652D22691ABCA6B600FA9D9D /* WaitSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22681ABCA6B600FA9D9D /* WaitSpinner.m */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		323DEAA7EDC2366AAC9C3C75 /* Pods-IASIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IASIS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IASIS/Pods-IASIS.debug.xcconfig"; sourceTree = "<group>"; };
 		6513CF461ADAFF260089ED53 /* ProviderLocations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProviderLocations.plist; sourceTree = "<group>"; };
+		6513CF481ADB5AFF0089ED53 /* Hospitals.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hospitals.plist; sourceTree = "<group>"; };
 		652D22611ABCA10000FA9D9D /* ERWaitTimes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERWaitTimes.h; sourceTree = "<group>"; };
 		652D22621ABCA10000FA9D9D /* ERWaitTimes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERWaitTimes.m; sourceTree = "<group>"; };
 		652D22641ABCA5CA00FA9D9D /* ProviderSearchClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProviderSearchClient.h; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 			children = (
 				65A1DBF41A17FF6200EF78FA /* Info.plist */,
 				6513CF461ADAFF260089ED53 /* ProviderLocations.plist */,
+				6513CF481ADB5AFF0089ED53 /* Hospitals.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				65A1DBFF1A17FF6200EF78FA /* LaunchScreen.xib in Resources */,
 				C6EEB2461A393D0700C59CB2 /* WebCell.xib in Resources */,
 				C66517DA1A3D5B650087BCA8 /* PortalHeaderCell.xib in Resources */,
+				6513CF491ADB5AFF0089ED53 /* Hospitals.plist in Resources */,
 				C61892291A38108B00A0CD08 /* MyMyProvidersHeader.xib in Resources */,
 				C6EEB2411A393B1300C59CB2 /* FindHospitalInfoCell.xib in Resources */,
 				C61ED4191A3807920034717B /* MyMyHospitalCell.xib in Resources */,

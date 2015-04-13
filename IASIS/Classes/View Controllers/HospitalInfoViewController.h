@@ -11,4 +11,6 @@
 
 @interface HospitalInfoViewController : EmptyBackButtonTitleViewController
 
+@property (nonatomic, strong) NSDictionary *hospital;
+
 @end

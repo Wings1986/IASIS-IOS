@@ -10,4 +10,6 @@
 
 @interface MyERWaitCell : UICollectionViewCell
 
+- (void)fetchER:(NSString *)erURL;
+
 @end

@@ -14,5 +14,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *lblAddress1;
 @property (nonatomic, weak) IBOutlet UILabel *lblAddress2;
 @property (nonatomic, weak) IBOutlet UILabel *lblPhone;
+@property (nonatomic, weak) IBOutlet UIImageView *image;
 
 @end

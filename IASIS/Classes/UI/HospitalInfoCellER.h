@@ -13,4 +13,6 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *lblWait;
 
+- (void)fetchER:(NSString *)erURL;
+
 @end

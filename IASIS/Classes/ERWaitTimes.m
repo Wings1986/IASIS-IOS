@@ -33,16 +33,17 @@
         AFXMLParserResponseSerializer *responseSerializer = [AFXMLParserResponseSerializer serializer];
         responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/rss+xml"];
         
-        _operationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://waittimes.iasishealthcare.com/"]];
+        _operationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@""]];
         _operationManager.responseSerializer = responseSerializer;
         _operationManager.requestSerializer = [AFJSONRequestSerializer serializer];
     }
     return self;
 }
 
-- (AFHTTPRequestOperation *)fetchWaitTimeForHospital:(NSString *)username successBlock:(void (^)(NSXMLParser *))successBlock failureBlock:(void (^)(NSError *error))failureBlock
+- (AFHTTPRequestOperation *)fetchWaitTimeForHospital:(NSString *)waitURLString successBlock:(void (^)(NSXMLParser *parser))successBlock failureBlock:(void (^)(NSError *error))failureBlock
 {
-    AFHTTPRequestOperation *operation = [self.operationManager GET:@"MEDHOST/GRM/EdisKpiRssFeedGenerator.aspx" parameters:nil success:^(AFHTTPRequestOperation *operation, NSXMLParser *responseObject) {
+    NSLog(@"%@", waitURLString);
+    AFHTTPRequestOperation *operation = [self.operationManager GET:waitURLString parameters:nil success:^(AFHTTPRequestOperation *operation, NSXMLParser *responseObject) {
         if(successBlock) {
             successBlock(responseObject);
         }

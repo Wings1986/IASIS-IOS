@@ -22,8 +22,6 @@
 
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlRequest];
-
-    NSLog(@"web = %@", self.webView);
 }
 
 @end

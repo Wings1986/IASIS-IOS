@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Arizona</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Mountain Vista Medical Center</string>
+			<key>info</key>
+			<string>1301 S. Crismon Road
+Mesa, AZ 85209
+(480) 358-6100</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/mvmc.html </string>
+			<key>image</key>
+			<string>mvmc</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/MVM/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>St. Luke’s Medical Center</string>
+			<key>info</key>
+			<string>1800 E. Van Buren Street
+Phoenix, AZ 85006
+(602) 251-8100</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/slmc.html</string>
+			<key>image</key>
+			<string>slmc</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/SLPHX/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>St. Luke’s Behavioral Health</string>
+			<key>info</key>
+			<string>1800 E. Van Buren Street
+Phoenix, AZ 85006
+(602) 251-8535</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/slbh.html </string>
+			<key>image</key>
+			<string>slbh</string>
+			<key>er</key>
+			<string>http://</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tempe St. Luke’s Hospital</string>
+			<key>info</key>
+			<string>1500 S. Mill Avenue
+Tempe, AZ 85281
+(480) 784-5500</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/tslh.html </string>
+			<key>image</key>
+			<string>tslh</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/TSL/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+	</array>
+	<key>Arkansas</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Wadley Regional Medical Center at Hope</string>
+			<key>info</key>
+			<string>2001 South Main Street
+Hope, AR 71801
+(870) 722-3800</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/hope.html </string>
+			<key>image</key>
+			<string>hope</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/WRM/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+	</array>
+	<key>Colorado</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Pikes Peak Regional Hospital</string>
+			<key>info</key>
+			<string>16420 West Highway 24
+Woodland Park, CO 80863
+(719) 687-9999</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/pprh.html</string>
+			<key>image</key>
+			<string>pprh</string>
+			<key>er</key>
+			<string>http://</string>
+		</dict>
+	</array>
+	<key>Louisiana</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Glenwood Regional Medical Center</string>
+			<key>info</key>
+			<string>503 McMillan Road
+West Monroe, LA 71291
+(318) 329-4200</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/grmc.html</string>
+			<key>image</key>
+			<string>grmc</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/GRM/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+	</array>
+	<key>Texas</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Odessa Regional Medical Center</string>
+			<key>info</key>
+			<string>520 East Sixth Street
+Odessa, TX 79761
+(432) 582-8000</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/ormc.html</string>
+			<key>image</key>
+			<string>ormc</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/ORH/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Southwest General Hospital</string>
+			<key>info</key>
+			<string>7400 Barlite Boulevard
+San Antonio, TX 78224
+(210) 921-2000</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/swgh.html</string>
+			<key>image</key>
+			<string>swgh</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/SGH/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>St. Joseph Medical Center</string>
+			<key>info</key>
+			<string>1401 St. Joseph Parkway
+Houston, TX 77002
+(713) 757-1000</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/sjmc.html</string>
+			<key>image</key>
+			<string>sjmc</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/sjm/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>St. Joseph Medical Center in the Heights</string>
+			<key>info</key>
+			<string>1917 Ashland Street
+Houston, TX 77008
+(713) 969-5400</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/heights.html</string>
+			<key>image</key>
+			<string>heights</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/SJH/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>The Medical Center of Southeast Texas</string>
+			<key>info</key>
+			<string>2555 Jimmy Johnson Blvd
+Port Arthur, TX 77640
+(409) 724-7389</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/mcst.html</string>
+			<key>image</key>
+			<string>mcst</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/MCSETX/EdisKpiRssFeedGenerator.a</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Wadley Regional Medical Center</string>
+			<key>info</key>
+			<string>1000 Pine Street
+Texarkana, TX 75501
+(903) 798-8000</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/wrmc.html</string>
+			<key>image</key>
+			<string>wrmc</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/WRM/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+	</array>
+	<key>Utah</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Davis Hospital and Medical Center</string>
+			<key>info</key>
+			<string>1600 West Antelope Drive
+Layton, UT 84041
+(801) 807-1000</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/dhmc.html</string>
+			<key>image</key>
+			<string>dhmc</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/DHM/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Jordan Valley Medical Center</string>
+			<key>info</key>
+			<string>3580 West 9000 South
+West Jordan, Utah 84088
+(801) 561-8888</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/jvmc.html</string>
+			<key>image</key>
+			<string>jvmc</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/JVH/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Jordan Valley Medical Center, West Valley Campus</string>
+			<key>info</key>
+			<string>3336 South 4155 West
+West Valley City, Utah 84120
+(801) 964-3100</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/west.html</string>
+			<key>image</key>
+			<string>west</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/PVH/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Salt Lake Regional Medical Center</string>
+			<key>info</key>
+			<string>1050 East South Temple
+Salt Lake City, UT 84102
+(801) 350-4111</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/slrmc.html</string>
+			<key>image</key>
+			<string>slrmc</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/SLR/EdisKpiRssFeedGenerator.aspx</string>
+		</dict>
+	</array>
+</dict>
+</plist>

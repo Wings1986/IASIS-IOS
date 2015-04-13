@@ -45,17 +45,27 @@
 {
     if(indexPath.section == 0) {
         FindHospitalInfoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([FindHospitalInfoCell class]) forIndexPath:indexPath];
+        
+        cell.lblName.text = self.hospital[@"name"];
+        
+        NSArray *parts = [self.hospital[@"info"] componentsSeparatedByString:@"\n"];
+        cell.lblAddress1.text = parts[0];
+        cell.lblAddress2.text = parts[1];
+        cell.lblPhone.text = parts[2];
+        cell.image.image = [UIImage imageNamed:self.hospital[@"image"]];
+        
         return cell;
     }
     
     if(indexPath.section == 1) {
         MyERWaitCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyERWaitCell class]) forIndexPath:indexPath];
+        [cell fetchER:self.hospital[@"er"]];
         return cell;
     }
     
     if(indexPath.section == 2) {
         WebCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([WebCell class]) forIndexPath:indexPath];
-        cell.url = [NSURL URLWithString:@"http://www.iasishealthcare.com/app/mvmc.html"];
+        cell.url = [NSURL URLWithString:self.hospital[@"url"]];
         return cell;
     }
     

@@ -190,7 +190,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="gd2-rk-Yb2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.14117647058823529" green="0.36470588235294116" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.14117647058823529" green="0.36470588235294116" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChevronBlue" translatesAutoresizingMaskIntoConstraints="NO" id="8AB-YY-spR">
@@ -512,6 +512,9 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="lblSubtitle" destination="fw8-1b-90g" id="d1j-61-GHM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwk-uR-Zc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
