@@ -529,7 +529,6 @@
 				TargetAttributes = {
 					65A1DBBD1A17FF2100EF78FA = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = R542H35MSK;
 					};
 					65A1DBD61A17FF2100EF78FA = {
 						CreatedOnToolsVersion = 6.1;
@@ -781,12 +780,12 @@
 			baseConfigurationReference = 323DEAA7EDC2366AAC9C3C75 /* Pods-IASIS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Pfeiffer (SVRQGP8NR3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Pfeiffer (SVRQGP8NR3)";
 				INFOPLIST_FILE = "$(SRCROOT)/IASIS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ccfdb65d-b5af-412c-9568-62e0cf2eb697";
 			};
 			name = Debug;
 		};
@@ -795,12 +794,12 @@
 			baseConfigurationReference = A596595F72C3F41E858537BD /* Pods-IASIS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Pfeiffer (SVRQGP8NR3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Pfeiffer (SVRQGP8NR3)";
 				INFOPLIST_FILE = "$(SRCROOT)/IASIS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ccfdb65d-b5af-412c-9568-62e0cf2eb697";
 			};
 			name = Release;
 		};
