@@ -14,6 +14,7 @@
 		652D22661ABCA5CA00FA9D9D /* ProviderSearchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22651ABCA5CA00FA9D9D /* ProviderSearchClient.m */; };
 		652D22691ABCA6B600FA9D9D /* WaitSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22681ABCA6B600FA9D9D /* WaitSpinner.m */; };
 		652D226C1ABCAB4D00FA9D9D /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D226B1ABCAB4D00FA9D9D /* UIViewController+Alerts.m */; };
+		653D45781AE3EFD4004E53BD /* Provider.html in Resources */ = {isa = PBXBuildFile; fileRef = 653D45771AE3EFD4004E53BD /* Provider.html */; };
 		653F94601A37B42A0045739C /* StatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F945F1A37B42A0045739C /* StatesViewController.m */; };
 		653F94631A37B4340045739C /* ProvidersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94621A37B4340045739C /* ProvidersViewController.m */; };
 		653F94661A37B43C0045739C /* PortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94651A37B43C0045739C /* PortalViewController.m */; };
@@ -81,6 +82,7 @@
 		652D22681ABCA6B600FA9D9D /* WaitSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitSpinner.m; sourceTree = "<group>"; };
 		652D226A1ABCAB4D00FA9D9D /* UIViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
 		652D226B1ABCAB4D00FA9D9D /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
+		653D45771AE3EFD4004E53BD /* Provider.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Provider.html; sourceTree = "<group>"; };
 		653F945E1A37B42A0045739C /* StatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesViewController.h; sourceTree = "<group>"; };
 		653F945F1A37B42A0045739C /* StatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesViewController.m; sourceTree = "<group>"; };
 		653F94611A37B4340045739C /* ProvidersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvidersViewController.h; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				65A1DBF41A17FF6200EF78FA /* Info.plist */,
 				6513CF461ADAFF260089ED53 /* ProviderLocations.plist */,
 				6513CF481ADB5AFF0089ED53 /* Hospitals.plist */,
+				653D45771AE3EFD4004E53BD /* Provider.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				C618922E1A38118700A0CD08 /* MyProviderCell.xib in Resources */,
 				65A1DBFC1A17FF6200EF78FA /* Images.xcassets in Resources */,
 				6513CF471ADAFF260089ED53 /* ProviderLocations.plist in Resources */,
+				653D45781AE3EFD4004E53BD /* Provider.html in Resources */,
 				65A1DC001A17FF6200EF78FA /* Main.storyboard in Resources */,
 				C61ED4211A380AA40034717B /* MyERWaitCell.xib in Resources */,
 				C66517DF1A3D5CDD0087BCA8 /* PortalStateCell.xib in Resources */,

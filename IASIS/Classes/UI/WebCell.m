@@ -24,4 +24,9 @@
     [self.webView loadRequest:urlRequest];
 }
 
+- (void)loadHTML:(NSString *)html
+{
+    [self.webView loadHTMLString:html baseURL:nil];
+}
+
 @end

@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSURL *url;
 
+- (void)loadHTML:(NSString *)html;
+
 @end
