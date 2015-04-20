@@ -33,7 +33,7 @@
         AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializer];
         responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
 
-        _operationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://108.163.204.186/"]];
+        _operationManager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://directory.iasishealthcare.com/"]];
         _operationManager.responseSerializer = responseSerializer;
         _operationManager.requestSerializer = [AFJSONRequestSerializer serializer];
     }
@@ -66,7 +66,7 @@
         state = @"la";
     }
 
-    NSString *url = [NSString stringWithFormat:@"~iasis/api/?last_name=%@&state=%@&city=%@&specialty=%@", lastName, state, city, specialty];
+    NSString *url = [NSString stringWithFormat:@"api/?last_name=%@&state=%@&city=%@&specialty=%@", lastName, state, city, specialty];
 
     AFHTTPRequestOperation *operation = [self.operationManager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if(successBlock) {
