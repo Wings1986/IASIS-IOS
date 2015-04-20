@@ -42,6 +42,7 @@
         cell.lblLocation.text = [[self.hospitals[indexPath.row][@"info"] componentsSeparatedByString:@"\n"][1] stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
         [cell.btnInfo addTarget:self action:@selector(info:) forControlEvents:UIControlEventTouchUpInside];
         cell.btnInfo.tag = indexPath.row;
+        [cell.btnCheckIn addTarget:self action:@selector(checkIn:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     } else {
         HospitalInfoCellER *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HospitalInfoCellER class]) forIndexPath:indexPath];
@@ -50,6 +51,7 @@
         [cell.btnInfo addTarget:self action:@selector(info:) forControlEvents:UIControlEventTouchUpInside];
         cell.btnInfo.tag = indexPath.row;
         [cell fetchER:self.hospitals[indexPath.row][@"er"]];
+        [cell.btnCheckIn addTarget:self action:@selector(checkIn:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
 }
@@ -78,6 +80,12 @@
     HospitalInfoViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([HospitalInfoViewController class])];
     vc.hospital = self.hospitals[sender.tag];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)checkIn:(UIButton *)sender
+{
+    NSURL *url = [NSURL URLWithString:self.hospitals[sender.tag][@"checkin"]];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 @end

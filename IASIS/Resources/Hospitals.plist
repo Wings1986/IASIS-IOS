@@ -17,6 +17,8 @@ Mesa, AZ 85209
 			<string>mvmc</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/MVM/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://arizonaer.inquicker.com/facility/mountain-vista-medical-center</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -31,6 +33,8 @@ Phoenix, AZ 85006
 			<string>slmc</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/SLPHX/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://arizonaer.inquicker.com/facility/st-lukes-medical-center</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -59,6 +63,8 @@ Tempe, AZ 85281
 			<string>tslh</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/TSL/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://arizonaer.inquicker.com/facility/tempe-st-lukes-hospital</string>
 		</dict>
 	</array>
 	<key>Arkansas</key>
@@ -110,6 +116,8 @@ West Monroe, LA 71291
 			<string>grmc</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/GRM/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://louisiana-iasis.inquicker.com/emergency-room</string>
 		</dict>
 	</array>
 	<key>Texas</key>
@@ -127,6 +135,8 @@ Odessa, TX 79761
 			<string>ormc</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/ORH/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://odessa-iasis.inquicker.com/emergency-room</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -141,6 +151,8 @@ San Antonio, TX 78224
 			<string>swgh</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/SGH/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://iasis.inquicker.com/facility/southwest-general-hospital</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -155,6 +167,8 @@ Houston, TX 77002
 			<string>sjmc</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/sjm/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://houston-iasis.inquicker.com/emergency-room</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -169,6 +183,8 @@ Houston, TX 77008
 			<string>heights</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/SJH/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://houston-iasis.inquicker.com/emergency-room</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -183,6 +199,8 @@ Port Arthur, TX 77640
 			<string>mcst</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/MCSETX/EdisKpiRssFeedGenerator.a</string>
+			<key>checkin</key>
+			<string>https://setexas-iasis.inquicker.com/facility/medical-center-of-southeast-texas</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -214,6 +232,8 @@ Layton, UT 84041
 			<string>dhmc</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/DHM/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://utah-iasis.inquicker.com/facility/davis-hospital-and-medical-center</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -228,6 +248,8 @@ West Jordan, Utah 84088
 			<string>jvmc</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/JVH/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://iasis.inquicker.com/facility/jordan-valley-medical-center</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -242,6 +264,8 @@ West Valley City, Utah 84120
 			<string>west</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/PVH/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://utah-iasis.inquicker.com/facility/pioneer-valley-hospital</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -256,6 +280,8 @@ Salt Lake City, UT 84102
 			<string>slrmc</string>
 			<key>er</key>
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/SLR/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://iasis.inquicker.com/facility/salt-lake-regional-medical-center</string>
 		</dict>
 	</array>
 </dict>
