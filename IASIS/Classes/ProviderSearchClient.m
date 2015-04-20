@@ -42,6 +42,30 @@
 
 - (AFHTTPRequestOperation *)searchWithState:(NSString *)state city:(NSString *)city specialty:(NSString *)specialty lastName:(NSString *)lastName successBlock:(void (^)(id responseObject))successBlock failureBlock:(void (^)(NSError *error))failureBlock
 {
+    if([[state lowercaseString] isEqualToString:@"arizona"]) {
+        state = @"az";
+    }
+
+    if([[state lowercaseString] isEqualToString:@"utah"]) {
+        state = @"ut";
+    }
+    
+    if([[state lowercaseString] isEqualToString:@"texas"]) {
+        state = @"tx";
+    }
+    
+    if([[state lowercaseString] isEqualToString:@"colorado"]) {
+        state = @"co";
+    }
+
+    if([[state lowercaseString] isEqualToString:@"arkasas"]) {
+        state = @"ak";
+    }
+
+    if([[state lowercaseString] isEqualToString:@"louisiana"]) {
+        state = @"la";
+    }
+
     NSString *url = [NSString stringWithFormat:@"~iasis/api/?last_name=%@&state=%@&city=%@&specialty=%@", lastName, state, city, specialty];
 
     AFHTTPRequestOperation *operation = [self.operationManager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
