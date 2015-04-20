@@ -10,6 +10,9 @@
 
 @interface MyERWaitCell : UICollectionViewCell
 
+@property (nonatomic, weak) IBOutlet UIButton *btnCheckIn;
+@property (nonatomic, weak) IBOutlet UIButton *btnDirections;
+
 - (void)fetchER:(NSString *)erURL;
 
 @end

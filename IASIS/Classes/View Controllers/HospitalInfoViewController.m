@@ -59,7 +59,12 @@
     
     if(indexPath.section == 1) {
         MyERWaitCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyERWaitCell class]) forIndexPath:indexPath];
+
         [cell fetchER:self.hospital[@"er"]];
+
+        [cell.btnCheckIn addTarget:self action:@selector(checkIn:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.btnDirections addTarget:self action:@selector(directions:) forControlEvents:UIControlEventTouchUpInside];
+
         return cell;
     }
     
@@ -79,6 +84,17 @@
     }
     
     return CGSizeMake(collectionView.bounds.size.width, 120.0);
+}
+
+- (IBAction)checkIn:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:self.hospital[@"checkin"]];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+- (IBAction)directions:(id)sender
+{
+    
 }
 
 @end
