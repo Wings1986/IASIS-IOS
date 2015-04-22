@@ -37,7 +37,7 @@
 {
     NSDictionary *provider = self.providers[indexPath.row];
     
-    NSString *photURLString = [NSString stringWithFormat:@"%@", provider[@"photo"]];
+    NSString *photURLString = [NSString stringWithFormat:@"http://directory.iasishealthcare.com/images/physicians/%@", provider[@"photo"]];
     
     MyProviderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyProviderCell class]) forIndexPath:indexPath];
     cell.lblName.text = [NSString stringWithFormat:@"%@ %@", provider[@"first_name"], provider[@"last_name"]];

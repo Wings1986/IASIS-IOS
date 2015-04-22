@@ -46,7 +46,7 @@
         
         cell.lblSpecialty.text = self.providerDict[@"specialty1"] ? self.providerDict[@"specialty1"] : @"";
 
-        NSString *photURLString = [NSString stringWithFormat:@"%@", self.providerDict[@"photo"]];
+        NSString *photURLString = [NSString stringWithFormat:@"http://directory.iasishealthcare.com/images/physicians/%@", self.providerDict[@"photo"]];
         [cell.photo setImageWithURL:[NSURL URLWithString:photURLString] placeholderImage:[UIImage imageNamed:@"doctor_placeholder"]];
 
         cell.btnSchedule.hidden = YES;
