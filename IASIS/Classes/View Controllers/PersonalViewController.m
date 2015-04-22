@@ -10,10 +10,14 @@
 #import "MyMyHospitalCell.h"
 #import "MyERWaitCell.h"
 #import "MyProviderCell.h"
+#import "Provider.h"
+#import "ProviderViewController.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface PersonalViewController ()
 
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) RLMResults *favoriteProviders;
 
 @end
 
@@ -31,6 +35,13 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"MyMyProvidersHeader" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MyMyProvidersHeader"];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.favoriteProviders = [Provider allObjects];
+    [self.collectionView reloadData];
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 3;
@@ -40,7 +51,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if(section == 2) {
-        return 100;
+        return self.favoriteProviders.count;
     }
     
     return 1;
@@ -59,7 +70,17 @@
     }
 
     if(indexPath.section == 2) {
+        Provider *provider = self.favoriteProviders[indexPath.row];
+
         MyProviderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyProviderCell class]) forIndexPath:indexPath];
+        cell.lblName.text = provider.name;
+        cell.lblSpecialty.text = provider.specialty;
+        [cell.photo setImageWithURL:[NSURL URLWithString:provider.photoURLString] placeholderImage:[UIImage imageNamed:@"doctor_placeholder"]];
+        cell.btnStar.hidden = YES;
+        
+        cell.btnDetails.tag = indexPath.row;
+        [cell.btnDetails addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
+
         return cell;
     }
 
@@ -96,6 +117,16 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
+}
+
+- (IBAction)details:(UIButton *)sender
+{
+    ProviderViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ProviderViewController class])];
+    vc.showDefaultLeftBarButton = YES;
+
+    Provider *provider = self.favoriteProviders[sender.tag];
+    vc.providerDict = [[NSUserDefaults standardUserDefaults] valueForKey:provider.guid];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

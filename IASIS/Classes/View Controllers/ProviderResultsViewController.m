@@ -10,6 +10,7 @@
 #import "ProviderViewController.h"
 #import "MyProviderCell.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import "Provider.h"
 
 @interface ProviderResultsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -26,6 +27,14 @@
     self.navigationItem.title = @"Provider Search Results";
 
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyProviderCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([MyProviderCell class])];
+
+    // NSLog(@"%@", self.providers);
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.collectionView reloadData];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -46,9 +55,16 @@
     
     cell.btnDetails.tag = indexPath.row;
     [cell.btnDetails addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
-    
-    cell.btnSchedule.tag = indexPath.row;
-    [cell.btnSchedule addTarget:self action:@selector(schedule:) forControlEvents:UIControlEventTouchUpInside];
+
+    cell.btnStar.tag = indexPath.row;
+    [cell.btnStar addTarget:self action:@selector(star:) forControlEvents:UIControlEventTouchUpInside];
+
+    Provider *fetchedProvider = [Provider objectForPrimaryKey:provider[@"id"]];
+    if(fetchedProvider) {
+        [cell.btnStar setSelected:YES];
+    } else {
+        [cell.btnStar setSelected:NO];
+    }
 
     return cell;
 }
@@ -77,6 +93,29 @@
     vc.showDefaultLeftBarButton = YES;
     vc.providerDict = self.providers[sender.tag];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)star:(UIButton *)sender
+{
+    NSDictionary *providerDict = self.providers[sender.tag];
+    Provider *provider = [Provider objectForPrimaryKey:providerDict[@"id"]];
+    if(provider) {
+        [sender setSelected:NO];
+        [[RLMRealm defaultRealm] beginWriteTransaction];
+        [[RLMRealm defaultRealm] deleteObject:provider];
+        [[RLMRealm defaultRealm] commitWriteTransaction];
+    } else {
+        [sender setSelected:YES];
+        [[RLMRealm defaultRealm] beginWriteTransaction];
+        provider = [[Provider alloc] init];
+        provider.name = [NSString stringWithFormat:@"%@ %@", providerDict[@"first_name"], providerDict[@"last_name"]];
+        provider.specialty = providerDict[@"specialty1"] ? providerDict[@"specialty1"] : @"";
+        provider.photoURLString = [NSString stringWithFormat:@"http://directory.iasishealthcare.com/images/physicians/%@", providerDict[@"photo"]];
+        provider.guid = providerDict[@"id"];
+        provider.fullData = providerDict;
+        [[RLMRealm defaultRealm] addObject:provider];
+        [[RLMRealm defaultRealm] commitWriteTransaction];
+    }
 }
 
 @end

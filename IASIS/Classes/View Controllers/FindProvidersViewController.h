@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "IASISViewController.h"
 
-@interface ProvidersViewController : IASISViewController
+@interface FindProvidersViewController : IASISViewController
 
 @end

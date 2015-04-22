@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 IASIS Healthcare Corporation. All rights reserved.
 //
 
-#import "ProvidersViewController.h"
+#import "FindProvidersViewController.h"
 #import "ProviderResultsViewController.h"
 #import "UIColor+Colors.h"
 #import "ProviderSearchClient.h"
 #import "WaitSpinner.h"
 #import "UIViewController+Alerts.h"
 
-@interface ProvidersViewController () <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface FindProvidersViewController () <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIPickerView *pickerView;
 @property (nonatomic, weak) IBOutlet UIButton *btnState;
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation ProvidersViewController
+@implementation FindProvidersViewController
 
 - (void)viewDidLoad
 {

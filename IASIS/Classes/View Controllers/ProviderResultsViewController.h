@@ -7,6 +7,7 @@
 //
 
 #import "IASISViewController.h"
+#import <Realm/Realm.h>
 
 @interface ProviderResultsViewController : IASISViewController
 

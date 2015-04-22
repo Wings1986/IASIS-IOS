@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Realm/Realm.h>
 #import "IASISViewController.h"
 
 @interface PersonalViewController : IASISViewController

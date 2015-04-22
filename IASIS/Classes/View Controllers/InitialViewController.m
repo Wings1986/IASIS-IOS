@@ -13,7 +13,7 @@
 
 #import "PersonalViewController.h"
 #import "StatesViewController.h"
-#import "ProvidersViewController.h"
+#import "FindProvidersViewController.h"
 #import "PortalViewController.h"
 #import "SettingsViewController.h"
 
@@ -22,7 +22,7 @@
 @property (nonatomic, strong) JSSlidingViewController *vcSliding;
 @property (nonatomic, strong) PersonalViewController *vcPersonal;
 @property (nonatomic, strong) StatesViewController *vcStates;
-@property (nonatomic, strong) ProvidersViewController *vcProviders;
+@property (nonatomic, strong) FindProvidersViewController *vcProviders;
 @property (nonatomic, strong) PortalViewController *vcPortal;
 @property (nonatomic, strong) SettingsViewController *vcSettings;
 
@@ -67,7 +67,7 @@
 
     if(index == 2) {
         if(!self.vcProviders) {
-            self.vcProviders = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ProvidersViewController class])];
+            self.vcProviders = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([FindProvidersViewController class])];
         }
         [self.vcSliding setFrontViewController:self.vcProviders animated:YES completion:nil];
     }

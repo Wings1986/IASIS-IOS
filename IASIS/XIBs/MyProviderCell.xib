@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -71,6 +71,17 @@
                                     <constraint firstAttribute="width" constant="63" id="hQZ-Xr-OsT"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mto-xo-Oav">
+                                <rect key="frame" x="438" y="6" width="29" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="NPz-bv-nLQ"/>
+                                    <constraint firstAttribute="width" constant="29" id="wCv-zb-dCr"/>
+                                </constraints>
+                                <state key="normal" image="star-off">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="star-on"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.93092105263157909" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -84,8 +95,10 @@
                             <constraint firstItem="F0O-L6-CCP" firstAttribute="leading" secondItem="ubK-0h-14r" secondAttribute="trailing" constant="8" id="Sgd-nr-1PO"/>
                             <constraint firstItem="1yZ-8h-kJc" firstAttribute="leading" secondItem="ubK-0h-14r" secondAttribute="trailing" constant="9" id="Tpj-MD-RUK"/>
                             <constraint firstItem="ubK-0h-14r" firstAttribute="leading" secondItem="lWT-f1-nPl" secondAttribute="leading" constant="9" id="WAo-dn-nqW"/>
+                            <constraint firstItem="mto-xo-Oav" firstAttribute="top" secondItem="lWT-f1-nPl" secondAttribute="top" constant="6" id="XFP-bM-joZ"/>
                             <constraint firstAttribute="centerY" secondItem="ubK-0h-14r" secondAttribute="centerY" constant="-0.5" id="YRv-4x-WTM"/>
                             <constraint firstAttribute="trailing" secondItem="1yZ-8h-kJc" secondAttribute="trailing" constant="8" id="bJl-vk-aen"/>
+                            <constraint firstAttribute="trailing" secondItem="mto-xo-Oav" secondAttribute="trailing" constant="8" id="tfm-pl-QEo"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -101,6 +114,7 @@
             <connections>
                 <outlet property="btnDetails" destination="Mr7-qs-pae" id="GEn-Vn-Ges"/>
                 <outlet property="btnSchedule" destination="awo-p0-JLV" id="uj4-Jq-s38"/>
+                <outlet property="btnStar" destination="mto-xo-Oav" id="Q4M-Gv-AYH"/>
                 <outlet property="lblName" destination="F0O-L6-CCP" id="h2v-Gq-9i4"/>
                 <outlet property="lblSpecialty" destination="1yZ-8h-kJc" id="FZ8-8o-nXb"/>
                 <outlet property="photo" destination="ubK-0h-14r" id="7vg-jk-NTm"/>
@@ -111,5 +125,7 @@
     </objects>
     <resources>
         <image name="ProviderHeadshot" width="63" height="78"/>
+        <image name="star-off" width="14" height="13"/>
+        <image name="star-on" width="13" height="12"/>
     </resources>
 </document>

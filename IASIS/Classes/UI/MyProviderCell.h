@@ -16,5 +16,6 @@
 @property (nonatomic, weak) IBOutlet UIImageView *photo;
 @property (nonatomic, weak) IBOutlet UIButton *btnSchedule;
 @property (nonatomic, weak) IBOutlet UIButton *btnDetails;
+@property (nonatomic, weak) IBOutlet UIButton *btnStar;
 
 @end
