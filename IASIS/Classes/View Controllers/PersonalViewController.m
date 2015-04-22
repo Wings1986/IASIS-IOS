@@ -12,6 +12,8 @@
 #import "MyProviderCell.h"
 #import "Provider.h"
 #import "ProviderViewController.h"
+#import "NoFavoriteProvidersCell.h"
+#import "FindProvidersViewController.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface PersonalViewController ()
@@ -32,6 +34,7 @@
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyMyHospitalCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([MyMyHospitalCell class])];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyERWaitCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([MyERWaitCell class])];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyProviderCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([MyProviderCell class])];
+    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([NoFavoriteProvidersCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([NoFavoriteProvidersCell class])];
     [self.collectionView registerNib:[UINib nibWithNibName:@"MyMyProvidersHeader" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MyMyProvidersHeader"];
 }
 
@@ -51,7 +54,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if(section == 2) {
-        return self.favoriteProviders.count;
+        return MAX(self.favoriteProviders.count, 1);
     }
     
     return 1;
@@ -70,18 +73,24 @@
     }
 
     if(indexPath.section == 2) {
-        Provider *provider = self.favoriteProviders[indexPath.row];
+        if(self.favoriteProviders.count == 0) {
+            NoFavoriteProvidersCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([NoFavoriteProvidersCell class]) forIndexPath:indexPath];
+            [cell.button addTarget:self action:@selector(addProviders:) forControlEvents:UIControlEventTouchUpInside];
+            return cell;
+        } else {
+            Provider *provider = self.favoriteProviders[indexPath.row];
 
-        MyProviderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyProviderCell class]) forIndexPath:indexPath];
-        cell.lblName.text = provider.name;
-        cell.lblSpecialty.text = provider.specialty;
-        [cell.photo setImageWithURL:[NSURL URLWithString:provider.photoURLString] placeholderImage:[UIImage imageNamed:@"doctor_placeholder"]];
-        cell.btnStar.hidden = YES;
-        
-        cell.btnDetails.tag = indexPath.row;
-        [cell.btnDetails addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
+            MyProviderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyProviderCell class]) forIndexPath:indexPath];
+            cell.lblName.text = provider.name;
+            cell.lblSpecialty.text = provider.specialty;
+            [cell.photo setImageWithURL:[NSURL URLWithString:provider.photoURLString] placeholderImage:[UIImage imageNamed:@"doctor_placeholder"]];
+            cell.btnStar.hidden = YES;
+            
+            cell.btnDetails.tag = indexPath.row;
+            [cell.btnDetails addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
 
-        return cell;
+            return cell;
+        }
     }
 
     return nil;
@@ -90,7 +99,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section == 2) {
-        return CGSizeMake(collectionView.bounds.size.width, 130.0);
+        return self.favoriteProviders.count > 0 ? CGSizeMake(collectionView.bounds.size.width, 130.0) : CGSizeMake(collectionView.bounds.size.width, 186.0);
     }
 
     return CGSizeMake(collectionView.bounds.size.width, 120.0);
@@ -126,6 +135,14 @@
 
     Provider *provider = self.favoriteProviders[sender.tag];
     vc.providerDict = [[NSUserDefaults standardUserDefaults] valueForKey:provider.guid];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)addProviders:(id)sender
+{
+    UINavigationController *nc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([FindProvidersViewController class])];
+    FindProvidersViewController *vc = nc.viewControllers[0];
+    vc.showDefaultLeftBarButton = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

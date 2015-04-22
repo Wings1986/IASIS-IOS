@@ -15,6 +15,8 @@
 		652D22691ABCA6B600FA9D9D /* WaitSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22681ABCA6B600FA9D9D /* WaitSpinner.m */; };
 		652D226C1ABCAB4D00FA9D9D /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D226B1ABCAB4D00FA9D9D /* UIViewController+Alerts.m */; };
 		653337B71AE82AB900AFDF20 /* Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = 653337B61AE82AB900AFDF20 /* Provider.m */; };
+		653337B91AE83C8100AFDF20 /* NoFavoriteProvidersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653337B81AE83C8100AFDF20 /* NoFavoriteProvidersCell.xib */; };
+		653337BC1AE83DE700AFDF20 /* NoFavoriteProvidersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 653337BB1AE83DE700AFDF20 /* NoFavoriteProvidersCell.m */; };
 		653D45781AE3EFD4004E53BD /* Provider.html in Resources */ = {isa = PBXBuildFile; fileRef = 653D45771AE3EFD4004E53BD /* Provider.html */; };
 		653F94601A37B42A0045739C /* StatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F945F1A37B42A0045739C /* StatesViewController.m */; };
 		653F94631A37B4340045739C /* FindProvidersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94621A37B4340045739C /* FindProvidersViewController.m */; };
@@ -85,6 +87,9 @@
 		652D226B1ABCAB4D00FA9D9D /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
 		653337B51AE82AB900AFDF20 /* Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Provider.h; sourceTree = "<group>"; };
 		653337B61AE82AB900AFDF20 /* Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Provider.m; sourceTree = "<group>"; };
+		653337B81AE83C8100AFDF20 /* NoFavoriteProvidersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoFavoriteProvidersCell.xib; sourceTree = "<group>"; };
+		653337BA1AE83DE700AFDF20 /* NoFavoriteProvidersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoFavoriteProvidersCell.h; sourceTree = "<group>"; };
+		653337BB1AE83DE700AFDF20 /* NoFavoriteProvidersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoFavoriteProvidersCell.m; sourceTree = "<group>"; };
 		653D45771AE3EFD4004E53BD /* Provider.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Provider.html; sourceTree = "<group>"; };
 		653F945E1A37B42A0045739C /* StatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesViewController.h; sourceTree = "<group>"; };
 		653F945F1A37B42A0045739C /* StatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesViewController.m; sourceTree = "<group>"; };
@@ -456,6 +461,8 @@
 				C66517E11A3D5D5A0087BCA8 /* PortalStateCell.m */,
 				65DB4A011ADCB314002F7C0A /* PortalFooterCell.h */,
 				65DB4A021ADCB314002F7C0A /* PortalFooterCell.m */,
+				653337BA1AE83DE700AFDF20 /* NoFavoriteProvidersCell.h */,
+				653337BB1AE83DE700AFDF20 /* NoFavoriteProvidersCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -472,6 +479,7 @@
 				C66517D91A3D5B650087BCA8 /* PortalHeaderCell.xib */,
 				C66517DE1A3D5CDD0087BCA8 /* PortalStateCell.xib */,
 				65DB49FF1ADCB2D7002F7C0A /* PortalFooterCell.xib */,
+				653337B81AE83C8100AFDF20 /* NoFavoriteProvidersCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -583,6 +591,7 @@
 				6513CF491ADB5AFF0089ED53 /* Hospitals.plist in Resources */,
 				C61892291A38108B00A0CD08 /* MyMyProvidersHeader.xib in Resources */,
 				C6EEB2411A393B1300C59CB2 /* FindHospitalInfoCell.xib in Resources */,
+				653337B91AE83C8100AFDF20 /* NoFavoriteProvidersCell.xib in Resources */,
 				C61ED4191A3807920034717B /* MyMyHospitalCell.xib in Resources */,
 				C618922E1A38118700A0CD08 /* MyProviderCell.xib in Resources */,
 				65A1DBFC1A17FF6200EF78FA /* Images.xcassets in Resources */,
@@ -648,6 +657,7 @@
 				653F94701A37BA760045739C /* UIColor+Colors.m in Sources */,
 				C66517E21A3D5D5A0087BCA8 /* PortalStateCell.m in Sources */,
 				653F94601A37B42A0045739C /* StatesViewController.m in Sources */,
+				653337BC1AE83DE700AFDF20 /* NoFavoriteProvidersCell.m in Sources */,
 				65A1DBFD1A17FF6200EF78FA /* main.m in Sources */,
 				C6EEB2441A393C2400C59CB2 /* HospitalInfoViewController.m in Sources */,
 				C6EEB2391A38F6EC00C59CB2 /* HospitalInfoCell.m in Sources */,
