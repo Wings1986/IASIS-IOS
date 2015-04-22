@@ -88,7 +88,6 @@
 
 - (IBAction)checkIn:(id)sender
 {
-    NSLog(@"%@", self.hospital);
     NSURL *url = [NSURL URLWithString:self.hospital[@"checkin"]];
     [[UIApplication sharedApplication] openURL:url];
 }
