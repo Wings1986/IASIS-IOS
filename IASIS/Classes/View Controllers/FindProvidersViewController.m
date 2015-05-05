@@ -26,6 +26,8 @@
 
 @property (nonatomic, strong) NSArray *pickerData;
 
+@property (nonatomic, strong) NSMutableArray *specialties;
+
 @end
 
 @implementation FindProvidersViewController
@@ -50,6 +52,8 @@
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     [self.view addSubview:self.pickerView];
+    
+    [self fetchSpecialties];
 }
 
 - (void)styleTextField:(UITextField *)textField withPlaceholder:(NSString *)placeholder
@@ -95,6 +99,7 @@
 {
     self.selectedButton = sender;
     self.pickerData = @[];
+    self.pickerData = self.specialties;
     [self.pickerView reloadAllComponents];
     [self showPickerView];
 }
@@ -137,6 +142,43 @@
     }];
 }
 
+- (void)fetchSpecialties
+{
+    [[WaitSpinner sharedObject] wait];
+    
+    if(!self.specialties) {
+        self.specialties = [@[] mutableCopy];
+    }
+    [self.specialties removeAllObjects];
+
+    NSString *state = [[self.btnState titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *city = [[self.btnCity titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if([state isEqualToString:@"State"]) {
+        state = @"";
+    }
+    
+    if([city isEqualToString:@"City"]) {
+        city = @"";
+    }
+
+    [[ProviderSearchClient sharedObject] specialtiesWithState:state city:city successBlock:^(NSDictionary *responseObject) {
+        for(NSString *key in responseObject.allKeys) {
+            if([responseObject[key] isKindOfClass:[NSDictionary class]]) {
+                for(NSString *subkey in ((NSDictionary *)responseObject[key]).allKeys) {
+                    [self.specialties addObject:subkey];
+                }
+            }
+        }
+
+        [self.specialties sortUsingSelector:@selector(compare:)];
+
+        [[WaitSpinner sharedObject] unwait];
+    } failureBlock:^(NSError *error) {
+        [[WaitSpinner sharedObject] unwait];
+    }];
+}
+
 - (void)showPickerView
 {
     CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width, 162.0);
@@ -172,6 +214,10 @@
     } completion:^(BOOL finished) {
         
     }];
+    
+    if(self.selectedButton != self.btnSpecialty) {
+        [self fetchSpecialties];
+    }
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
