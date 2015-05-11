@@ -49,7 +49,20 @@
         if(!self.foundFirstTitle) {
             self.foundFirstTitle = YES;
         } else {
-            self.lblWait.text = [NSString stringWithFormat:@"Current ER Wait Time: %@ minutes", self.characters];
+            NSString *waitTimeString;
+            NSInteger waitTime = [self.characters integerValue];
+            
+            if(waitTime < 0) {
+                waitTimeString = @"0 minutes";
+            } else if (waitTime == 1) {
+                waitTimeString = @"1 minute";
+            } else if (waitTime > 59) {
+                waitTimeString = @"Unavailable";
+            } else {
+                waitTimeString = [NSString stringWithFormat:@"%ld minutes", (long)waitTime];
+            }
+
+            self.lblWait.text = [NSString stringWithFormat:@"Current ER Wait Time: %@", waitTimeString];
         }
     }
 }
