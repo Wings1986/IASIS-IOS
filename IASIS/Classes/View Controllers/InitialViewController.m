@@ -25,6 +25,7 @@
 @property (nonatomic, strong) FindProvidersViewController *vcProviders;
 @property (nonatomic, strong) PortalViewController *vcPortal;
 @property (nonatomic, strong) SettingsViewController *vcSettings;
+@property (nonatomic, assign) NSUInteger currentVCIndex;
 
 @end
 
@@ -51,6 +52,11 @@
 
 - (void)menuSelectedItem:(NSUInteger)index
 {
+    if(index == self.currentVCIndex) {
+        [self.vcSliding closeSlider:YES completion:nil];
+        return;
+    }
+    
     if(index == 0) {
         if(!self.vcPersonal) {
             self.vcPersonal = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([PersonalViewController class])];
@@ -87,6 +93,8 @@
     }
     
     [self.vcSliding closeSlider:YES completion:nil];
+
+    self.currentVCIndex = index;
 }
 
 - (void)hamburger:(NSNotification *)notification
