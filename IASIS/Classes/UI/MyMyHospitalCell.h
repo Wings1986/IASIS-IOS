@@ -10,4 +10,8 @@
 
 @interface MyMyHospitalCell : UICollectionViewCell
 
+@property (nonatomic, weak) IBOutlet UIButton *button;
+
+- (void)setHospital:(NSDictionary *)hospital;
+
 @end

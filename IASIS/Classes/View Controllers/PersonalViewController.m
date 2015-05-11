@@ -20,6 +20,7 @@
 
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) RLMResults *favoriteProviders;
+@property (nonatomic, strong) NSDictionary *favoriteHospital;
 
 @end
 
@@ -41,7 +42,17 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    self.favoriteHospital = nil;
+    
+    NSString *favoriteState = [[NSUserDefaults standardUserDefaults] valueForKey:@"favoriteLocation"];
+    NSInteger favoriteHospitalIndex = [[[NSUserDefaults standardUserDefaults] valueForKey:@"favoriteHospital"] integerValue];
+    
+    NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Hospitals" ofType:@"plist"]];
+    self.favoriteHospital = data[favoriteState][favoriteHospitalIndex];
+
     self.favoriteProviders = [Provider allObjects];
+
     [self.collectionView reloadData];
 }
 
@@ -64,6 +75,7 @@
 {
     if(indexPath.section == 0) {
         MyMyHospitalCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyMyHospitalCell class]) forIndexPath:indexPath];
+        [cell setHospital:self.favoriteHospital];
         return cell;
     }
 
