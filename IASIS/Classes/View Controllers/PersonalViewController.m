@@ -14,13 +14,16 @@
 #import "ProviderViewController.h"
 #import "NoFavoriteProvidersCell.h"
 #import "FindProvidersViewController.h"
+#import "FirstLaunchViewController.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import <MapKit/MapKit.h>
 
 @interface PersonalViewController ()
 
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) RLMResults *favoriteProviders;
 @property (nonatomic, strong) NSDictionary *favoriteHospital;
+@property (nonatomic, strong) FirstLaunchViewController *vcFirstLaunch;
 
 @end
 
@@ -76,11 +79,19 @@
     if(indexPath.section == 0) {
         MyMyHospitalCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyMyHospitalCell class]) forIndexPath:indexPath];
         [cell setHospital:self.favoriteHospital];
+        [cell.button addTarget:self action:@selector(pickFavorites) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
 
     if(indexPath.section == 1) {
         MyERWaitCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyERWaitCell class]) forIndexPath:indexPath];
+        if(self.favoriteHospital) {
+            [cell fetchER:self.favoriteHospital[@"er"]];
+        }
+
+        [cell.btnCheckIn addTarget:self action:@selector(checkIn) forControlEvents:UIControlEventTouchUpInside];
+        [cell.btnDirections addTarget:self action:@selector(directions) forControlEvents:UIControlEventTouchUpInside];
+        
         return cell;
     }
 
@@ -156,6 +167,24 @@
     FindProvidersViewController *vc = nc.viewControllers[0];
     vc.showDefaultLeftBarButton = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)checkIn
+{
+    NSURL *url = [NSURL URLWithString:self.favoriteHospital[@"checkin"]];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+- (void)directions
+{
+    NSString* url = [NSString stringWithFormat:@"http://maps.google.com/maps?saddr=&daddr=%@", [[self.favoriteHospital[@"info"] stringByReplacingOccurrencesOfString:@"\n" withString:@","] stringByReplacingOccurrencesOfString:@" " withString:@"+"]];
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString: url]];
+}
+
+- (void)pickFavorites
+{
+    self.vcFirstLaunch = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([FirstLaunchViewController class])];
+    [self presentViewController:self.vcFirstLaunch animated:YES completion:nil];
 }
 
 @end

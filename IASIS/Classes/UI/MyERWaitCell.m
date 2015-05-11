@@ -23,13 +23,16 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    self.lblWaitTime.text = @"Fetching ER Wait Time...";
+
+    self.lblWaitTime.text = @"Current ER Wait Time: Not Available";
+    self.btnCheckIn.hidden = YES;
+    self.btnDirections.hidden = YES;
 }
 
 - (void)fetchER:(NSString *)erURL
 {
     [[ERWaitTimes sharedObject] fetchWaitTimeForHospital:erURL successBlock:^(NSXMLParser *parser) {
+        self.lblWaitTime.text = @"Fetching ER Wait Time...";
         self.characters = @"";
         self.foundFirstTitle = NO;
         parser.delegate = self;
@@ -68,6 +71,8 @@
             }
 
             self.lblWaitTime.text = [NSString stringWithFormat:@"Current ER Wait Time: %@", waitTimeString];
+            self.btnDirections.hidden = NO;
+            self.btnCheckIn.hidden = NO;
         }
     }
 }
