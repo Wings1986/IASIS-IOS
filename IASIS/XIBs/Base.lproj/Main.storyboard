@@ -788,10 +788,32 @@
                                     <action selector="specialty:" destination="VnH-zy-jJY" eventType="touchUpInside" id="SQj-EV-gSu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNN-uW-t5f">
+                                <rect key="frame" x="16" y="422" width="568" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="2Ph-jJ-drQ"/>
+                                    <constraint firstAttribute="height" constant="44" id="aFC-b1-GkL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="jOr-Hz-vDP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2Ph-jJ-drQ"/>
+                                        <exclude reference="jOr-Hz-vDP"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="clear:" destination="VnH-zy-jJY" eventType="touchUpInside" id="pLx-bO-J4b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5Ux-dW-Z9O" firstAttribute="top" secondItem="7Km-Kj-zlH" secondAttribute="bottom" constant="17" id="5YA-0z-ro8"/>
+                            <constraint firstItem="vNN-uW-t5f" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="7FC-Ru-ap1"/>
                             <constraint firstItem="7Km-Kj-zlH" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="8FM-Xe-3Tl"/>
                             <constraint firstItem="5Ux-dW-Z9O" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="9Sg-yZ-Ylq"/>
                             <constraint firstItem="7Km-Kj-zlH" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="F8t-D8-Wua"/>
@@ -805,8 +827,10 @@
                             <constraint firstItem="7Km-Kj-zlH" firstAttribute="top" secondItem="MDX-B2-ZoZ" secondAttribute="bottom" constant="22" id="WIx-b3-1Na"/>
                             <constraint firstItem="MDX-B2-ZoZ" firstAttribute="top" secondItem="Fdh-26-aIV" secondAttribute="bottom" id="XlU-Sz-iPl"/>
                             <constraint firstItem="WkO-Zs-4a2" firstAttribute="trailing" secondItem="CD2-fu-NyL" secondAttribute="trailingMargin" id="ZRF-DH-xQY"/>
+                            <constraint firstItem="vNN-uW-t5f" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="c3v-NI-c2A"/>
                             <constraint firstItem="88o-6m-QXf" firstAttribute="top" secondItem="oUz-ek-WJi" secondAttribute="bottom" constant="15" id="cXs-36-jth"/>
                             <constraint firstItem="WkO-Zs-4a2" firstAttribute="top" secondItem="5Ux-dW-Z9O" secondAttribute="bottom" constant="19" id="fjT-lj-RYS"/>
+                            <constraint firstItem="vNN-uW-t5f" firstAttribute="top" secondItem="88o-6m-QXf" secondAttribute="bottom" constant="8" id="lUs-2s-Qlm"/>
                             <constraint firstItem="5Ux-dW-Z9O" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" id="v9u-72-BsY"/>
                             <constraint firstItem="MDX-B2-ZoZ" firstAttribute="leading" secondItem="CD2-fu-NyL" secondAttribute="leadingMargin" constant="-16" id="x6v-lf-LNN"/>
                         </constraints>
@@ -814,6 +838,7 @@
                     <navigationItem key="navigationItem" id="KmP-tT-M5e"/>
                     <connections>
                         <outlet property="btnCity" destination="5Ux-dW-Z9O" id="Zka-Rl-oqh"/>
+                        <outlet property="btnClear" destination="vNN-uW-t5f" id="uXZ-I9-7fP"/>
                         <outlet property="btnSearch" destination="88o-6m-QXf" id="pJp-Do-kIW"/>
                         <outlet property="btnSpecialty" destination="WkO-Zs-4a2" id="t2I-9Y-5o7"/>
                         <outlet property="btnState" destination="7Km-Kj-zlH" id="B7T-p3-jrg"/>

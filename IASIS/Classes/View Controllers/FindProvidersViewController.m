@@ -24,6 +24,7 @@
 @property (nonatomic, strong) UIView *shimView;
 @property (nonatomic, strong) UIButton *selectedButton;
 @property (nonatomic, weak) IBOutlet UIButton *btnSearch;
+@property (nonatomic, weak) IBOutlet UIButton *btnClear;
 
 @property (nonatomic, strong) NSArray *pickerData;
 
@@ -61,6 +62,11 @@
     self.btnSearch.layer.borderWidth = 0.0;
     self.btnSearch.layer.cornerRadius = 4.0;
     [self.btnSearch setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+    self.btnClear.backgroundColor = [UIColor grayColor];
+    self.btnClear.layer.borderWidth = 0.0;
+    self.btnClear.layer.cornerRadius = 4.0;
+    [self.btnClear setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     [self fetchSpecialties];
 }
@@ -247,6 +253,14 @@
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
 {
     return self.view.bounds.size.width;
+}
+
+- (IBAction)clear:(id)sender
+{
+    [self.btnState setTitle:@"   State" forState:UIControlStateNormal];
+    [self.btnCity setTitle:@"   City" forState:UIControlStateNormal];
+    [self.btnSpecialty setTitle:@"   Specialty" forState:UIControlStateNormal];
+    self.txtLastName.text = @"";
 }
 
 @end
