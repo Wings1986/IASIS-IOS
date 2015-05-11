@@ -42,8 +42,7 @@
         cell.lblLocation.text = [[self.hospitals[indexPath.row][@"info"] componentsSeparatedByString:@"\n"][1] stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
         [cell.btnInfo addTarget:self action:@selector(info:) forControlEvents:UIControlEventTouchUpInside];
         cell.btnInfo.tag = indexPath.row;
-        [cell.btnCheckIn addTarget:self action:@selector(checkIn:) forControlEvents:UIControlEventTouchUpInside];
-        cell.btnCheckIn.tag = indexPath.row;
+        cell.btnCheckIn.hidden = YES;
         return cell;
     } else {
         HospitalInfoCellER *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HospitalInfoCellER class]) forIndexPath:indexPath];
@@ -54,6 +53,7 @@
         [cell fetchER:self.hospitals[indexPath.row][@"er"]];
         [cell.btnCheckIn addTarget:self action:@selector(checkIn:) forControlEvents:UIControlEventTouchUpInside];
         cell.btnCheckIn.tag = indexPath.row;
+        cell.btnCheckIn.hidden = NO;
         return cell;
     }
 }
