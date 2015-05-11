@@ -52,6 +52,9 @@
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     [self.view addSubview:self.pickerView];
+ 
+    self.txtLastName.layer.borderWidth = 1.0;
+    self.txtLastName.layer.cornerRadius = 4.0;
     
     [self fetchSpecialties];
 }
