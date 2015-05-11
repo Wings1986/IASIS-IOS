@@ -70,7 +70,7 @@
     
     if(indexPath.section == 2) {
         WebCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([WebCell class]) forIndexPath:indexPath];
-        cell.url = [NSURL URLWithString:self.hospital[@"url"]];
+        cell.url = [NSURL URLWithString:[self.hospital[@"url"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
         return cell;
     }
     
