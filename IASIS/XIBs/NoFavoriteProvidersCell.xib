@@ -14,14 +14,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUZ-tZ-ckj">
-                        <rect key="frame" x="8" y="8" width="364" height="83"/>
+                        <rect key="frame" x="16" y="8" width="356" height="104"/>
                         <string key="text">It looks like you haven't added any favorite providers yet. Saving providers to your favorites is a great way to access information and schedule appointments with the providers you visit most.</string>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8x-wp-4qw" customClass="OutlinedButton">
-                        <rect key="frame" x="99" y="116" width="183" height="30"/>
+                        <rect key="frame" x="103" y="132" width="183" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="183" id="M4f-mh-0y2"/>
                             <constraint firstAttribute="height" constant="30" id="kWP-MZ-7z9"/>
@@ -41,9 +41,9 @@
             <constraints>
                 <constraint firstItem="eUZ-tZ-ckj" firstAttribute="top" secondItem="sHe-9O-w0K" secondAttribute="top" constant="8" id="CkQ-9u-bER"/>
                 <constraint firstItem="X8x-wp-4qw" firstAttribute="centerX" secondItem="eUZ-tZ-ckj" secondAttribute="centerX" constant="0.5" id="LNM-4M-l6p"/>
-                <constraint firstItem="eUZ-tZ-ckj" firstAttribute="leading" secondItem="sHe-9O-w0K" secondAttribute="leading" constant="8" id="ebW-ju-BbN"/>
+                <constraint firstItem="eUZ-tZ-ckj" firstAttribute="leading" secondItem="sHe-9O-w0K" secondAttribute="leading" constant="16" id="ebW-ju-BbN"/>
                 <constraint firstAttribute="trailing" secondItem="eUZ-tZ-ckj" secondAttribute="trailing" constant="8" id="ekN-iy-3wd"/>
-                <constraint firstItem="X8x-wp-4qw" firstAttribute="top" secondItem="eUZ-tZ-ckj" secondAttribute="bottom" constant="25" id="z3W-cA-Bf5"/>
+                <constraint firstItem="X8x-wp-4qw" firstAttribute="top" secondItem="eUZ-tZ-ckj" secondAttribute="bottom" constant="20" id="z3W-cA-Bf5"/>
             </constraints>
             <size key="customSize" width="380" height="166"/>
             <connections>
