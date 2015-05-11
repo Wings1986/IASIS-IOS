@@ -42,7 +42,6 @@
 
 - (AFHTTPRequestOperation *)fetchWaitTimeForHospital:(NSString *)waitURLString successBlock:(void (^)(NSXMLParser *parser))successBlock failureBlock:(void (^)(NSError *error))failureBlock
 {
-    NSLog(@"%@", waitURLString);
     AFHTTPRequestOperation *operation = [self.operationManager GET:waitURLString parameters:nil success:^(AFHTTPRequestOperation *operation, NSXMLParser *responseObject) {
         if(successBlock) {
             successBlock(responseObject);
