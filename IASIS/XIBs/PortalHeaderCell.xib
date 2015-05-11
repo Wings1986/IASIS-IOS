@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -21,47 +21,37 @@
                         <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Staying Healthy is Now Easer Than Ever" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16V-ND-Tm2">
-                        <rect key="frame" x="70" y="73" width="308" height="21"/>
+                        <rect key="frame" x="70" y="60" width="308" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUc-KI-DbJ">
-                        <rect key="frame" x="145" y="47" width="156" height="27"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patient Portal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxl-As-RNi">
-                                <rect key="frame" x="20" y="1" width="107" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="156" id="YnJ-Mi-Hzq"/>
-                            <constraint firstAttribute="height" constant="27" id="jgq-ww-6tk"/>
-                        </constraints>
-                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Portal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxl-As-RNi">
+                        <rect key="frame" x="170" y="40" width="107" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" red="0.1361473799" green="0.340436399" blue="0.47059553859999997" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="16V-ND-Tm2" firstAttribute="top" secondItem="TUc-KI-DbJ" secondAttribute="bottom" constant="-1" id="0kK-yz-bwt"/>
-                <constraint firstItem="vag-Za-7mn" firstAttribute="top" secondItem="XWv-Fg-fHW" secondAttribute="top" id="6jp-E5-C4v"/>
-                <constraint firstAttribute="trailing" secondItem="vag-Za-7mn" secondAttribute="trailing" id="9u8-Ob-m2i"/>
-                <constraint firstAttribute="centerX" secondItem="TUc-KI-DbJ" secondAttribute="centerX" constant="0.5" id="EKO-Mj-UY8"/>
-                <constraint firstAttribute="centerX" secondItem="16V-ND-Tm2" secondAttribute="centerX" id="K1S-Un-sT6"/>
-                <constraint firstItem="knN-e1-CI2" firstAttribute="top" secondItem="XWv-Fg-fHW" secondAttribute="top" id="Xjt-6O-MYx"/>
-                <constraint firstAttribute="centerY" secondItem="TUc-KI-DbJ" secondAttribute="centerY" constant="0.5" id="Zi3-4w-yJA"/>
-                <constraint firstAttribute="bottom" secondItem="knN-e1-CI2" secondAttribute="bottom" id="a22-vj-EPd"/>
-                <constraint firstItem="knN-e1-CI2" firstAttribute="leading" secondItem="XWv-Fg-fHW" secondAttribute="leading" id="cN3-EK-AVA"/>
-                <constraint firstAttribute="trailing" secondItem="knN-e1-CI2" secondAttribute="trailing" id="h48-nM-WWy"/>
-                <constraint firstItem="vag-Za-7mn" firstAttribute="leading" secondItem="XWv-Fg-fHW" secondAttribute="leading" id="l4g-xc-ogP"/>
-                <constraint firstAttribute="bottom" secondItem="vag-Za-7mn" secondAttribute="bottom" id="sY6-L8-Xgx"/>
+                <constraint firstAttribute="centerY" secondItem="16V-ND-Tm2" secondAttribute="centerY" constant="-10" id="0mO-S9-DWA"/>
+                <constraint firstAttribute="bottom" secondItem="knN-e1-CI2" secondAttribute="bottom" id="2EA-Xv-Elp"/>
+                <constraint firstAttribute="bottom" secondItem="vag-Za-7mn" secondAttribute="bottom" id="3im-lP-ITw"/>
+                <constraint firstAttribute="centerY" secondItem="Bxl-As-RNi" secondAttribute="centerY" constant="10" id="Cok-JG-QYB"/>
+                <constraint firstItem="knN-e1-CI2" firstAttribute="leading" secondItem="XWv-Fg-fHW" secondAttribute="leading" id="HPG-Ex-ekz"/>
+                <constraint firstItem="knN-e1-CI2" firstAttribute="top" secondItem="XWv-Fg-fHW" secondAttribute="top" id="JMf-2a-pE5"/>
+                <constraint firstItem="vag-Za-7mn" firstAttribute="leading" secondItem="XWv-Fg-fHW" secondAttribute="leading" id="Jd0-LE-dTg"/>
+                <constraint firstAttribute="centerX" secondItem="16V-ND-Tm2" secondAttribute="centerX" constant="-0.5" id="JzP-43-Hl7"/>
+                <constraint firstAttribute="centerX" secondItem="Bxl-As-RNi" secondAttribute="centerX" id="buF-G2-rvq"/>
+                <constraint firstAttribute="trailing" secondItem="vag-Za-7mn" secondAttribute="trailing" id="gDy-0k-YJ8"/>
+                <constraint firstItem="vag-Za-7mn" firstAttribute="top" secondItem="XWv-Fg-fHW" secondAttribute="top" id="jqa-n7-7xv"/>
+                <constraint firstAttribute="trailing" secondItem="knN-e1-CI2" secondAttribute="trailing" id="uGo-cj-lGn"/>
             </constraints>
             <size key="customSize" width="447" height="121"/>
-            <point key="canvasLocation" x="431.5" y="347.5"/>
+            <point key="canvasLocation" x="-58.5" y="438.5"/>
         </collectionViewCell>
     </objects>
     <resources>
