@@ -689,7 +689,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88o-6m-QXf" customClass="OutlinedButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88o-6m-QXf">
                                 <rect key="frame" x="16" y="370" width="568" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="2bK-6u-v1s"/>
@@ -697,14 +697,9 @@
                                     <constraint firstAttribute="height" constant="44" id="XRF-a4-HMk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Search" backgroundImage="NavigationBarBG">
+                                <state key="normal" title="Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="2bK-6u-v1s"/>
@@ -819,6 +814,7 @@
                     <navigationItem key="navigationItem" id="KmP-tT-M5e"/>
                     <connections>
                         <outlet property="btnCity" destination="5Ux-dW-Z9O" id="Zka-Rl-oqh"/>
+                        <outlet property="btnSearch" destination="88o-6m-QXf" id="pJp-Do-kIW"/>
                         <outlet property="btnSpecialty" destination="WkO-Zs-4a2" id="t2I-9Y-5o7"/>
                         <outlet property="btnState" destination="7Km-Kj-zlH" id="B7T-p3-jrg"/>
                         <outlet property="txtLastName" destination="oUz-ek-WJi" id="IGR-6d-LGm"/>
@@ -994,6 +990,5 @@
     <resources>
         <image name="ChevronBlue" width="11" height="17"/>
         <image name="MenuStar" width="27" height="27"/>
-        <image name="NavigationBarBG" width="29" height="26"/>
     </resources>
 </document>

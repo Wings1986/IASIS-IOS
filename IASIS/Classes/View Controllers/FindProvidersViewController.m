@@ -23,6 +23,7 @@
 @property (nonatomic, strong) NSDictionary *providerLocations;
 @property (nonatomic, strong) UIView *shimView;
 @property (nonatomic, strong) UIButton *selectedButton;
+@property (nonatomic, weak) IBOutlet UIButton *btnSearch;
 
 @property (nonatomic, strong) NSArray *pickerData;
 
@@ -35,7 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.navigationItem.title = @"Find a Provider";
     
     [self styleTextField:self.txtLastName withPlaceholder:@"Provider's Last Name..."];
@@ -55,6 +56,11 @@
  
     self.txtLastName.layer.borderWidth = 1.0;
     self.txtLastName.layer.cornerRadius = 4.0;
+    
+    self.btnSearch.backgroundColor = [UIColor colorWithRed:0.09 green:0.4 blue:0.69 alpha:1];
+    self.btnSearch.layer.borderWidth = 0.0;
+    self.btnSearch.layer.cornerRadius = 4.0;
+    [self.btnSearch setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     [self fetchSpecialties];
 }
