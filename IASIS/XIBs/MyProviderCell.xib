@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="32" id="sTl-bJ-djw"/>
                                     <constraint firstAttribute="width" constant="81" id="uLo-ga-HZc"/>
                                 </constraints>
-                                <state key="normal" title="Schedule">
+                                <state key="normal" title="Details">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -55,7 +55,7 @@
                                     <constraint firstAttribute="width" constant="81" id="bh3-Mk-ZlH"/>
                                     <constraint firstAttribute="height" constant="32" id="njj-Q7-TmS"/>
                                 </constraints>
-                                <state key="normal" title="Details">
+                                <state key="normal" title="Schedule">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -88,7 +88,7 @@
                             <constraint firstAttribute="centerY" secondItem="Mr7-qs-pae" secondAttribute="centerY" constant="-20.5" id="2pA-zx-j3C"/>
                             <constraint firstItem="Mr7-qs-pae" firstAttribute="leading" secondItem="awo-p0-JLV" secondAttribute="trailing" constant="11" id="3Qi-Yt-gsl"/>
                             <constraint firstAttribute="centerY" secondItem="F0O-L6-CCP" secondAttribute="centerY" constant="26" id="Fg6-hh-99C"/>
-                            <constraint firstAttribute="centerY" secondItem="awo-p0-JLV" secondAttribute="centerY" constant="-20.5" id="H7D-qm-DIr"/>
+                            <constraint firstAttribute="centerY" secondItem="awo-p0-JLV" secondAttribute="centerY" constant="-20" id="H7D-qm-DIr"/>
                             <constraint firstAttribute="trailing" secondItem="F0O-L6-CCP" secondAttribute="trailing" constant="22" id="HZi-mH-FI8"/>
                             <constraint firstItem="awo-p0-JLV" firstAttribute="leading" secondItem="ubK-0h-14r" secondAttribute="trailing" constant="8" id="Jbe-h7-sw6"/>
                             <constraint firstAttribute="centerY" secondItem="1yZ-8h-kJc" secondAttribute="centerY" constant="8.5" id="Ov6-fz-2eY"/>
@@ -112,8 +112,8 @@
             </constraints>
             <size key="customSize" width="503" height="117"/>
             <connections>
-                <outlet property="btnDetails" destination="Mr7-qs-pae" id="GEn-Vn-Ges"/>
-                <outlet property="btnSchedule" destination="awo-p0-JLV" id="uj4-Jq-s38"/>
+                <outlet property="btnDetails" destination="awo-p0-JLV" id="XBH-5d-zvn"/>
+                <outlet property="btnSchedule" destination="Mr7-qs-pae" id="f2g-lj-AwL"/>
                 <outlet property="btnStar" destination="mto-xo-Oav" id="Q4M-Gv-AYH"/>
                 <outlet property="lblName" destination="F0O-L6-CCP" id="h2v-Gq-9i4"/>
                 <outlet property="lblSpecialty" destination="1yZ-8h-kJc" id="FZ8-8o-nXb"/>

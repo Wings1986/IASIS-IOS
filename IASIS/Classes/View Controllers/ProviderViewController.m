@@ -65,12 +65,15 @@
         } else {
             [cell.btnStar setSelected:NO];
         }
-        
-        cell.btnDetails.hidden = YES;
-//        if(self.providerDict[@"appointment_url"]) {
-//            cell.btnDetails.hidden = NO;
-//            [cell.btnDetails addTarget:self action:@selector(appointment:) forControlEvents:UIControlEventTouchUpInside];
-//        }
+
+        if([self.providerDict[@"appointment_url"] isKindOfClass:[NSNull class]]) {
+            cell.btnSchedule.hidden = YES;
+        } else if([self.providerDict[@"appointment_url"] containsString:@"://"]) {
+            cell.btnSchedule.hidden = NO;
+            [cell.btnSchedule addTarget:self action:@selector(appointment:) forControlEvents:UIControlEventTouchUpInside];
+        } else {
+            cell.btnSchedule.hidden = YES;
+        }
 
         return cell;
     } else {

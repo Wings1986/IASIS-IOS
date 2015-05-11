@@ -45,7 +45,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *provider = self.providers[indexPath.row];
-    
+
     NSString *photURLString = [NSString stringWithFormat:@"http://directory.iasishealthcare.com/images/physicians/%@", provider[@"photo"]];
     
     MyProviderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyProviderCell class]) forIndexPath:indexPath];
@@ -65,6 +65,15 @@
     } else {
         [cell.btnStar setSelected:NO];
     }
+    
+    if([provider[@"appointment_url"] isKindOfClass:[NSNull class]]) {
+        cell.btnSchedule.hidden = YES;
+    } else if([provider[@"appointment_url"] containsString:@"://"]) {
+        cell.btnSchedule.hidden = NO;
+        [cell.btnSchedule addTarget:self action:@selector(schedule:) forControlEvents:UIControlEventTouchUpInside];
+    } else {
+        cell.btnSchedule.hidden = YES;
+    }
 
     return cell;
 }
@@ -82,9 +91,11 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)schedule:(id)sender
+- (IBAction)schedule:(UIButton *)sender
 {
-    
+    NSDictionary *provider = self.providers[sender.tag];
+    NSURL *url = [NSURL URLWithString:provider[@"appointment_url"]];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 - (IBAction)details:(UIButton *)sender
