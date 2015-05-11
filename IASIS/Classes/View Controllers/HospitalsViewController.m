@@ -43,6 +43,7 @@
         [cell.btnInfo addTarget:self action:@selector(info:) forControlEvents:UIControlEventTouchUpInside];
         cell.btnInfo.tag = indexPath.row;
         [cell.btnCheckIn addTarget:self action:@selector(checkIn:) forControlEvents:UIControlEventTouchUpInside];
+        cell.btnCheckIn.tag = indexPath.row;
         return cell;
     } else {
         HospitalInfoCellER *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HospitalInfoCellER class]) forIndexPath:indexPath];
@@ -52,6 +53,7 @@
         cell.btnInfo.tag = indexPath.row;
         [cell fetchER:self.hospitals[indexPath.row][@"er"]];
         [cell.btnCheckIn addTarget:self action:@selector(checkIn:) forControlEvents:UIControlEventTouchUpInside];
+        cell.btnCheckIn.tag = indexPath.row;
         return cell;
     }
 }
