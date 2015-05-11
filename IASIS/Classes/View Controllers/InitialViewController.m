@@ -16,6 +16,7 @@
 #import "FindProvidersViewController.h"
 #import "PortalViewController.h"
 #import "SettingsViewController.h"
+#import "FirstLaunchViewController.h"
 
 @interface InitialViewController () <MenuViewControllerDelegate>
 
@@ -26,6 +27,8 @@
 @property (nonatomic, strong) PortalViewController *vcPortal;
 @property (nonatomic, strong) SettingsViewController *vcSettings;
 @property (nonatomic, assign) NSUInteger currentVCIndex;
+
+@property (nonatomic, strong) FirstLaunchViewController *vcFirstLaunch;
 
 @end
 
@@ -47,7 +50,12 @@
     
     self.vcSliding = [[JSSlidingViewController alloc] initWithFrontViewController:self.vcPersonal backViewController:menuVC];
     self.vcSliding.useBouncyAnimations = NO;
-    [self presentViewController:self.vcSliding animated:NO completion:nil];
+    [self presentViewController:self.vcSliding animated:NO completion:^{
+        if(![[NSUserDefaults standardUserDefaults] valueForKey:@"favoriteLocation"]) {
+            self.vcFirstLaunch = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([FirstLaunchViewController class])];
+            [self.vcSliding presentViewController:self.vcFirstLaunch animated:YES completion:nil];
+        }
+    }];
 }
 
 - (void)menuSelectedItem:(NSUInteger)index

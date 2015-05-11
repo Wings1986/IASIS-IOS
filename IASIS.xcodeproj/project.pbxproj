@@ -24,6 +24,7 @@
 		653F94691A37B44C0045739C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F94681A37B44C0045739C /* SettingsViewController.m */; };
 		653F946D1A37BA2F0045739C /* IASISViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F946C1A37BA2F0045739C /* IASISViewController.m */; };
 		653F94701A37BA760045739C /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F946F1A37BA760045739C /* UIColor+Colors.m */; };
+		6567AE6B1B01490D003B6C2F /* FirstLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6567AE6A1B01490D003B6C2F /* FirstLaunchViewController.m */; };
 		65A1DBDE1A17FF2100EF78FA /* IASISTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBDD1A17FF2100EF78FA /* IASISTests.m */; };
 		65A1DBFA1A17FF6200EF78FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBEA1A17FF6200EF78FA /* AppDelegate.m */; };
 		65A1DBFB1A17FF6200EF78FA /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBEE1A17FF6200EF78FA /* InitialViewController.m */; };
@@ -104,6 +105,8 @@
 		653F946C1A37BA2F0045739C /* IASISViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASISViewController.m; sourceTree = "<group>"; };
 		653F946E1A37BA760045739C /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colors.h"; sourceTree = "<group>"; };
 		653F946F1A37BA760045739C /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colors.m"; sourceTree = "<group>"; };
+		6567AE691B01490D003B6C2F /* FirstLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLaunchViewController.h; sourceTree = "<group>"; };
+		6567AE6A1B01490D003B6C2F /* FirstLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLaunchViewController.m; sourceTree = "<group>"; };
 		65A1DBBE1A17FF2100EF78FA /* IASIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IASIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A1DBD71A17FF2100EF78FA /* IASISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IASISTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A1DBDC1A17FF2100EF78FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -349,6 +352,8 @@
 				65A1DBEE1A17FF6200EF78FA /* InitialViewController.m */,
 				653F946B1A37BA2F0045739C /* IASISViewController.h */,
 				653F946C1A37BA2F0045739C /* IASISViewController.m */,
+				6567AE691B01490D003B6C2F /* FirstLaunchViewController.h */,
+				6567AE6A1B01490D003B6C2F /* FirstLaunchViewController.m */,
 				65B13E081A2D61DF00A5E4D3 /* MenuViewController */,
 				65B13E0C1A2D622600A5E4D3 /* PersonalViewController */,
 				653F945A1A37B3DA0045739C /* Hospitals */,
@@ -660,6 +665,7 @@
 				653337BC1AE83DE700AFDF20 /* NoFavoriteProvidersCell.m in Sources */,
 				65A1DBFD1A17FF6200EF78FA /* main.m in Sources */,
 				C6EEB2441A393C2400C59CB2 /* HospitalInfoViewController.m in Sources */,
+				6567AE6B1B01490D003B6C2F /* FirstLaunchViewController.m in Sources */,
 				C6EEB2391A38F6EC00C59CB2 /* HospitalInfoCell.m in Sources */,
 				653337B71AE82AB900AFDF20 /* Provider.m in Sources */,
 				65DB4A031ADCB314002F7C0A /* PortalFooterCell.m in Sources */,

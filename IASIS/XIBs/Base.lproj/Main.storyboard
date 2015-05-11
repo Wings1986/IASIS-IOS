@@ -23,6 +23,94 @@
             </objects>
             <point key="canvasLocation" x="516" y="523"/>
         </scene>
+        <!--First Launch View Controller-->
+        <scene sceneID="yOv-Bp-p6h">
+            <objects>
+                <viewController storyboardIdentifier="FirstLaunchViewController" id="Gue-zY-O0I" customClass="FirstLaunchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zgl-s6-lvb"/>
+                        <viewControllerLayoutGuide type="bottom" id="R4e-R0-ugZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OQu-2v-zDV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iasis-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Mia-B2-jTs">
+                                <rect key="frame" x="0.0" y="28" width="600" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="JMU-3Z-6PJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSi-cT-rr1" customClass="OutlinedButton">
+                                <rect key="frame" x="220" y="173" width="160" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="7Vt-NX-Oq6"/>
+                                    <constraint firstAttribute="width" constant="160" id="RAO-77-gyH"/>
+                                </constraints>
+                                <state key="normal" title="Set My Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chooseLocation:" destination="Gue-zY-O0I" eventType="touchUpInside" id="aVl-fG-jZI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQa-9r-Arp" customClass="OutlinedButton">
+                                <rect key="frame" x="220" y="242" width="160" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="15c-Uu-rH9"/>
+                                    <constraint firstAttribute="height" constant="42" id="AdC-PY-V1L"/>
+                                </constraints>
+                                <state key="normal" title="Set My Hospital">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chooseHospital:" destination="Gue-zY-O0I" eventType="touchUpInside" id="yQU-gc-YFG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0S-Zg-qlt">
+                                <rect key="frame" x="244" y="327" width="113" height="30"/>
+                                <state key="normal" title="Skip initial setup">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skip:" destination="Gue-zY-O0I" eventType="touchUpInside" id="C9R-Ip-Mh0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.094117647058823528" green="0.40392156862745099" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mia-B2-jTs" firstAttribute="top" secondItem="zgl-s6-lvb" secondAttribute="bottom" constant="8" id="AT0-iT-Ter"/>
+                            <constraint firstItem="BSi-cT-rr1" firstAttribute="top" secondItem="Mia-B2-jTs" secondAttribute="bottom" constant="39" id="AnJ-iR-3rz"/>
+                            <constraint firstAttribute="centerX" secondItem="GQa-9r-Arp" secondAttribute="centerX" id="SQP-9o-Mgy"/>
+                            <constraint firstAttribute="centerX" secondItem="BSi-cT-rr1" secondAttribute="centerX" id="cFe-ou-ybT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mia-B2-jTs" secondAttribute="trailing" constant="-16" id="eXW-0m-4xz"/>
+                            <constraint firstItem="S0S-Zg-qlt" firstAttribute="top" secondItem="GQa-9r-Arp" secondAttribute="bottom" constant="43" id="lYr-iO-UZb"/>
+                            <constraint firstAttribute="centerX" secondItem="S0S-Zg-qlt" secondAttribute="centerX" constant="-0.5" id="ldU-sw-Kga"/>
+                            <constraint firstItem="GQa-9r-Arp" firstAttribute="top" secondItem="BSi-cT-rr1" secondAttribute="bottom" constant="27" id="qSE-Y8-gRG"/>
+                            <constraint firstItem="Mia-B2-jTs" firstAttribute="leading" secondItem="OQu-2v-zDV" secondAttribute="leadingMargin" constant="-16" id="zd2-jf-YWP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnHospital" destination="GQa-9r-Arp" id="Ff0-m3-dRL"/>
+                        <outlet property="btnLocation" destination="BSi-cT-rr1" id="FNx-tf-PBd"/>
+                        <outlet property="btnSkip" destination="S0S-Zg-qlt" id="Rhf-1R-xkx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SjM-RT-mR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="-804"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="qTR-NJ-kr2">
             <objects>
@@ -1015,5 +1103,6 @@
     <resources>
         <image name="ChevronBlue" width="11" height="17"/>
         <image name="MenuStar" width="27" height="27"/>
+        <image name="iasis-logo" width="800" height="401"/>
     </resources>
 </document>
