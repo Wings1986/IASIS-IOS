@@ -47,6 +47,9 @@
         FindHospitalInfoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([FindHospitalInfoCell class]) forIndexPath:indexPath];
         
         cell.lblName.text = self.hospital[@"name"];
+        if(self.hospital[@"displayName"]) {
+            cell.lblName.text = self.hospital[@"displayName"];
+        }
         
         NSArray *parts = [self.hospital[@"info"] componentsSeparatedByString:@"\n"];
         cell.lblAddress1.text = parts[0];

@@ -254,6 +254,8 @@ West Jordan, Utah 84088
 		<dict>
 			<key>name</key>
 			<string>Jordan Valley Medical Center, West Valley Campus</string>
+			<key>displayName</key>
+			<string>JVMC, West Valley Campus</string>
 			<key>info</key>
 			<string>3336 South 4155 West
 West Valley City, Utah 84120
