@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, MenuItem) {
     MenuItemHospitals,
     MenuItemProviders,
     MenuItemPatientPortal,
-    MenuItemSettings,
+    // MenuItemSettings,
     MenuItemCount
 };
 
@@ -63,10 +63,10 @@ typedef NS_ENUM(NSUInteger, MenuItem) {
         cell.imgIcon.image = [UIImage imageNamed:@"MenuKey"];
     }
 
-    if(indexPath.row == MenuItemSettings) {
-        cell.lblTitle.text = @"Settings";
-        cell.imgIcon.image = [UIImage imageNamed:@"MenuGear"];
-    }
+//    if(indexPath.row == MenuItemSettings) {
+//        cell.lblTitle.text = @"Settings";
+//        cell.imgIcon.image = [UIImage imageNamed:@"MenuGear"];
+//    }
     
     return cell;
 }

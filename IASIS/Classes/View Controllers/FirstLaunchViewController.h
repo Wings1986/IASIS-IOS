@@ -10,4 +10,6 @@
 
 @interface FirstLaunchViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIButton *btnSkip;
+
 @end

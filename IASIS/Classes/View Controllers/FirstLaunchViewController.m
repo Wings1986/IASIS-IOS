@@ -12,7 +12,6 @@
 
 @property (nonatomic, weak) IBOutlet UIButton *btnLocation;
 @property (nonatomic, weak) IBOutlet UIButton *btnHospital;
-@property (nonatomic, weak) IBOutlet UIButton *btnSkip;
 @property (nonatomic, strong) IBOutlet UIPickerView *pickerView;
 @property (nonatomic, strong) UIView *shimView;
 

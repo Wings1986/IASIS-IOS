@@ -7,6 +7,7 @@
 //
 
 #import "IASISViewController.h"
+#import "FirstLaunchViewController.h"
 
 @interface IASISViewController ()
 
@@ -41,6 +42,10 @@
 - (IBAction)settings:(id)sender
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SETTINGS" object:nil];
+
+    FirstLaunchViewController *vcFirstLaunch = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([FirstLaunchViewController class])];
+    [self presentViewController:vcFirstLaunch animated:YES completion:nil];
+    [vcFirstLaunch.btnSkip setTitle:@"Close" forState:UIControlStateNormal];
 }
 
 @end
