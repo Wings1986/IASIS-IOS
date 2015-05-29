@@ -50,6 +50,11 @@
         NSString *photURLString = [NSString stringWithFormat:@"http://directory.iasishealthcare.com/images/physicians/%@", self.providerDict[@"photo"]];
         [cell.photo setImageWithURL:[NSURL URLWithString:photURLString] placeholderImage:[UIImage imageNamed:@"doctor_placeholder"]];
 
+        if(![self.providerDict[@"location1_url"] isKindOfClass:[NSNull class]]) {
+            [cell.btnDetails setTitle:@"Website" forState:UIControlStateNormal];
+            [cell.btnDetails addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        
         cell.btnSchedule.hidden = YES;
         if(self.providerDict[@"appointment_url"]) {
             cell.btnSchedule.hidden = NO;
@@ -82,9 +87,15 @@
         NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"Provider" ofType:@"html"];
         NSString *html = [[NSString alloc] initWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
         NSMutableString *mutableHTML = [html mutableCopy];
+        
+        NSString *url = ![self.providerDict[@"location1_url"] isKindOfClass:[NSNull class]] ? self.providerDict[@"location1_url"] : @"";
+        if(![url containsString:@"http://"]) {
+            url = [NSString stringWithFormat:@"http://%@", url];
+        }
 
         NSDictionary *replacements = @{ @"first_name" : ![self.providerDict[@"first_name"] isKindOfClass:[NSNull class]] ? self.providerDict[@"first_name"] : @"",
                                         @"last_name" : ![self.providerDict[@"last_name"] isKindOfClass:[NSNull class]] ? self.providerDict[@"last_name"] : @"",
+                                        @"credentials" : ![self.providerDict[@"credentials"] isKindOfClass:[NSNull class]] ? self.providerDict[@"credentials"] : @"",
                                         @"specialty" : ![self.providerDict[@"specialty1"] isKindOfClass:[NSNull class]] ? self.providerDict[@"specialty1"] : @"",
                                         @"bio" : ![self.providerDict[@"bio"] isKindOfClass:[NSNull class]] ? self.providerDict[@"bio"] : @"",
                                         @"location1_name" : ![self.providerDict[@"location1_name"] isKindOfClass:[NSNull class]] ? self.providerDict[@"location1_name"] : @"",
@@ -93,7 +104,7 @@
                                         @"location1_state" : ![self.providerDict[@"location1_state"] isKindOfClass:[NSNull class]] ? self.providerDict[@"location1_state"] : @"",
                                         @"location1_zip" : ![self.providerDict[@"location1_zip"] isKindOfClass:[NSNull class]] ? self.providerDict[@"location1_zip"] : @"",
                                         @"location1_phone" : ![self.providerDict[@"location1_phone"] isKindOfClass:[NSNull class]] ? self.providerDict[@"location1_phone"] : @"",
-                                        @"location1_url" : ![self.providerDict[@"location1_url"] isKindOfClass:[NSNull class]] ? self.providerDict[@"location1_url"] : @""
+                                        @"location1_url" : url
                                         };
 
         for(NSString *key in replacements.allKeys) {
@@ -114,6 +125,12 @@
         CGFloat height = MIN(500, (collectionView.bounds.size.height - 130.0));
         return CGSizeMake(collectionView.bounds.size.width, height);
     }
+}
+
+- (IBAction)details:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:self.providerDict[@"location1_url"]];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 - (IBAction)appointment:(id)sender

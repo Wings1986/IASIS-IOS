@@ -48,7 +48,7 @@ Phoenix, AZ 85006
 			<key>image</key>
 			<string>slbh</string>
 			<key>er</key>
-			<string>http://</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -98,7 +98,7 @@ Woodland Park, CO 80863
 			<key>image</key>
 			<string>pprh</string>
 			<key>er</key>
-			<string>http://</string>
+			<string></string>
 		</dict>
 	</array>
 	<key>Louisiana</key>
@@ -214,7 +214,7 @@ Texarkana, TX 75501
 			<key>image</key>
 			<string>wrmc</string>
 			<key>er</key>
-			<string>https://waittimes.iasishealthcare.com/MEDHOST/WRM/EdisKpiRssFeedGenerator.aspx</string>
+			<string></string>
 		</dict>
 	</array>
 	<key>Utah</key>

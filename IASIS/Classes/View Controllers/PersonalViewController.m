@@ -112,6 +112,12 @@
             
             cell.btnDetails.tag = indexPath.row;
             [cell.btnDetails addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
+            
+            if([provider.scheduleURLString containsString:@"://"]) {
+                cell.btnSchedule.hidden = NO;
+            } else {
+                cell.btnSchedule.hidden = YES;
+            }
 
             return cell;
         }

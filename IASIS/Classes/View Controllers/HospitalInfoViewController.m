@@ -86,6 +86,12 @@
         return CGSizeMake(collectionView.bounds.size.width, 500.0);
     }
     
+    NSLog(@"%@", self.hospital);
+
+    if(indexPath.section == 1 && ![self.hospital[@"er"] containsString:@"http"]) {
+        return CGSizeMake(collectionView.bounds.size.width, 1.0);
+    }
+    
     return CGSizeMake(collectionView.bounds.size.width, 120.0);
 }
 
@@ -97,7 +103,11 @@
 
 - (IBAction)directions:(id)sender
 {
-    
+    NSArray *parts = [self.hospital[@"info"] componentsSeparatedByString:@"\n"];
+    NSString *address = [NSString stringWithFormat:@"%@ %@", parts[0], parts[1]];
+    address = [address stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?q=%@", address]];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 @end

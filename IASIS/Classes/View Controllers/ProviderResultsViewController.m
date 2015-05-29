@@ -49,7 +49,7 @@
     NSString *photURLString = [NSString stringWithFormat:@"http://directory.iasishealthcare.com/images/physicians/%@", provider[@"photo"]];
     
     MyProviderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyProviderCell class]) forIndexPath:indexPath];
-    cell.lblName.text = [NSString stringWithFormat:@"%@ %@", provider[@"first_name"], provider[@"last_name"]];
+    cell.lblName.text = [NSString stringWithFormat:@"%@ %@, %@", provider[@"first_name"], provider[@"last_name"], provider[@"credentials"]];
     cell.lblSpecialty.text = provider[@"specialty1"] ? provider[@"specialty1"] : @"";
     [cell.photo setImageWithURL:[NSURL URLWithString:photURLString] placeholderImage:[UIImage imageNamed:@"doctor_placeholder"]];
     
@@ -124,6 +124,15 @@
         provider.photoURLString = [NSString stringWithFormat:@"http://directory.iasishealthcare.com/images/physicians/%@", providerDict[@"photo"]];
         provider.guid = providerDict[@"id"];
         provider.fullData = providerDict;
+
+        if([providerDict[@"appointment_url"] isKindOfClass:[NSNull class]]) {
+            provider.scheduleURLString = @"";
+        } else if([providerDict[@"appointment_url"] containsString:@"://"]) {
+            provider.scheduleURLString = providerDict[@"appointment_url"];
+        } else {
+            provider.scheduleURLString = @"";
+        }
+        
         [[RLMRealm defaultRealm] addObject:provider];
         [[RLMRealm defaultRealm] commitWriteTransaction];
     }

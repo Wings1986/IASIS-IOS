@@ -67,6 +67,7 @@
     }
     
     specialty = [specialty stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    city = [city stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 
     NSString *url = [NSString stringWithFormat:@"api/?last_name=%@&state=%@&city=%@&specialty=%@", lastName, state, city, specialty];
 
@@ -116,6 +117,8 @@
     if([[state lowercaseString] isEqualToString:@"louisiana"]) {
         state = @"la";
     }
+    
+    city = [city stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 
     NSString *url = [NSString stringWithFormat:@"api/specialties.php?state=%@&city=%@", state, city];
     
