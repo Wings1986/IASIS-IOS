@@ -96,7 +96,7 @@
 - (IBAction)chooseLocation:(id)sender
 {
     self.choosingLocation = YES;
-    self.pickerData = [self.data allKeys];
+    self.pickerData = [[self.data allKeys] sortedArrayUsingSelector:@selector(compare:)];
     [self showPickerView];
 }
 
