@@ -69,6 +69,11 @@
     [self.btnClear setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     [self fetchSpecialties];
+    
+    NSString *favoriteLocation = [[NSUserDefaults standardUserDefaults] valueForKey:@"favoriteLocation"];
+    if(favoriteLocation) {
+        [self.btnState setTitle:[NSString stringWithFormat:@"  %@", favoriteLocation] forState:UIControlStateNormal];
+    }
 }
 
 - (void)styleTextField:(UITextField *)textField withPlaceholder:(NSString *)placeholder
