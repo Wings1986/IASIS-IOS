@@ -15,6 +15,7 @@
 #import "NoFavoriteProvidersCell.h"
 #import "FindProvidersViewController.h"
 #import "FirstLaunchViewController.h"
+#import "HospitalInfoViewController.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import <MapKit/MapKit.h>
 
@@ -148,7 +149,17 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if(indexPath.section == 0) {
+        HospitalInfoViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([HospitalInfoViewController class])];
+
+        NSString *favoriteState = [[NSUserDefaults standardUserDefaults] valueForKey:@"favoriteLocation"];
+        NSInteger favoriteHospitalIndex = [[[NSUserDefaults standardUserDefaults] valueForKey:@"favoriteHospital"] integerValue];
+
+        NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Hospitals" ofType:@"plist"]];
+        vc.hospital = data[favoriteState][favoriteHospitalIndex];
+
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (IBAction)details:(UIButton *)sender
