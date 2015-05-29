@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
 
-    self.navigationItem.title = @"Legal";
+    self.navigationItem.title = @"Legal Notices";
     
     NSURL *url = [NSURL URLWithString:@"http://www.iasishealthcare.com/app/legal.html"];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
