@@ -27,6 +27,14 @@
     self.navigationItem.title = @"Find a Hospital";
 
     self.states = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Hospitals" ofType:@"plist"]];
+    
+    NSString *favoriteLocation = [[NSUserDefaults standardUserDefaults] valueForKey:@"favoriteLocation"];
+    if(favoriteLocation) {
+        HospitalsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([HospitalsViewController class])];
+        vc.hospitals = self.states[favoriteLocation];
+        vc.subtitle = [NSString stringWithFormat:@"%@ IASIS Hospitals", favoriteLocation];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
