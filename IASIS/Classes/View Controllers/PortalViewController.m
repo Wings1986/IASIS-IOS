@@ -26,6 +26,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Patient Portal";
+    
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([PortalHeaderCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([PortalHeaderCell class])];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([PortalStateCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([PortalStateCell class])];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([PortalFooterCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([PortalFooterCell class])];

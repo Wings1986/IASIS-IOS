@@ -17,6 +17,7 @@
 #import "PortalViewController.h"
 #import "SettingsViewController.h"
 #import "FirstLaunchViewController.h"
+#import "LegalViewController.h"
 
 @interface InitialViewController () <MenuViewControllerDelegate>
 
@@ -26,6 +27,7 @@
 @property (nonatomic, strong) FindProvidersViewController *vcProviders;
 @property (nonatomic, strong) PortalViewController *vcPortal;
 @property (nonatomic, strong) SettingsViewController *vcSettings;
+@property (nonatomic, strong) SettingsViewController *vcLegal;
 @property (nonatomic, assign) NSUInteger currentVCIndex;
 
 @property (nonatomic, strong) FirstLaunchViewController *vcFirstLaunch;
@@ -93,13 +95,20 @@
         [self.vcSliding setFrontViewController:self.vcPortal animated:YES completion:nil];
     }
 
+//    if(index == 4) {
+//        if(!self.vcSettings) {
+//            self.vcSettings = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([SettingsViewController class])];
+//        }
+//        [self.vcSliding setFrontViewController:self.vcSettings animated:YES completion:nil];
+//    }
+
     if(index == 4) {
-        if(!self.vcSettings) {
-            self.vcSettings = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([SettingsViewController class])];
+        if(!self.vcLegal) {
+            self.vcLegal = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([LegalViewController class])];
         }
-        [self.vcSliding setFrontViewController:self.vcSettings animated:YES completion:nil];
+        [self.vcSliding setFrontViewController:self.vcLegal animated:YES completion:nil];
     }
-    
+
     [self.vcSliding closeSlider:YES completion:nil];
 
     self.currentVCIndex = index;

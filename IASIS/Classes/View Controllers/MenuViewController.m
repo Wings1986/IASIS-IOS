@@ -16,6 +16,7 @@ typedef NS_ENUM(NSUInteger, MenuItem) {
     MenuItemProviders,
     MenuItemPatientPortal,
     // MenuItemSettings,
+    MenuItemLegal,
     MenuItemCount
 };
 
@@ -67,7 +68,12 @@ typedef NS_ENUM(NSUInteger, MenuItem) {
 //        cell.lblTitle.text = @"Settings";
 //        cell.imgIcon.image = [UIImage imageNamed:@"MenuGear"];
 //    }
-    
+
+    if(indexPath.row == MenuItemLegal) {
+        cell.lblTitle.text = @"Legal";
+        cell.imgIcon.image = [UIImage imageNamed:@"MenuLegal"];
+    }
+
     return cell;
 }
 

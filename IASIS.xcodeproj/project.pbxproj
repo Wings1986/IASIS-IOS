@@ -38,6 +38,7 @@
 		65B13E131A2D655400A5E4D3 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B13E121A2D655400A5E4D3 /* MenuTableViewCell.m */; };
 		65DB4A001ADCB2D7002F7C0A /* PortalFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DB49FF1ADCB2D7002F7C0A /* PortalFooterCell.xib */; };
 		65DB4A031ADCB314002F7C0A /* PortalFooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB4A021ADCB314002F7C0A /* PortalFooterCell.m */; };
+		65F38D881B181B1300100843 /* LegalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F38D871B181B1300100843 /* LegalViewController.m */; };
 		C61892291A38108B00A0CD08 /* MyMyProvidersHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C61892281A38108B00A0CD08 /* MyMyProvidersHeader.xib */; };
 		C618922C1A38117B00A0CD08 /* MyProviderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C618922B1A38117B00A0CD08 /* MyProviderCell.m */; };
 		C618922E1A38118700A0CD08 /* MyProviderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C618922D1A38118700A0CD08 /* MyProviderCell.xib */; };
@@ -131,6 +132,8 @@
 		65DB49FF1ADCB2D7002F7C0A /* PortalFooterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortalFooterCell.xib; sourceTree = "<group>"; };
 		65DB4A011ADCB314002F7C0A /* PortalFooterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortalFooterCell.h; sourceTree = "<group>"; };
 		65DB4A021ADCB314002F7C0A /* PortalFooterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortalFooterCell.m; sourceTree = "<group>"; };
+		65F38D861B181B1300100843 /* LegalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegalViewController.h; sourceTree = "<group>"; };
+		65F38D871B181B1300100843 /* LegalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegalViewController.m; sourceTree = "<group>"; };
 		A596595F72C3F41E858537BD /* Pods-IASIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IASIS.release.xcconfig"; path = "Pods/Target Support Files/Pods-IASIS/Pods-IASIS.release.xcconfig"; sourceTree = "<group>"; };
 		B386E523C8EB5942917140BF /* libPods-IASIS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IASIS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61892281A38108B00A0CD08 /* MyMyProvidersHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMyProvidersHeader.xib; sourceTree = "<group>"; };
@@ -359,6 +362,7 @@
 				653F945A1A37B3DA0045739C /* Hospitals */,
 				653F945B1A37B3E70045739C /* Providers */,
 				653F945C1A37B3F40045739C /* Patient Portal */,
+				65F38D851B181AD900100843 /* Legal */,
 				653F945D1A37B4040045739C /* Settings */,
 			);
 			path = "View Controllers";
@@ -470,6 +474,15 @@
 				653337BB1AE83DE700AFDF20 /* NoFavoriteProvidersCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		65F38D851B181AD900100843 /* Legal */ = {
+			isa = PBXGroup;
+			children = (
+				65F38D861B181B1300100843 /* LegalViewController.h */,
+				65F38D871B181B1300100843 /* LegalViewController.m */,
+			);
+			name = Legal;
 			sourceTree = "<group>";
 		};
 		C61ED4171A3807660034717B /* Cells */ = {
@@ -681,6 +694,7 @@
 				C61ED4241A380B150034717B /* OutlinedButton.m in Sources */,
 				C66517DD1A3D5BA20087BCA8 /* PortalHeaderCell.m in Sources */,
 				652D226C1ABCAB4D00FA9D9D /* UIViewController+Alerts.m in Sources */,
+				65F38D881B181B1300100843 /* LegalViewController.m in Sources */,
 				C618922C1A38117B00A0CD08 /* MyProviderCell.m in Sources */,
 				C66517D31A3D53CD0087BCA8 /* ProviderResultsViewController.m in Sources */,
 				C6EEB2491A393D3B00C59CB2 /* WebCell.m in Sources */,
