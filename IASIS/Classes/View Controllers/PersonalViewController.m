@@ -115,6 +115,8 @@
             
             if([provider.scheduleURLString containsString:@"://"]) {
                 cell.btnSchedule.hidden = NO;
+                cell.btnSchedule.tag = indexPath.row;
+                [cell.btnSchedule addTarget:self action:@selector(schedule:) forControlEvents:UIControlEventTouchUpInside];
             } else {
                 cell.btnSchedule.hidden = YES;
             }
@@ -176,6 +178,13 @@
     Provider *provider = self.favoriteProviders[sender.tag];
     vc.providerDict = [[NSUserDefaults standardUserDefaults] valueForKey:provider.guid];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)schedule:(UIButton *)sender
+{
+    Provider *provider = self.favoriteProviders[sender.tag];
+    NSURL *url = [NSURL URLWithString:provider.scheduleURLString];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 - (IBAction)addProviders:(id)sender

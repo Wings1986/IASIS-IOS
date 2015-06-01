@@ -36,7 +36,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if([self.hospitals[indexPath.row][@"er"] isEqualToString:@"http://"]) {
+    if([self.hospitals[indexPath.row][@"er"] length] < 8) {
         HospitalInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([HospitalInfoCell class]) forIndexPath:indexPath];
         cell.lblTitle.text = self.hospitals[indexPath.row][@"name"];
         cell.lblLocation.text = [[self.hospitals[indexPath.row][@"info"] componentsSeparatedByString:@"\n"][1] stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
@@ -60,7 +60,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if([self.hospitals[indexPath.row][@"er"] isEqualToString:@"http://"]) {
+    if([self.hospitals[indexPath.row][@"er"] length] < 8 ) {
         return 145.0;
     } else {
         return 203.0;
