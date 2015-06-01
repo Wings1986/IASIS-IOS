@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "UIColor+Colors.h"
+#import "GAI.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,8 @@
 //    [[AFNetworkActivityLogger sharedLogger] startLogging];
 
     [self styleApp];
+    
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-41791573-1"];
 
     return YES;
 }
