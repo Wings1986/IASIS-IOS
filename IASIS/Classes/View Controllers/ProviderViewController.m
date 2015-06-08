@@ -50,9 +50,11 @@
         NSString *photURLString = [NSString stringWithFormat:@"http://directory.iasishealthcare.com/images/physicians/%@", self.providerDict[@"photo"]];
         [cell.photo setImageWithURL:[NSURL URLWithString:photURLString] placeholderImage:[UIImage imageNamed:@"doctor_placeholder"]];
 
-        if(![self.providerDict[@"location1_url"] isKindOfClass:[NSNull class]]) {
+        cell.btnDetails.hidden = YES;
+        if((![self.providerDict[@"location1_url"] isKindOfClass:[NSNull class]]) && ([self.providerDict[@"location1_url"] length] > 0)) {
             [cell.btnDetails setTitle:@"Website" forState:UIControlStateNormal];
             [cell.btnDetails addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
+            cell.btnDetails.hidden = NO;
         }
         
         cell.btnSchedule.hidden = YES;

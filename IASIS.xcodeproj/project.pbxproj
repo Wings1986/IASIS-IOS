@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		63247F462DC109081C4FF889 /* libPods-IASIS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B386E523C8EB5942917140BF /* libPods-IASIS.a */; };
+		650971441B2526430080E4D2 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 650971401B2526430080E4D2 /* libGoogleAnalyticsServices.a */; };
+		650971451B2526430080E4D2 /* JSSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650971431B2526430080E4D2 /* JSSlidingViewController.m */; };
+		650971481B2526500080E4D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 650971471B2526500080E4D2 /* main.m */; };
 		6513CF471ADAFF260089ED53 /* ProviderLocations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6513CF461ADAFF260089ED53 /* ProviderLocations.plist */; };
 		6513CF491ADB5AFF0089ED53 /* Hospitals.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6513CF481ADB5AFF0089ED53 /* Hospitals.plist */; };
 		652D22631ABCA10000FA9D9D /* ERWaitTimes.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D22621ABCA10000FA9D9D /* ERWaitTimes.m */; };
@@ -29,15 +32,12 @@
 		65A1DBFA1A17FF6200EF78FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBEA1A17FF6200EF78FA /* AppDelegate.m */; };
 		65A1DBFB1A17FF6200EF78FA /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBEE1A17FF6200EF78FA /* InitialViewController.m */; };
 		65A1DBFC1A17FF6200EF78FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A1DBEF1A17FF6200EF78FA /* Images.xcassets */; };
-		65A1DBFD1A17FF6200EF78FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1DBF21A17FF6200EF78FA /* main.m */; };
 		65A1DBFF1A17FF6200EF78FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A1DBF61A17FF6200EF78FA /* LaunchScreen.xib */; };
 		65A1DC001A17FF6200EF78FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A1DBF81A17FF6200EF78FA /* Main.storyboard */; };
 		65A422761B1C0282006CA755 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A422751B1C0282006CA755 /* CoreData.framework */; };
 		65A422781B1C028B006CA755 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A422771B1C028B006CA755 /* SystemConfiguration.framework */; };
 		65A4227A1B1C0295006CA755 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A422791B1C0295006CA755 /* libz.dylib */; };
 		65A4227C1B1C029E006CA755 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A4227B1B1C029E006CA755 /* libsqlite3.dylib */; };
-		65A4227E1B1C02AE006CA755 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A4227D1B1C02AE006CA755 /* libGoogleAnalyticsServices.a */; };
-		65B13E071A2D617D00A5E4D3 /* JSSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B13E061A2D617D00A5E4D3 /* JSSlidingViewController.m */; };
 		65B13E0B1A2D61FE00A5E4D3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B13E0A1A2D61FE00A5E4D3 /* MenuViewController.m */; };
 		65B13E0F1A2D623500A5E4D3 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B13E0E1A2D623500A5E4D3 /* PersonalViewController.m */; };
 		65B13E131A2D655400A5E4D3 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B13E121A2D655400A5E4D3 /* MenuTableViewCell.m */; };
@@ -82,6 +82,20 @@
 
 /* Begin PBXFileReference section */
 		323DEAA7EDC2366AAC9C3C75 /* Pods-IASIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IASIS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IASIS/Pods-IASIS.debug.xcconfig"; sourceTree = "<group>"; };
+		650971361B2526430080E4D2 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		650971371B2526430080E4D2 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		650971381B2526430080E4D2 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		650971391B2526430080E4D2 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		6509713A1B2526430080E4D2 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		6509713B1B2526430080E4D2 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		6509713C1B2526430080E4D2 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		6509713D1B2526430080E4D2 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		6509713E1B2526430080E4D2 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		6509713F1B2526430080E4D2 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		650971401B2526430080E4D2 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		650971421B2526430080E4D2 /* JSSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSlidingViewController.h; sourceTree = "<group>"; };
+		650971431B2526430080E4D2 /* JSSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSlidingViewController.m; sourceTree = "<group>"; };
+		650971471B2526500080E4D2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6513CF461ADAFF260089ED53 /* ProviderLocations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProviderLocations.plist; sourceTree = "<group>"; };
 		6513CF481ADB5AFF0089ED53 /* Hospitals.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hospitals.plist; sourceTree = "<group>"; };
 		652D22611ABCA10000FA9D9D /* ERWaitTimes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERWaitTimes.h; sourceTree = "<group>"; };
@@ -122,27 +136,13 @@
 		65A1DBED1A17FF6200EF78FA /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
 		65A1DBEE1A17FF6200EF78FA /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		65A1DBEF1A17FF6200EF78FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		65A1DBF21A17FF6200EF78FA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65A1DBF41A17FF6200EF78FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A1DBF71A17FF6200EF78FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		65A1DBF91A17FF6200EF78FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		65A4226B1B1C0270006CA755 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
-		65A4226C1B1C0270006CA755 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		65A4226D1B1C0270006CA755 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
-		65A4226E1B1C0270006CA755 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
-		65A4226F1B1C0270006CA755 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
-		65A422701B1C0270006CA755 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
-		65A422711B1C0270006CA755 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
-		65A422721B1C0270006CA755 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
-		65A422731B1C0270006CA755 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
-		65A422741B1C0270006CA755 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		65A422751B1C0282006CA755 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		65A422771B1C028B006CA755 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		65A422791B1C0295006CA755 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		65A4227B1B1C029E006CA755 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		65A4227D1B1C02AE006CA755 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
-		65B13E051A2D617D00A5E4D3 /* JSSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSlidingViewController.h; sourceTree = "<group>"; };
-		65B13E061A2D617D00A5E4D3 /* JSSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSlidingViewController.m; sourceTree = "<group>"; };
 		65B13E091A2D61FE00A5E4D3 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		65B13E0A1A2D61FE00A5E4D3 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		65B13E0D1A2D623500A5E4D3 /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 				65A422781B1C028B006CA755 /* SystemConfiguration.framework in Frameworks */,
 				65A422761B1C0282006CA755 /* CoreData.framework in Frameworks */,
 				63247F462DC109081C4FF889 /* libPods-IASIS.a in Frameworks */,
-				65A4227E1B1C02AE006CA755 /* libGoogleAnalyticsServices.a in Frameworks */,
+				650971441B2526430080E4D2 /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +241,51 @@
 				A596595F72C3F41E858537BD /* Pods-IASIS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		650971341B2526430080E4D2 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				650971351B2526430080E4D2 /* GA */,
+				650971411B2526430080E4D2 /* JSSlidingViewController */,
+			);
+			name = 3rdParty;
+			path = IASIS/3rdParty;
+			sourceTree = "<group>";
+		};
+		650971351B2526430080E4D2 /* GA */ = {
+			isa = PBXGroup;
+			children = (
+				650971361B2526430080E4D2 /* GAI.h */,
+				650971371B2526430080E4D2 /* GAIDictionaryBuilder.h */,
+				650971381B2526430080E4D2 /* GAIEcommerceFields.h */,
+				650971391B2526430080E4D2 /* GAIEcommerceProduct.h */,
+				6509713A1B2526430080E4D2 /* GAIEcommerceProductAction.h */,
+				6509713B1B2526430080E4D2 /* GAIEcommercePromotion.h */,
+				6509713C1B2526430080E4D2 /* GAIFields.h */,
+				6509713D1B2526430080E4D2 /* GAILogger.h */,
+				6509713E1B2526430080E4D2 /* GAITrackedViewController.h */,
+				6509713F1B2526430080E4D2 /* GAITracker.h */,
+				650971401B2526430080E4D2 /* libGoogleAnalyticsServices.a */,
+			);
+			path = GA;
+			sourceTree = "<group>";
+		};
+		650971411B2526430080E4D2 /* JSSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				650971421B2526430080E4D2 /* JSSlidingViewController.h */,
+				650971431B2526430080E4D2 /* JSSlidingViewController.m */,
+			);
+			path = JSSlidingViewController;
+			sourceTree = "<group>";
+		};
+		650971461B2526500080E4D2 /* OtherSources */ = {
+			isa = PBXGroup;
+			children = (
+				650971471B2526500080E4D2 /* main.m */,
+			);
+			path = OtherSources;
 			sourceTree = "<group>";
 		};
 		653F945A1A37B3DA0045739C /* Hospitals */ = {
@@ -291,7 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				65A1DBC01A17FF2100EF78FA /* IASIS */,
-				65B13E031A2D617D00A5E4D3 /* 3rd Party */,
+				650971341B2526430080E4D2 /* 3rdParty */,
 				65A1DBDA1A17FF2100EF78FA /* IASISTests */,
 				65A1DBBF1A17FF2100EF78FA /* Products */,
 				4AF09E9DA7A89795EBD0517E /* Pods */,
@@ -315,7 +360,7 @@
 				65A1DBE81A17FF6200EF78FA /* Classes */,
 				65A1DBEF1A17FF6200EF78FA /* Images.xcassets */,
 				65A1DBF01A17FF6200EF78FA /* Models */,
-				65A1DBF11A17FF6200EF78FA /* Other Sources */,
+				650971461B2526500080E4D2 /* OtherSources */,
 				65A1DBF31A17FF6200EF78FA /* Resources */,
 				65A1DBF51A17FF6200EF78FA /* XIBs */,
 			);
@@ -406,14 +451,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		65A1DBF11A17FF6200EF78FA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				65A1DBF21A17FF6200EF78FA /* main.m */,
-			);
-			path = "Other Sources";
-			sourceTree = "<group>";
-		};
 		65A1DBF31A17FF6200EF78FA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,43 +470,6 @@
 				65A1DBF81A17FF6200EF78FA /* Main.storyboard */,
 			);
 			path = XIBs;
-			sourceTree = "<group>";
-		};
-		65A4226A1B1C0270006CA755 /* GA */ = {
-			isa = PBXGroup;
-			children = (
-				65A4227D1B1C02AE006CA755 /* libGoogleAnalyticsServices.a */,
-				65A4226B1B1C0270006CA755 /* GAI.h */,
-				65A4226C1B1C0270006CA755 /* GAIDictionaryBuilder.h */,
-				65A4226D1B1C0270006CA755 /* GAIEcommerceFields.h */,
-				65A4226E1B1C0270006CA755 /* GAIEcommerceProduct.h */,
-				65A4226F1B1C0270006CA755 /* GAIEcommerceProductAction.h */,
-				65A422701B1C0270006CA755 /* GAIEcommercePromotion.h */,
-				65A422711B1C0270006CA755 /* GAIFields.h */,
-				65A422721B1C0270006CA755 /* GAILogger.h */,
-				65A422731B1C0270006CA755 /* GAITrackedViewController.h */,
-				65A422741B1C0270006CA755 /* GAITracker.h */,
-			);
-			path = GA;
-			sourceTree = "<group>";
-		};
-		65B13E031A2D617D00A5E4D3 /* 3rd Party */ = {
-			isa = PBXGroup;
-			children = (
-				65A4226A1B1C0270006CA755 /* GA */,
-				65B13E041A2D617D00A5E4D3 /* JSSlidingViewController */,
-			);
-			name = "3rd Party";
-			path = "IASIS/3rd Party";
-			sourceTree = "<group>";
-		};
-		65B13E041A2D617D00A5E4D3 /* JSSlidingViewController */ = {
-			isa = PBXGroup;
-			children = (
-				65B13E051A2D617D00A5E4D3 /* JSSlidingViewController.h */,
-				65B13E061A2D617D00A5E4D3 /* JSSlidingViewController.m */,
-			);
-			path = JSSlidingViewController;
 			sourceTree = "<group>";
 		};
 		65B13E081A2D61DF00A5E4D3 /* MenuViewController */ = {
@@ -718,13 +718,14 @@
 			files = (
 				652D22661ABCA5CA00FA9D9D /* ProviderSearchClient.m in Sources */,
 				65B13E0F1A2D623500A5E4D3 /* PersonalViewController.m in Sources */,
+				650971451B2526430080E4D2 /* JSSlidingViewController.m in Sources */,
 				65A1DBFB1A17FF6200EF78FA /* InitialViewController.m in Sources */,
 				C632877F1A75693F00C90D76 /* EmptyBackButtonTitleViewController.m in Sources */,
 				653F94701A37BA760045739C /* UIColor+Colors.m in Sources */,
 				C66517E21A3D5D5A0087BCA8 /* PortalStateCell.m in Sources */,
 				653F94601A37B42A0045739C /* StatesViewController.m in Sources */,
+				650971481B2526500080E4D2 /* main.m in Sources */,
 				653337BC1AE83DE700AFDF20 /* NoFavoriteProvidersCell.m in Sources */,
-				65A1DBFD1A17FF6200EF78FA /* main.m in Sources */,
 				C6EEB2441A393C2400C59CB2 /* HospitalInfoViewController.m in Sources */,
 				6567AE6B1B01490D003B6C2F /* FirstLaunchViewController.m in Sources */,
 				C6EEB2391A38F6EC00C59CB2 /* HospitalInfoCell.m in Sources */,
@@ -746,7 +747,6 @@
 				C618922C1A38117B00A0CD08 /* MyProviderCell.m in Sources */,
 				C66517D31A3D53CD0087BCA8 /* ProviderResultsViewController.m in Sources */,
 				C6EEB2491A393D3B00C59CB2 /* WebCell.m in Sources */,
-				65B13E071A2D617D00A5E4D3 /* JSSlidingViewController.m in Sources */,
 				652D22631ABCA10000FA9D9D /* ERWaitTimes.m in Sources */,
 				653F94691A37B44C0045739C /* SettingsViewController.m in Sources */,
 				C6EEB23C1A38F74200C59CB2 /* HospitalInfoCellER.m in Sources */,
@@ -886,6 +886,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/IASIS/3rd",
 					Party/GA,
+					"$(PROJECT_DIR)/IASIS/3rdParty/GA",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ccfdb65d-b5af-412c-9568-62e0cf2eb697";
@@ -905,6 +906,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/IASIS/3rd",
 					Party/GA,
+					"$(PROJECT_DIR)/IASIS/3rdParty/GA",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ccfdb65d-b5af-412c-9568-62e0cf2eb697";
