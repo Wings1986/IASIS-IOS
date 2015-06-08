@@ -46,7 +46,9 @@
 {
     StateNameCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([StateNameCell class])];
     
-    NSString *stateName = self.states.allKeys[indexPath.row];
+    NSArray *allKeys = [self.states.allKeys sortedArrayUsingSelector:@selector(compare:)];
+
+    NSString *stateName = allKeys[indexPath.row];
 
     cell.lblTitle.text = stateName;
 
@@ -56,8 +58,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    NSString *stateName = self.states.allKeys[indexPath.row];
+
+    NSArray *allKeys = [self.states.allKeys sortedArrayUsingSelector:@selector(compare:)];
+
+    NSString *stateName = allKeys[indexPath.row];
 
     HospitalsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([HospitalsViewController class])];
     vc.hospitals = self.states[stateName];

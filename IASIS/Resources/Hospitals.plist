@@ -81,7 +81,7 @@ Hope, AR 71801
 			<key>image</key>
 			<string>hope</string>
 			<key>er</key>
-			<string>https://waittimes.iasishealthcare.com/MEDHOST/WRM/EdisKpiRssFeedGenerator.aspx</string>
+			<string></string>
 		</dict>
 	</array>
 	<key>Colorado</key>
@@ -214,7 +214,7 @@ Texarkana, TX 75501
 			<key>image</key>
 			<string>wrmc</string>
 			<key>er</key>
-			<string></string>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/WRM/EdisKpiRssFeedGenerator.aspx</string>
 		</dict>
 	</array>
 	<key>Utah</key>
@@ -234,6 +234,22 @@ Layton, UT 84041
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/DHM/EdisKpiRssFeedGenerator.aspx</string>
 			<key>checkin</key>
 			<string>https://utah-iasis.inquicker.com/facility/davis-hospital-and-medical-center</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Davis Hospital - Weber Campus</string>
+			<key>info</key>
+			<string>3451 West 5600 South 
+Roy, UT 84067 
+(801) 896-5600</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/weber.html</string>
+			<key>image</key>
+			<string>weber</string>
+			<key>er</key>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/DHM_roy/EdisKpiRssFeedGenerator.aspx</string>
+			<key>checkin</key>
+			<string>https://utah-iasis.inquicker.com/facility/davis-hospital-weber-campus</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -268,6 +284,20 @@ West Valley City, Utah 84120
 			<string>https://waittimes.iasishealthcare.com/MEDHOST/PVH/EdisKpiRssFeedGenerator.aspx</string>
 			<key>checkin</key>
 			<string>https://utah-iasis.inquicker.com/facility/pioneer-valley-hospital</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mountain Point Medical Center</string>
+			<key>info</key>
+			<string>3000 N. Triumph Blvd.
+Lehi, UT 84043
+(385) 345-3000</string>
+			<key>url</key>
+			<string>http://www.iasishealthcare.com/app/mpmc.html</string>
+			<key>image</key>
+			<string>mpmc</string>
+			<key>er</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>name</key>
