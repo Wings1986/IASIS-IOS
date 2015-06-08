@@ -81,6 +81,15 @@
         MyMyHospitalCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MyMyHospitalCell class]) forIndexPath:indexPath];
         [cell setHospital:self.favoriteHospital];
         [cell.button addTarget:self action:@selector(pickFavorites) forControlEvents:UIControlEventTouchUpInside];
+        
+        NSString *favoriteState = [[NSUserDefaults standardUserDefaults] valueForKey:@"favoriteLocation"];
+        NSInteger favoriteHospitalIndex = [[[NSUserDefaults standardUserDefaults] valueForKey:@"favoriteHospital"] integerValue];
+        
+        NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Hospitals" ofType:@"plist"]];
+        NSDictionary *hospital = data[favoriteState][favoriteHospitalIndex];
+        
+        cell.imgBackground.image = [UIImage imageNamed:hospital[@"image"]];
+        
         return cell;
     }
 

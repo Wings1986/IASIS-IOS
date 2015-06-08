@@ -11,6 +11,7 @@
 @interface MyMyHospitalCell : UICollectionViewCell
 
 @property (nonatomic, weak) IBOutlet UIButton *button;
+@property (nonatomic, weak) IBOutlet UIImageView *imgBackground;
 
 - (void)setHospital:(NSDictionary *)hospital;
 
