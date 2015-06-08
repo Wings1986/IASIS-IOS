@@ -10,6 +10,9 @@
 #import "FindHospitalInfoCell.h"
 #import "MyERWaitCell.h"
 #import "WebCell.h"
+#import "WaitSpinner.h"
+#import "ProviderSearchClient.h"
+#import "ProviderResultsViewController.h"
 
 @interface HospitalInfoViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -18,6 +21,11 @@
 @end
 
 @implementation HospitalInfoViewController
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SHOW_PROVIDERS" object:nil];
+}
 
 - (void)viewDidLoad
 {
@@ -28,6 +36,8 @@
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([FindHospitalInfoCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([FindHospitalInfoCell class])];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyERWaitCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([MyERWaitCell class])];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([WebCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([WebCell class])];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(providerSearch:) name:@"SHOW_PROVIDERS" object:nil];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -108,6 +118,25 @@
     address = [address stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?q=%@", address]];
     [[UIApplication sharedApplication] openURL:url];
+}
+
+- (void)providerSearch:(NSNotification *)notification
+{
+    NSURL *url = notification.object;
+    
+    NSArray *components = [url.absoluteString componentsSeparatedByString:@"="];
+    
+    [[WaitSpinner sharedObject] wait];
+    
+    [[ProviderSearchClient sharedObject] searchWithDataset:components[1] successBlock:^(id responseObject) {
+        [[WaitSpinner sharedObject] unwait];
+        ProviderResultsViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:NSStringFromClass([ProviderResultsViewController class])];
+        vc.providers = responseObject[@"providers"];
+        vc.showDefaultLeftBarButton = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    } failureBlock:^(NSError *error) {
+        [[WaitSpinner sharedObject] unwait];
+    }];
 }
 
 @end

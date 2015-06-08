@@ -40,6 +40,23 @@
     return self;
 }
 
+- (AFHTTPRequestOperation *)searchWithDataset:(NSString *)dataset successBlock:(void (^)(id responseObject))successBlock failureBlock:(void (^)(NSError *error))failureBlock
+{
+    NSString *url = [NSString stringWithFormat:@"api/?dataset=%@", dataset];
+
+    AFHTTPRequestOperation *operation = [self.operationManager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if(successBlock) {
+            successBlock(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if(failureBlock) {
+            failureBlock(error);
+        }
+    }];
+    
+    return operation;
+}
+
 - (AFHTTPRequestOperation *)searchWithState:(NSString *)state city:(NSString *)city specialty:(NSString *)specialty lastName:(NSString *)lastName successBlock:(void (^)(id responseObject))successBlock failureBlock:(void (^)(NSError *error))failureBlock
 {
     if([[state lowercaseString] isEqualToString:@"arizona"]) {
