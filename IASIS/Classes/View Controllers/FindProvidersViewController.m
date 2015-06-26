@@ -29,6 +29,7 @@
 @property (nonatomic, strong) NSArray *pickerData;
 
 @property (nonatomic, strong) NSMutableArray *specialties;
+@property (nonatomic, strong) NSDictionary *rawResponseData;
 
 @end
 
@@ -152,10 +153,9 @@
         BOOL isParent;
 
         for(__strong NSString *s in self.specialties) {
-            isParent = [s containsString:@"◀︎"];
-            s = [s stringByReplacingOccurrencesOfString:@"◀︎" withString:@""];
-            s = [s stringByReplacingOccurrencesOfString:@"▶︎" withString:@""];
             s = [s stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+            isParent = (self.rawResponseData[s] != nil);
             
             if(isParent) {
                 parentSpecialty = s;
@@ -181,7 +181,7 @@
         ProviderResultsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ProviderResultsViewController class])];
         vc.showDefaultLeftBarButton = YES;
         vc.providers = responseObject[@"providers"];
-        
+
         if(vc.providers.count == 0) {
             [self TDM_presentOkAlertControllerWithTitle:@"No Results Found" message:@"No providers matching your search criteria were found." handler:nil];
         } else {
@@ -214,16 +214,15 @@
     }
 
     [[ProviderSearchClient sharedObject] specialtiesWithState:state city:city successBlock:^(NSDictionary *responseObject) {
+        self.rawResponseData = [responseObject copy];
         for(NSString *key in [responseObject.allKeys sortedArrayUsingSelector:@selector(compare:)]) {
             if([responseObject[key] isKindOfClass:[NSDictionary class]]) {
-                [self.specialties addObject:[NSString stringWithFormat:@"◀︎ %@ ▶︎", key]];
+                [self.specialties addObject:key];
                 for(NSString *subkey in ((NSDictionary *)responseObject[key]).allKeys) {
                     [self.specialties addObject:subkey];
                 }
             }
         }
-
-        // [self.specialties sortUsingSelector:@selector(compare:)];
 
         [[WaitSpinner sharedObject] unwait];
     } failureBlock:^(NSError *error) {
@@ -258,8 +257,6 @@
     
     if(self.pickerData.count > 0) {
         NSString *selection = self.pickerData[[self.pickerView selectedRowInComponent:0]];
-        selection = [selection stringByReplacingOccurrencesOfString:@"◀︎" withString:@""];
-        selection = [selection stringByReplacingOccurrencesOfString:@"▶︎" withString:@""];
         [self.selectedButton setTitle:[NSString stringWithFormat:@"   %@", selection] forState:UIControlStateNormal];
     }
     
@@ -289,9 +286,9 @@
     UILabel *label = [[UILabel alloc] initWithFrame:view.bounds];
     label.text = self.pickerData[row];
     label.textAlignment = NSTextAlignmentCenter;
-    
+
     if(self.selectedButton == self.btnSpecialty) {
-        if([label.text containsString:@"◀︎"]) {
+        if(self.rawResponseData[label.text] != nil) {
             label.textColor = [UIColor colorWithRed:23.0 / 255.0 green:102.0 / 255.0 blue:176.0 / 255.0 alpha:1.0];
         } else {
             label.textColor = [UIColor colorWithRed:128.0 / 255.0 green:128.0 / 255.0 blue:128.0 / 255.0 alpha:1.0];
