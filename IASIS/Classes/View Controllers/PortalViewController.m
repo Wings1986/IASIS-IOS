@@ -32,7 +32,7 @@
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([PortalStateCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([PortalStateCell class])];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([PortalFooterCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([PortalFooterCell class])];
 
-    self.states = @[ @"Hope, AR", @"AZ", @"Glenwood, LA", @"UT", @"Houston, TX", @"Odessa, TX", @"Port Arthur, TX", @"San Antonio, TX", @"Texarkana, TX" ];
+    self.states = @[ @"Hope, AR", @"AZ", @"West Monroe, LA", @"UT", @"Houston, TX", @"Odessa, TX", @"Port Arthur, TX", @"San Antonio, TX", @"Texarkana, TX" ];
     self.urls = @[ @"http://mywadleyathope.com/", @"http://patientportalaz.com/", @"http://mygrmc.com/", @"http://patientportalut.com/", @"http://mysjmc.com/", @"http://yourormc.com/", @"http://mymcst.com/", @"http://myswgh.com/", @"http://mywadley.com/" ];
 }
 
