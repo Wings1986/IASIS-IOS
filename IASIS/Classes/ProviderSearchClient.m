@@ -7,6 +7,7 @@
 //
 
 #import "ProviderSearchClient.h"
+#import <NSString-UrlEncode/NSString+UrlEncode.h>
 
 @interface ProviderSearchClient ()
 
@@ -83,9 +84,9 @@
         state = @"la";
     }
     
-    specialty = [specialty stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-    subspecialty = [subspecialty stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-    city = [city stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    specialty = [specialty urlEncode];
+    subspecialty = [subspecialty urlEncode];
+    city = [city urlEncode];
 
     NSString *url = [NSString stringWithFormat:@"api/?last_name=%@&state=%@&city=%@&specialty=%@&subspecialty=%@", lastName, state, city, specialty, subspecialty];
 

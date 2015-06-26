@@ -57,7 +57,7 @@
 
     self.favoriteProviders = [Provider allObjects];
 
-    [self.collectionView reloadData];
+   [self.collectionView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -71,7 +71,7 @@
     if(section == 2) {
         return MAX(self.favoriteProviders.count, 1);
     }
-    
+
     return 1;
 }
 
@@ -88,7 +88,9 @@
         NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Hospitals" ofType:@"plist"]];
         NSDictionary *hospital = data[favoriteState][favoriteHospitalIndex];
         
-        cell.imgBackground.image = [UIImage imageNamed:hospital[@"image"]];
+        if(hospital[@"image"]) {
+            cell.imgBackground.image = [UIImage imageNamed:hospital[@"image"]];
+        }
         
         return cell;
     }
@@ -146,15 +148,19 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    if(indexPath.section == 0) {
+        return CGSizeMake(collectionView.bounds.size.width, 120.0);
+    }
+
+    if(indexPath.section == 1) {
+        return [self.favoriteHospital[@"er"] length] > 8 ? CGSizeMake(collectionView.bounds.size.width, 120.0) : CGSizeMake(collectionView.bounds.size.width, 1);
+    }
+
     if(indexPath.section == 2) {
         return self.favoriteProviders.count > 0 ? CGSizeMake(collectionView.bounds.size.width, 130.0) : CGSizeMake(collectionView.bounds.size.width, 186.0);
     }
 
-    if(indexPath.section == 1) {
-        return [self.favoriteHospital[@"er"] length] > 8 ? CGSizeMake(collectionView.bounds.size.width, 120.0) : CGSizeMake(collectionView.bounds.size.width, 0);
-    }
-
-    return CGSizeMake(collectionView.bounds.size.width, 120.0);
+    return CGSizeZero;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section

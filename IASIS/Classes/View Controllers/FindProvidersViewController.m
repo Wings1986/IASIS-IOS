@@ -129,18 +129,18 @@
 - (IBAction)search:(id)sender
 {
     [[WaitSpinner sharedObject] wait];
-    
+
     NSString *state = [[self.btnState titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *city = [[self.btnCity titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *specialty = [[self.btnSpecialty titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
     NSString *parentSpecialty = @"";
     NSString *subSpecialty = @"";
-    
+
     if([state isEqualToString:@"State"]) {
         state = @"";
     }
-    
+
     if([city isEqualToString:@"City"]) {
         city = @"";
     }
@@ -156,10 +156,21 @@
             s = [s stringByReplacingOccurrencesOfString:@"◀︎" withString:@""];
             s = [s stringByReplacingOccurrencesOfString:@"▶︎" withString:@""];
             s = [s stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            
             if(isParent) {
                 parentSpecialty = s;
             } else {
                 subSpecialty = s;
+            }
+            
+            if([specialty isEqualToString:s] && isParent) {
+                parentSpecialty = s;
+                subSpecialty = @"";
+                break;
+            }
+
+            if([specialty isEqualToString:s] && !isParent) {
+                break;
             }
         }
     }
@@ -273,9 +284,21 @@
     return self.pickerData.count;
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
-    return self.pickerData[row];
+    UILabel *label = [[UILabel alloc] initWithFrame:view.bounds];
+    label.text = self.pickerData[row];
+    label.textAlignment = NSTextAlignmentCenter;
+    
+    if(self.selectedButton == self.btnSpecialty) {
+        if([label.text containsString:@"◀︎"]) {
+            label.textColor = [UIColor colorWithRed:23.0 / 255.0 green:102.0 / 255.0 blue:176.0 / 255.0 alpha:1.0];
+        } else {
+            label.textColor = [UIColor colorWithRed:128.0 / 255.0 green:128.0 / 255.0 blue:128.0 / 255.0 alpha:1.0];
+        }
+    }
+
+    return label;
 }
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component

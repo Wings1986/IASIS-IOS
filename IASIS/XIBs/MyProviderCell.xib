@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -18,6 +18,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Robert Candipan, MD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0O-L6-CCP">
                                 <rect key="frame" x="80" y="8" width="373" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4fw-LV-Hjl"/>
                                 </constraints>
@@ -27,6 +28,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cardiology" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yZ-8h-kJc">
                                 <rect key="frame" x="81" y="27" width="386" height="18"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="7Et-p7-f17"/>
                                 </constraints>
@@ -36,6 +38,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awo-p0-JLV" customClass="OutlinedButton">
                                 <rect key="frame" x="80" y="49" width="81" height="32"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="sTl-bJ-djw"/>
                                     <constraint firstAttribute="width" constant="81" id="uLo-ga-HZc"/>
@@ -51,6 +54,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mr7-qs-pae" customClass="OutlinedButton">
                                 <rect key="frame" x="172" y="49" width="81" height="32"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="81" id="bh3-Mk-ZlH"/>
                                     <constraint firstAttribute="height" constant="32" id="njj-Q7-TmS"/>
@@ -66,6 +70,7 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProviderHeadshot" translatesAutoresizingMaskIntoConstraints="NO" id="ubK-0h-14r" userLabel="I">
                                 <rect key="frame" x="9" y="6" width="63" height="78"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="HMf-qd-nAS"/>
                                     <constraint firstAttribute="width" constant="63" id="hQZ-Xr-OsT"/>
@@ -73,6 +78,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mto-xo-Oav">
                                 <rect key="frame" x="438" y="6" width="29" height="27"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="NPz-bv-nLQ"/>
                                     <constraint firstAttribute="width" constant="29" id="wCv-zb-dCr"/>
@@ -83,6 +89,7 @@
                                 <state key="selected" image="star-on"/>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.93092105263157909" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Mr7-qs-pae" secondAttribute="centerY" constant="-20.5" id="2pA-zx-j3C"/>
@@ -102,8 +109,10 @@
                         </constraints>
                     </view>
                 </subviews>
+                <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <animations/>
             <constraints>
                 <constraint firstItem="lWT-f1-nPl" firstAttribute="leading" secondItem="Izt-vb-oRF" secondAttribute="leading" constant="14" id="FIt-Sb-wDZ"/>
                 <constraint firstItem="lWT-f1-nPl" firstAttribute="top" secondItem="Izt-vb-oRF" secondAttribute="top" constant="14" id="crN-Wv-7x5"/>
