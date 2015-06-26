@@ -297,7 +297,7 @@ Lehi, UT 84043
 			<key>image</key>
 			<string>mpmc</string>
 			<key>er</key>
-			<string></string>
+			<string>https://waittimes.iasishealthcare.com/MEDHOST/MPMC/EdisKpiRssFeedGenerator.aspx</string>
 		</dict>
 		<dict>
 			<key>name</key>

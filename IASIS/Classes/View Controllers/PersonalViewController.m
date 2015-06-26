@@ -143,6 +143,10 @@
         return self.favoriteProviders.count > 0 ? CGSizeMake(collectionView.bounds.size.width, 130.0) : CGSizeMake(collectionView.bounds.size.width, 186.0);
     }
 
+    if(indexPath.section == 1) {
+        return [self.favoriteHospital[@"er"] length] > 8 ? CGSizeMake(collectionView.bounds.size.width, 120.0) : CGSizeMake(collectionView.bounds.size.width, 0);
+    }
+
     return CGSizeMake(collectionView.bounds.size.width, 120.0);
 }
 

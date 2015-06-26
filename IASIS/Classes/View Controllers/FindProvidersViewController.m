@@ -98,7 +98,7 @@
 - (IBAction)state:(id)sender
 {
     self.selectedButton = sender;
-    self.pickerData = self.providerLocations.allKeys;
+    self.pickerData = [self.providerLocations.allKeys sortedArrayUsingSelector:@selector(compare:)];
     [self.pickerView reloadAllComponents];
     [self showPickerView];
 }
@@ -111,6 +111,7 @@
         NSString *selection = [[self.btnState titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         self.pickerData = self.providerLocations[selection];
     }
+    self.pickerData = [self.pickerData sortedArrayUsingSelector:@selector(compare:)];
     [self.pickerView reloadAllComponents];
     [self showPickerView];
 }
