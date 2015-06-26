@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D130a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,6 +15,7 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hJ-QX-weg" customClass="OutlinedButton">
                         <rect key="frame" x="103" y="86" width="94" height="34"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="KZx-A7-cge"/>
                             <constraint firstAttribute="width" constant="94" id="Xho-R6-KZc"/>
@@ -30,6 +31,7 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eft-gz-Rnk" customClass="OutlinedButton">
                         <rect key="frame" x="223" y="86" width="94" height="34"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="94" id="7QM-ux-rPx"/>
                             <constraint firstAttribute="height" constant="34" id="9vl-aK-20z"/>
@@ -45,24 +47,46 @@
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Current ER Wait Time: Not Available" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZb-m8-MbX">
                         <rect key="frame" x="73" y="52" width="276" height="21"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9J1-0d-mWP" customClass="OutlinedButton">
+                        <rect key="frame" x="162" y="86" width="94" height="34"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="94" id="uPe-Fd-Z3u"/>
+                            <constraint firstAttribute="height" constant="34" id="xmH-BT-btb"/>
+                        </constraints>
+                        <state key="normal" title="Directions">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
                 </subviews>
+                <animations/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <animations/>
             <color key="backgroundColor" red="0.87058823529411766" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="2hJ-QX-weg" secondAttribute="centerY" constant="-20" id="5Tn-yK-jZo"/>
+                <constraint firstItem="eft-gz-Rnk" firstAttribute="centerY" secondItem="9J1-0d-mWP" secondAttribute="centerY" id="H33-5W-JJ8"/>
                 <constraint firstAttribute="centerX" secondItem="HZb-m8-MbX" secondAttribute="centerX" constant="-0.5" id="Qg6-h2-2ZY"/>
                 <constraint firstAttribute="centerY" secondItem="HZb-m8-MbX" secondAttribute="centerY" constant="20" id="Uwf-de-lxl"/>
                 <constraint firstAttribute="centerX" secondItem="eft-gz-Rnk" secondAttribute="centerX" constant="-60" id="VoH-ik-Sqx"/>
                 <constraint firstAttribute="centerY" secondItem="eft-gz-Rnk" secondAttribute="centerY" constant="-20" id="ZcY-vm-uXX"/>
+                <constraint firstAttribute="centerX" secondItem="9J1-0d-mWP" secondAttribute="centerX" constant="0.5" id="l7y-q8-Hbh"/>
                 <constraint firstAttribute="centerX" secondItem="2hJ-QX-weg" secondAttribute="centerX" constant="60" id="n0R-pZ-SMT"/>
             </constraints>
             <size key="customSize" width="419" height="165"/>
             <connections>
+                <outlet property="btnCenteredDirections" destination="9J1-0d-mWP" id="6lY-rs-CUt"/>
                 <outlet property="btnCheckIn" destination="2hJ-QX-weg" id="CwJ-aG-1fM"/>
                 <outlet property="btnDirections" destination="eft-gz-Rnk" id="crd-Tl-xlG"/>
                 <outlet property="lblWaitTime" destination="HZb-m8-MbX" id="PRj-iV-ecS"/>

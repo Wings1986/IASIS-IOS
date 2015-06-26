@@ -27,6 +27,7 @@
     self.lblWaitTime.text = @"Current ER Wait Time: Not Available";
     self.btnCheckIn.hidden = YES;
     self.btnDirections.hidden = YES;
+    self.btnCenteredDirections.hidden = YES;
 }
 
 - (void)fetchER:(NSString *)erURL
@@ -71,8 +72,16 @@
             }
 
             self.lblWaitTime.text = [NSString stringWithFormat:@"Current ER Wait Time: %@", waitTimeString];
-            self.btnDirections.hidden = NO;
-            self.btnCheckIn.hidden = NO;
+            
+            if(self.useCenteredLayout) {
+                self.btnCheckIn.hidden = YES;
+                self.btnDirections.hidden = YES;
+                self.btnCenteredDirections.hidden = NO;
+            } else {
+                self.btnCheckIn.hidden = NO;
+                self.btnDirections.hidden = NO;
+                self.btnCenteredDirections.hidden = YES;
+            }
         }
     }
 }

@@ -77,7 +77,14 @@
 
         [cell.btnCheckIn addTarget:self action:@selector(checkIn:) forControlEvents:UIControlEventTouchUpInside];
         [cell.btnDirections addTarget:self action:@selector(directions:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.btnCenteredDirections addTarget:self action:@selector(directions:) forControlEvents:UIControlEventTouchUpInside];
 
+        if(self.hospital[@"checkin"] != nil) {
+            cell.useCenteredLayout = NO;
+        } else {
+            cell.useCenteredLayout = YES;
+        }
+        
         return cell;
     }
     
@@ -95,8 +102,6 @@
     if(indexPath.section == 2) {
         return CGSizeMake(collectionView.bounds.size.width, 500.0);
     }
-    
-    NSLog(@"%@", self.hospital);
 
     if(indexPath.section == 1 && ![self.hospital[@"er"] containsString:@"http"]) {
         return CGSizeMake(collectionView.bounds.size.width, 1.0);

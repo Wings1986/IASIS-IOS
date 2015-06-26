@@ -56,13 +56,7 @@
             [cell.btnDetails addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
             cell.btnDetails.hidden = NO;
         }
-        
-        cell.btnSchedule.hidden = YES;
-        if(self.providerDict[@"appointment_url"]) {
-            cell.btnSchedule.hidden = NO;
-            [cell.btnSchedule addTarget:self action:@selector(appointment:) forControlEvents:UIControlEventTouchUpInside];
-        }
-        
+
         cell.btnStar.tag = indexPath.row;
         [cell.btnStar addTarget:self action:@selector(star:) forControlEvents:UIControlEventTouchUpInside];
 

@@ -48,6 +48,7 @@
     [self.view addSubview:self.shimView];
     UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hidePickerView)];
     [self.shimView addGestureRecognizer:tgr];
+    self.shimView.hidden = YES;
 
     self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 162.0)];
     self.pickerView.hidden = YES;
@@ -133,6 +134,9 @@
     NSString *city = [[self.btnCity titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *specialty = [[self.btnSpecialty titleForState:UIControlStateNormal] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
+    NSString *parentSpecialty = @"";
+    NSString *subSpecialty = @"";
+    
     if([state isEqualToString:@"State"]) {
         state = @"";
     }
@@ -142,10 +146,25 @@
     }
 
     if([specialty isEqualToString:@"Specialty"]) {
-        specialty = @"";
+        parentSpecialty = @"";
+        subSpecialty = @"";
+    } else {
+        BOOL isParent;
+
+        for(__strong NSString *s in self.specialties) {
+            isParent = [s containsString:@"◀︎"];
+            s = [s stringByReplacingOccurrencesOfString:@"◀︎" withString:@""];
+            s = [s stringByReplacingOccurrencesOfString:@"▶︎" withString:@""];
+            s = [s stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            if(isParent) {
+                parentSpecialty = s;
+            } else {
+                subSpecialty = s;
+            }
+        }
     }
 
-    [[ProviderSearchClient sharedObject] searchWithState:state city:city specialty:specialty lastName:self.txtLastName.text successBlock:^(id responseObject) {
+    [[ProviderSearchClient sharedObject] searchWithState:state city:city specialty:parentSpecialty subspecialty:subSpecialty lastName:self.txtLastName.text successBlock:^(id responseObject) {
         [[WaitSpinner sharedObject] unwait];
 
         ProviderResultsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ProviderResultsViewController class])];
@@ -184,15 +203,16 @@
     }
 
     [[ProviderSearchClient sharedObject] specialtiesWithState:state city:city successBlock:^(NSDictionary *responseObject) {
-        for(NSString *key in responseObject.allKeys) {
+        for(NSString *key in [responseObject.allKeys sortedArrayUsingSelector:@selector(compare:)]) {
             if([responseObject[key] isKindOfClass:[NSDictionary class]]) {
+                [self.specialties addObject:[NSString stringWithFormat:@"◀︎ %@ ▶︎", key]];
                 for(NSString *subkey in ((NSDictionary *)responseObject[key]).allKeys) {
                     [self.specialties addObject:subkey];
                 }
             }
         }
 
-        [self.specialties sortUsingSelector:@selector(compare:)];
+        // [self.specialties sortUsingSelector:@selector(compare:)];
 
         [[WaitSpinner sharedObject] unwait];
     } failureBlock:^(NSError *error) {
@@ -227,6 +247,8 @@
     
     if(self.pickerData.count > 0) {
         NSString *selection = self.pickerData[[self.pickerView selectedRowInComponent:0]];
+        selection = [selection stringByReplacingOccurrencesOfString:@"◀︎" withString:@""];
+        selection = [selection stringByReplacingOccurrencesOfString:@"▶︎" withString:@""];
         [self.selectedButton setTitle:[NSString stringWithFormat:@"   %@", selection] forState:UIControlStateNormal];
     }
     

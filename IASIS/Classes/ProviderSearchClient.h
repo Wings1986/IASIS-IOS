@@ -13,7 +13,7 @@
 
 + (instancetype)sharedObject;
 
-- (AFHTTPRequestOperation *)searchWithState:(NSString *)state city:(NSString *)city specialty:(NSString *)specialty lastName:(NSString *)lastName successBlock:(void (^)(id responseObject))successBlock failureBlock:(void (^)(NSError *error))failureBlock;
+- (AFHTTPRequestOperation *)searchWithState:(NSString *)state city:(NSString *)city specialty:(NSString *)specialty subspecialty:(NSString *)subspecialty lastName:(NSString *)lastName successBlock:(void (^)(id responseObject))successBlock failureBlock:(void (^)(NSError *error))failureBlock;
 - (AFHTTPRequestOperation *)specialtiesWithState:(NSString *)state city:(NSString *)city successBlock:(void (^)(id responseObject))successBlock failureBlock:(void (^)(NSError *error))failureBlock;
 - (AFHTTPRequestOperation *)searchWithDataset:(NSString *)dataset successBlock:(void (^)(id responseObject))successBlock failureBlock:(void (^)(NSError *error))failureBlock;
 

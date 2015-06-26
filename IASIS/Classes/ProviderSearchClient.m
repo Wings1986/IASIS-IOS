@@ -57,7 +57,7 @@
     return operation;
 }
 
-- (AFHTTPRequestOperation *)searchWithState:(NSString *)state city:(NSString *)city specialty:(NSString *)specialty lastName:(NSString *)lastName successBlock:(void (^)(id responseObject))successBlock failureBlock:(void (^)(NSError *error))failureBlock
+- (AFHTTPRequestOperation *)searchWithState:(NSString *)state city:(NSString *)city specialty:(NSString *)specialty subspecialty:(NSString *)subspecialty lastName:(NSString *)lastName successBlock:(void (^)(id responseObject))successBlock failureBlock:(void (^)(NSError *error))failureBlock
 {
     if([[state lowercaseString] isEqualToString:@"arizona"]) {
         state = @"az";
@@ -84,9 +84,10 @@
     }
     
     specialty = [specialty stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    subspecialty = [subspecialty stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     city = [city stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 
-    NSString *url = [NSString stringWithFormat:@"api/?last_name=%@&state=%@&city=%@&specialty=%@", lastName, state, city, specialty];
+    NSString *url = [NSString stringWithFormat:@"api/?last_name=%@&state=%@&city=%@&specialty=%@&subspecialty=%@", lastName, state, city, specialty, subspecialty];
 
     AFHTTPRequestOperation *operation = [self.operationManager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if(successBlock) {

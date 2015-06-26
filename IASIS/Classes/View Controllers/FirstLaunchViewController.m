@@ -34,6 +34,7 @@
     [self.view addSubview:self.shimView];
     UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hidePickerView)];
     [self.shimView addGestureRecognizer:tgr];
+    self.shimView.hidden = YES;
     
     self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 162.0)];
     self.pickerView.hidden = YES;
@@ -53,6 +54,7 @@
     [self.pickerView reloadAllComponents];
     self.pickerView.frame = frame;
     self.pickerView.hidden = NO;
+    [self.view bringSubviewToFront:self.pickerView];
 
     [UIView animateWithDuration:0.25 animations:^{
         self.pickerView.frame = newFrame;

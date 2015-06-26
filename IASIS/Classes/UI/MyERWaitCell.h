@@ -12,6 +12,8 @@
 
 @property (nonatomic, weak) IBOutlet UIButton *btnCheckIn;
 @property (nonatomic, weak) IBOutlet UIButton *btnDirections;
+@property (nonatomic, weak) IBOutlet UIButton *btnCenteredDirections;
+@property (nonatomic, assign) BOOL useCenteredLayout;
 
 - (void)fetchER:(NSString *)erURL;
 

@@ -101,6 +101,13 @@
 
         [cell.btnCheckIn addTarget:self action:@selector(checkIn) forControlEvents:UIControlEventTouchUpInside];
         [cell.btnDirections addTarget:self action:@selector(directions) forControlEvents:UIControlEventTouchUpInside];
+        [cell.btnCenteredDirections addTarget:self action:@selector(directions) forControlEvents:UIControlEventTouchUpInside];
+        
+        if(self.favoriteHospital[@"checkin"] != nil) {
+            cell.useCenteredLayout = NO;
+        } else {
+            cell.useCenteredLayout = YES;
+        }
         
         return cell;
     }
